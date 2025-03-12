@@ -3,17 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EliSal Website</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>Scale Your Course Business | Expert Growth System</title>
+    <!-- HubSpot tracking code -->
+    <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/242100136.js"></script>
+    <!-- HubSpot Forms -->
+    <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --primary-color: #0070f3;
-            --secondary-color: #00a8ff;
-            --background-color: #000000;
-            --text-color: #ffffff;
-            --accent-color: #404040;
-        }
-
         * {
             margin: 0;
             padding: 0;
@@ -22,24 +18,25 @@
         }
 
         body {
-            background-color: var(--background-color);
-            color: var(--text-color);
             line-height: 1.6;
+            color: #fff;
+            background: #000;
+            overflow-x: hidden;
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 1000px;
             margin: 0 auto;
             padding: 0 20px;
         }
 
-        /* Header Styles */
-        header {
+        .nav {
+            background: #000;
             padding: 20px 0;
             position: fixed;
-            width: 100%;
             top: 0;
-            background-color: rgba(0, 0, 0, 0.9);
+            left: 0;
+            width: 100%;
             z-index: 1000;
         }
 
@@ -52,233 +49,201 @@
         .logo {
             font-size: 24px;
             font-weight: 700;
-            color: var(--primary-color);
             text-decoration: none;
+            color: #fff;
         }
 
-        .nav-links {
-            display: flex;
-            gap: 30px;
-        }
-
-        .nav-links a {
-            color: var(--text-color);
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: 700;
             text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #000;
+            background: #FF6B00;
+            border: none;
+            border-radius: 4px;
+            transition: all 0.3s ease;
         }
 
-        .nav-links a:hover {
-            color: var(--primary-color);
+        .btn:hover {
+            transform: translateY(-2px);
+            background: #ff8533;
         }
 
-        /* Hero Section */
         .hero {
-            height: 100vh;
+            min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
-            background: linear-gradient(45deg, var(--background-color), var(--accent-color));
+            padding: 100px 0;
         }
 
         .hero-content {
             max-width: 800px;
+            margin: 0 auto;
         }
 
         .hero h1 {
-            font-size: 4rem;
-            margin-bottom: 20px;
-            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            font-size: 64px;
+            line-height: 1.2;
+            margin-bottom: 30px;
+            font-weight: 800;
+        }
+
+        .hero .highlight {
+            color: #FF6B00;
         }
 
         .hero p {
-            font-size: 1.5rem;
-            margin-bottom: 30px;
-            color: #888;
+            font-size: 24px;
+            margin-bottom: 40px;
+            opacity: 0.9;
         }
 
-        /* Features Section */
         .features {
-            padding: 100px 0;
-            background-color: var(--accent-color);
+            padding: 120px 0;
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.1);
         }
 
         .features-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 50px;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin: 60px 0;
         }
 
         .feature-card {
-            background: rgba(255, 255, 255, 0.05);
-            padding: 30px;
-            border-radius: 10px;
-            transition: transform 0.3s ease;
+            background: rgba(255,255,255,0.05);
+            padding: 40px;
+            border-radius: 8px;
         }
 
-        .feature-card:hover {
-            transform: translateY(-5px);
-        }
-
-        /* CTA Section */
-        .cta {
-            padding: 100px 0;
-            text-align: center;
-            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
-        }
-
-        .button {
-            display: inline-block;
-            padding: 15px 30px;
-            background-color: var(--text-color);
-            color: var(--background-color);
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: 600;
-            transition: transform 0.3s ease;
-        }
-
-        .button:hover {
-            transform: scale(1.05);
-        }
-
-        /* Footer */
-        footer {
-            padding: 50px 0;
-            background-color: var(--accent-color);
-        }
-
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 30px;
-        }
-
-        .footer-section h3 {
-            margin-bottom: 20px;
-            color: var(--primary-color);
-        }
-
-        .footer-section ul {
-            list-style: none;
-        }
-
-        .footer-section ul li {
+        .feature-card h3 {
+            font-size: 24px;
+            font-weight: 700;
             margin-bottom: 10px;
         }
 
-        .footer-section ul li a {
-            color: var(--text-color);
-            text-decoration: none;
-            transition: color 0.3s ease;
+        .feature-card p {
+            font-size: 18px;
+            opacity: 0.9;
         }
 
-        .footer-section ul li a:hover {
-            color: var(--primary-color);
+        .form-section {
+            padding: 120px 0;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 40px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 8px;
+        }
+
+        .hubspot-form-container {
+            margin-top: 40px;
+        }
+
+        footer {
+            padding: 40px 0;
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        footer p {
+            opacity: 0.7;
+            font-size: 14px;
         }
 
         @media (max-width: 768px) {
             .hero h1 {
-                font-size: 3rem;
+                font-size: 36px;
             }
 
             .hero p {
-                font-size: 1.2rem;
+                font-size: 20px;
             }
 
-            .nav-links {
-                display: none;
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .btn {
+                width: 100%;
+                padding: 20px;
             }
         }
     </style>
 </head>
 <body>
-    <header>
+    <nav class="nav">
         <div class="container nav-container">
-            <a href="#" class="logo">EliSal</a>
-            <nav class="nav-links">
-                <a href="#features">Features</a>
-                <a href="#about">About</a>
-                <a href="#contact">Contact</a>
-                <a href="#" class="button">Get Started</a>
-            </nav>
+            <a href="#" class="logo">Your Brand</a>
+            <a href="#roadmap" class="btn">Get My Roadmap</a>
         </div>
-    </header>
+    </nav>
 
     <section class="hero">
-        <div class="container hero-content">
-            <h1>Transform Your Digital Presence</h1>
-            <p>Create stunning websites that capture attention and drive results</p>
-            <a href="#" class="button">Start Your Journey</a>
+        <div class="container">
+            <div class="hero-content">
+                <h1>Scale Your Course Business To <span class="highlight">$5M+ Revenue</span> With Our Proven System</h1>
+                <p>Join the elite course creators who've discovered how to scale while working less</p>
+                <a href="#roadmap" class="btn">Get Your Custom Roadmap →</a>
+            </div>
         </div>
     </section>
 
-    <section class="features" id="features">
+    <section class="features">
         <div class="container">
-            <h2>Our Services</h2>
             <div class="features-grid">
                 <div class="feature-card">
-                    <h3>Web Design</h3>
-                    <p>Custom-designed websites that reflect your brand and engage your audience</p>
+                    <h3>Proven System</h3>
+                    <p>Our methodology has generated over $127M in revenue for course creators</p>
                 </div>
                 <div class="feature-card">
-                    <h3>Development</h3>
-                    <p>Robust and scalable solutions built with cutting-edge technology</p>
+                    <h3>No Paid Ads Required</h3>
+                    <p>Scale organically without spending thousands on advertising</p>
                 </div>
                 <div class="feature-card">
-                    <h3>Digital Strategy</h3>
-                    <p>Strategic planning to maximize your online presence and achieve your goals</p>
+                    <h3>Work Less, Earn More</h3>
+                    <p>Automated systems that run your business while you sleep</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="cta">
+    <section id="roadmap" class="form-section">
         <div class="container">
-            <h2>Ready to Get Started?</h2>
-            <p>Let's create something amazing together</p>
-            <a href="#" class="button">Contact Us</a>
+            <div class="form-container">
+                <h2>Get Your Custom Growth Roadmap</h2>
+                <p>Fill out the form below to receive your personalized scaling strategy</p>
+                <div class="hubspot-form-container">
+                    <script>
+                        window.onload = function() {
+                            hbspt.forms.create({
+                                region: "na1",
+                                portalId: "242100136",
+                                formId: "YOUR-FORM-ID-HERE",
+                                target: ".hubspot-form-container",
+                                css: ""
+                            });
+                        }
+                    </script>
+                </div>
+            </div>
         </div>
     </section>
 
     <footer>
-        <div class="container footer-content">
-            <div class="footer-section">
-                <h3>Company</h3>
-                <ul>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Careers</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Services</h3>
-                <ul>
-                    <li><a href="#">Web Design</a></li>
-                    <li><a href="#">Development</a></li>
-                    <li><a href="#">Consulting</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Resources</h3>
-                <ul>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Documentation</a></li>
-                    <li><a href="#">Support</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Legal</h3>
-                <ul>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Terms of Service</a></li>
-                    <li><a href="#">Cookie Policy</a></li>
-                </ul>
-            </div>
+        <div class="container">
+            <p>&copy; 2025 Your Brand. All rights reserved.</p>
         </div>
     </footer>
 </body>
