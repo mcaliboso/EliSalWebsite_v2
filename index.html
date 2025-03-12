@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scale Your Course Business | Expert Growth System</title>
+    <title>Scale Your Course Business | Elite Business Growth System</title>
     <!-- HubSpot tracking code -->
     <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/242100136.js"></script>
     <!-- HubSpot Forms -->
     <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
     <style>
         * {
             margin: 0;
@@ -25,22 +26,24 @@
         }
 
         .container {
-            max-width: 1000px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
         }
 
+        /* Navigation */
         .nav {
-            background: #000;
-            padding: 20px 0;
             position: fixed;
             top: 0;
             left: 0;
-            width: 100%;
+            right: 0;
+            padding: 20px 0;
+            background: rgba(0,0,0,0.95);
             z-index: 1000;
+            backdrop-filter: blur(10px);
         }
 
-        .nav-container {
+        .nav .container {
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -48,14 +51,154 @@
 
         .logo {
             font-size: 24px;
-            font-weight: 700;
-            text-decoration: none;
+            font-weight: 800;
             color: #fff;
+            text-decoration: none;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 120px 0 100px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at center, rgba(255,107,0,0.15) 0%, rgba(0,0,0,0) 70%);
+        }
+
+        .hero h1 {
+            font-size: 72px;
+            line-height: 1.1;
+            margin-bottom: 30px;
+            font-weight: 800;
+        }
+
+        .hero .highlight {
+            color: #FF6B00;
+            position: relative;
+        }
+
+        .hero p {
+            font-size: 24px;
+            margin-bottom: 40px;
+            opacity: 0.9;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Results Section */
+        .results {
+            padding: 120px 0;
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            background: #080808;
+        }
+
+        .stat-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin: 60px 0;
+        }
+
+        .stat-card {
+            padding: 40px;
+            background: rgba(255,255,255,0.03);
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .stat-number {
+            font-size: 64px;
+            font-weight: 800;
+            color: #FF6B00;
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            font-size: 20px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Process Section */
+        .process {
+            padding: 120px 0;
+            background: #000;
+        }
+
+        .process h2 {
+            font-size: 48px;
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .process-card {
+            padding: 30px;
+            background: rgba(255,255,255,0.03);
+            border-radius: 8px;
+        }
+
+        .process-number {
+            font-size: 24px;
+            color: #FF6B00;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        /* Form Section */
+        .contact {
+            padding: 120px 0;
+            background: #080808;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .form-wrapper {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 60px;
+            background: rgba(255,255,255,0.03);
+            border-radius: 12px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+        }
+
+        .form-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .form-header h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
         }
 
         .btn {
             display: inline-block;
-            padding: 15px 30px;
+            padding: 20px 40px;
             font-size: 18px;
             font-weight: 700;
             text-decoration: none;
@@ -66,6 +209,7 @@
             border: none;
             border-radius: 4px;
             transition: all 0.3s ease;
+            cursor: pointer;
         }
 
         .btn:hover {
@@ -73,88 +217,12 @@
             background: #ff8533;
         }
 
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 100px 0;
-        }
-
-        .hero-content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .hero h1 {
-            font-size: 64px;
-            line-height: 1.2;
-            margin-bottom: 30px;
-            font-weight: 800;
-        }
-
-        .hero .highlight {
-            color: #FF6B00;
-        }
-
-        .hero p {
-            font-size: 24px;
-            margin-bottom: 40px;
-            opacity: 0.9;
-        }
-
-        .features {
-            padding: 120px 0;
-            text-align: center;
-            border-top: 1px solid rgba(255,255,255,0.1);
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 40px;
-            margin: 60px 0;
-        }
-
-        .feature-card {
-            background: rgba(255,255,255,0.05);
-            padding: 40px;
-            border-radius: 8px;
-        }
-
-        .feature-card h3 {
-            font-size: 24px;
-            font-weight: 700;
-            margin-bottom: 10px;
-        }
-
-        .feature-card p {
-            font-size: 18px;
-            opacity: 0.9;
-        }
-
-        .form-section {
-            padding: 120px 0;
-            border-top: 1px solid rgba(255,255,255,0.1);
-        }
-
-        .form-container {
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 40px;
-            background: rgba(255,255,255,0.05);
-            border-radius: 8px;
-        }
-
-        .hubspot-form-container {
-            margin-top: 40px;
-        }
-
+        /* Footer */
         footer {
             padding: 40px 0;
             text-align: center;
             border-top: 1px solid rgba(255,255,255,0.1);
+            background: #000;
         }
 
         footer p {
@@ -163,88 +231,130 @@
         }
 
         @media (max-width: 768px) {
+            .nav {
+                padding: 15px 0;
+            }
+
+            .hero {
+                padding: 100px 0 80px;
+            }
+
             .hero h1 {
                 font-size: 36px;
             }
 
             .hero p {
-                font-size: 20px;
+                font-size: 18px;
             }
 
-            .features-grid {
+            .stat-grid, .process-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .form-wrapper {
+                padding: 30px;
             }
 
             .btn {
                 width: 100%;
-                padding: 20px;
+                padding: 15px;
             }
         }
     </style>
 </head>
 <body>
     <nav class="nav">
-        <div class="container nav-container">
-            <a href="#" class="logo">Your Brand</a>
-            <a href="#roadmap" class="btn">Get My Roadmap</a>
+        <div class="container">
+            <a href="#" class="logo">EliSal</a>
+            <a href="#form" class="btn">Get Started</a>
         </div>
     </nav>
 
     <section class="hero">
         <div class="container">
-            <div class="hero-content">
-                <h1>Scale Your Course Business To <span class="highlight">$5M+ Revenue</span> With Our Proven System</h1>
-                <p>Join the elite course creators who've discovered how to scale while working less</p>
-                <a href="#roadmap" class="btn">Get Your Custom Roadmap →</a>
+            <h1 data-aos="fade-up">Scale Your Course Business To <span class="highlight">$5M+ In Net Profit</span></h1>
+            <p data-aos="fade-up" data-aos-delay="100">Join the elite 1% of course creators who've discovered how to scale to 7-figures while working less</p>
+            <a href="#form" class="btn" data-aos="fade-up" data-aos-delay="200">Get Your Custom Roadmap →</a>
+        </div>
+    </section>
+
+    <section class="results">
+        <div class="container">
+            <div class="stat-grid">
+                <div class="stat-card" data-aos="fade-up">
+                    <div class="stat-number">$127M+</div>
+                    <div class="stat-label">Revenue Generated</div>
+                </div>
+                <div class="stat-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="stat-number">1,472</div>
+                    <div class="stat-label">Course Creators Helped</div>
+                </div>
+                <div class="stat-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="stat-number">89%</div>
+                    <div class="stat-label">Average Revenue Increase</div>
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="features">
+    <section class="process">
         <div class="container">
-            <div class="features-grid">
-                <div class="feature-card">
-                    <h3>Proven System</h3>
-                    <p>Our methodology has generated over $127M in revenue for course creators</p>
+            <h2 data-aos="fade-up">Our Proven Process</h2>
+            <div class="process-grid">
+                <div class="process-card" data-aos="fade-up">
+                    <div class="process-number">01</div>
+                    <h3>Custom Strategy</h3>
+                    <p>Get a tailored roadmap based on your unique business goals and current situation</p>
                 </div>
-                <div class="feature-card">
-                    <h3>No Paid Ads Required</h3>
-                    <p>Scale organically without spending thousands on advertising</p>
+                <div class="process-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="process-number">02</div>
+                    <h3>Implementation</h3>
+                    <p>Follow our proven system to implement high-converting strategies</p>
                 </div>
-                <div class="feature-card">
-                    <h3>Work Less, Earn More</h3>
-                    <p>Automated systems that run your business while you sleep</p>
+                <div class="process-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="process-number">03</div>
+                    <h3>Scale</h3>
+                    <p>Watch your course business grow to 7-figures and beyond</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="roadmap" class="form-section">
+    <section class="contact" id="form">
         <div class="container">
-            <div class="form-container">
-                <h2>Get Your Custom Growth Roadmap</h2>
-                <p>Fill out the form below to receive your personalized scaling strategy</p>
-                <div class="hubspot-form-container">
-                    <script>
-                        window.onload = function() {
-                            hbspt.forms.create({
-                                region: "na1",
-                                portalId: "242100136",
-                                formId: "YOUR-FORM-ID-HERE",
-                                target: ".hubspot-form-container",
-                                css: ""
-                            });
-                        }
-                    </script>
+            <div class="form-wrapper" data-aos="fade-up">
+                <div class="form-header">
+                    <h2>Get Your Custom Growth Roadmap</h2>
+                    <p>Fill out the form below to get your personalized strategy</p>
                 </div>
+                <div id="hubspot-form"></div>
             </div>
         </div>
     </section>
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 Your Brand. All rights reserved.</p>
+            <p>&copy; 2025 EliSal. All rights reserved.</p>
         </div>
     </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+
+        // HubSpot Form Embed
+        window.onload = function() {
+            hbspt.forms.create({
+                region: "na1",
+                portalId: "242100136",
+                formId: "4b97fdab-8963-4774-8f3e-90397326b3fb",
+                target: "#hubspot-form",
+                css: ""
+            });
+        }
+    </script>
 </body>
 </html>
