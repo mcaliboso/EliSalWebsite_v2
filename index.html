@@ -255,6 +255,96 @@
             background: #ff8533;
         }
 
+        /* FAQ Section */
+        .faq {
+            padding: 120px 0;
+            background: #000;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .faq h2 {
+            font-size: 48px;
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .faq-grid {
+            display: grid;
+            gap: 30px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: rgba(255,255,255,0.03);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 25px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .faq-question h3 {
+            font-size: 18px;
+            font-weight: 600;
+            margin: 0;
+        }
+
+        .faq-question .icon {
+            width: 20px;
+            height: 20px;
+            position: relative;
+        }
+
+        .faq-question .icon::before,
+        .faq-question .icon::after {
+            content: '';
+            position: absolute;
+            background: #FF6B00;
+            transition: all 0.3s ease;
+        }
+
+        .faq-question .icon::before {
+            width: 2px;
+            height: 20px;
+            left: 9px;
+            top: 0;
+        }
+
+        .faq-question .icon::after {
+            width: 20px;
+            height: 2px;
+            left: 0;
+            top: 9px;
+        }
+
+        .faq-answer {
+            padding: 0 30px;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .faq-item.active .faq-question {
+            background: rgba(255,107,0,0.1);
+        }
+
+        .faq-item.active .faq-question .icon::before {
+            transform: rotate(90deg);
+            opacity: 0;
+        }
+
+        .faq-item.active .faq-answer {
+            padding: 0 30px 25px;
+            max-height: 1000px;
+        }
+
         /* Footer */
         footer {
             padding: 80px 0 40px;
@@ -380,6 +470,23 @@
                 gap: 20px;
                 text-align: center;
             }
+
+            .faq h2 {
+                font-size: 36px;
+                margin-bottom: 40px;
+            }
+
+            .faq-question {
+                padding: 20px;
+            }
+
+            .faq-question h3 {
+                font-size: 16px;
+            }
+
+            .faq-item.active .faq-answer {
+                padding: 0 20px 20px;
+            }
         }
     </style>
 </head>
@@ -457,6 +564,53 @@
         </div>
     </section>
 
+    <section class="faq">
+        <div class="container">
+            <h2 data-aos="fade-up">Frequently Asked Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item" data-aos="fade-up">
+                    <div class="faq-question">
+                        <h3>How long does it take to see results?</h3>
+                        <div class="icon"></div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Most of our clients start seeing significant improvements within 30-60 days of implementing our strategies. However, the exact timeline depends on your current business stage, niche, and how quickly you can implement our recommendations.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="faq-question">
+                        <h3>Do I need to have an existing course?</h3>
+                        <div class="icon"></div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, our strategies work best for course creators who already have a course and some initial traction. If you're just starting out, we recommend first developing and validating your course before scaling.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="faq-question">
+                        <h3>What makes your approach different?</h3>
+                        <div class="icon"></div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Unlike generic business coaching, we specialize exclusively in scaling course businesses. Our methodology combines proven marketing strategies, operational systems, and industry-specific optimizations that we've developed through helping hundreds of course creators reach 7-figures.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="faq-question">
+                        <h3>What's included in the roadmap?</h3>
+                        <div class="icon"></div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Your custom roadmap includes a detailed analysis of your current business, specific growth opportunities, step-by-step implementation plans, and proven strategies tailored to your niche and goals. We also identify potential bottlenecks and provide solutions to overcome them.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="cta" id="form">
         <div class="container">
             <div class="form-wrapper" data-aos="fade-up">
@@ -516,6 +670,24 @@
         AOS.init({
             duration: 800,
             once: true
+        });
+
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const item = question.parentElement;
+                const isActive = item.classList.contains('active');
+                
+                // Close all FAQ items
+                document.querySelectorAll('.faq-item').forEach(faqItem => {
+                    faqItem.classList.remove('active');
+                });
+
+                // Open clicked item if it wasn't already open
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
         });
     </script>
 </body>
