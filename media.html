@@ -133,182 +133,188 @@
             margin: 0 auto 40px;
         }
 
-        /* Media Sections */
-        .media-section {
-            padding: 80px 0;
-        }
-
-        .section-header {
+        /* Section Styles */
+        .section-title {
             text-align: center;
-            margin-bottom: 60px;
-        }
-
-        .section-header h2 {
+            margin-bottom: 50px;
             font-size: 36px;
-            font-weight: 700;
-            margin-bottom: 15px;
+            color: #333;
         }
 
-        .section-header p {
-            font-size: 18px;
-            opacity: 0.8;
-            max-width: 600px;
-            margin: 0 auto;
+        /* Social Media Section */
+        .social-media {
+            padding: 80px 0;
+            background: #f9f9f9;
         }
 
-        /* Featured Videos */
-        .video-grid {
+        .social-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(3, 1fr);
             gap: 30px;
-            margin-bottom: 60px;
+            margin-top: 40px;
         }
 
-        .video-card {
-            background: rgba(255,255,255,0.03);
-            border-radius: 12px;
-            overflow: hidden;
+        .social-card {
+            background: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease;
         }
 
-        .video-card:hover {
-            transform: translateY(-5px);
+        .social-card:hover {
+            transform: translateY(-10px);
         }
 
-        .video-thumbnail {
-            position: relative;
-            padding-top: 56.25%; /* 16:9 Aspect Ratio */
-            background: #1a1a1a;
+        .social-card i {
+            font-size: 48px;
+            color: #FF6B00;
+            margin-bottom: 20px;
         }
 
-        .video-thumbnail img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+        .social-card h3 {
+            margin-bottom: 15px;
+            color: #333;
         }
 
-        .video-content {
-            padding: 25px;
+        /* Podcast Section */
+        .podcasts {
+            padding: 80px 0;
         }
 
-        .video-title {
-            font-size: 20px;
-            font-weight: 700;
+        .podcast-list {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .podcast-item {
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .podcast-info h3 {
+            color: #333;
             margin-bottom: 10px;
         }
 
-        .video-meta {
-            font-size: 14px;
-            opacity: 0.7;
+        .podcast-info .episode {
+            color: #FF6B00;
+            margin-bottom: 15px;
+            font-weight: 500;
         }
 
-        /* Press Features */
-        .press-grid {
+        .podcast-info .description {
+            margin-bottom: 20px;
+            color: #666;
+        }
+
+        /* Speaking Engagements Section */
+        .speaking {
+            padding: 80px 0;
+            background: #f9f9f9;
+        }
+
+        .events-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 30px;
         }
 
-        .press-card {
-            background: rgba(255,255,255,0.03);
-            border-radius: 12px;
-            padding: 30px;
+        .event-card {
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .event-date {
+            background: #FF6B00;
+            color: #fff;
+            padding: 15px;
             text-align: center;
-            transition: transform 0.3s ease;
         }
 
-        .press-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .press-logo {
-            height: 40px;
-            margin-bottom: 20px;
-        }
-
-        .press-quote {
-            font-style: italic;
-            margin-bottom: 20px;
-            opacity: 0.9;
-        }
-
-        .press-link {
-            color: #FF6B00;
-            text-decoration: none;
-            font-weight: 500;
-            transition: opacity 0.3s ease;
-        }
-
-        .press-link:hover {
-            opacity: 0.8;
-        }
-
-        /* Podcast Features */
-        .podcast-list {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 30px;
-        }
-
-        .podcast-item {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            background: rgba(255,255,255,0.03);
-            border-radius: 12px;
-            padding: 20px;
-            transition: transform 0.3s ease;
-        }
-
-        .podcast-item:hover {
-            transform: translateY(-5px);
-        }
-
-        .podcast-icon {
-            width: 60px;
-            height: 60px;
-            border-radius: 12px;
-        }
-
-        .podcast-info h3 {
+        .event-date .month {
+            display: block;
             font-size: 18px;
-            font-weight: 600;
-            margin-bottom: 5px;
+            font-weight: 500;
         }
 
-        .podcast-info p {
-            font-size: 14px;
-            opacity: 0.7;
+        .event-date .day {
+            display: block;
+            font-size: 32px;
+            font-weight: 700;
+            line-height: 1;
         }
 
-        @media (max-width: 1024px) {
-            .video-grid,
-            .press-grid,
-            .podcast-list {
+        .event-info {
+            padding: 20px;
+        }
+
+        .event-info h3 {
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .event-info .location {
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        .event-info .description {
+            margin-bottom: 20px;
+            color: #666;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 80px 0;
+            text-align: center;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('images/contact-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+        }
+
+        .contact-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-content h2 {
+            margin-bottom: 20px;
+            font-size: 36px;
+        }
+
+        .contact-content p {
+            margin-bottom: 30px;
+            font-size: 18px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .social-grid,
+            .events-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
         }
 
         @media (max-width: 768px) {
-            .hero {
-                padding: 120px 0 60px;
-            }
-
-            .hero h1 {
-                font-size: 40px;
-            }
-
-            .video-grid,
-            .press-grid,
-            .podcast-list {
+            .social-grid,
+            .events-grid {
                 grid-template-columns: 1fr;
             }
 
-            .section-header h2 {
-                font-size: 30px;
+            .section-title {
+                font-size: 28px;
+            }
+
+            .contact-content h2 {
+                font-size: 28px;
             }
         }
     </style>
@@ -336,106 +342,133 @@
         </div>
     </nav>
 
-    <section class="hero">
-        <div class="container">
-            <h1 data-aos="fade-up">Media & Press Coverage</h1>
-            <p data-aos="fade-up" data-aos-delay="100">Discover our latest interviews, press features, and podcast appearances where we share insights on scaling course businesses.</p>
-        </div>
-    </section>
-
-    <section class="media-section">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <h2>Featured Videos</h2>
-                <p>Watch our most impactful talks and interviews on course creation and business scaling</p>
-            </div>
-            <div class="video-grid">
-                <div class="video-card" data-aos="fade-up">
-                    <div class="video-thumbnail">
-                        <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Course Creation Masterclass">
-                    </div>
-                    <div class="video-content">
-                        <h3 class="video-title">Course Creation Masterclass: From Idea to Launch</h3>
-                        <div class="video-meta">TEDx Talk • 18 minutes</div>
-                    </div>
-                </div>
-
-                <div class="video-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="video-thumbnail">
-                        <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Scaling Strategies">
-                    </div>
-                    <div class="video-content">
-                        <h3 class="video-title">Scaling Strategies for Course Creators</h3>
-                        <div class="video-meta">Business Insider • 25 minutes</div>
-                    </div>
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content" data-aos="fade-up">
+                    <h1>Media & Engagements</h1>
+                    <p>Connect with us across various platforms and discover our latest speaking engagements.</p>
                 </div>
             </div>
+        </section>
 
-            <div class="section-header" data-aos="fade-up">
-                <h2>Press Features</h2>
-                <p>Read what leading publications are saying about our impact in the online education space</p>
-            </div>
-            <div class="press-grid">
-                <div class="press-card" data-aos="fade-up">
-                    <img src="https://example.com/forbes-logo.png" alt="Forbes" class="press-logo">
-                    <p class="press-quote">"Revolutionizing the way course creators scale their businesses..."</p>
-                    <a href="#" class="press-link">Read Article →</a>
-                </div>
-
-                <div class="press-card" data-aos="fade-up" data-aos-delay="100">
-                    <img src="https://example.com/entrepreneur-logo.png" alt="Entrepreneur" class="press-logo">
-                    <p class="press-quote">"Setting new standards in online education business growth..."</p>
-                    <a href="#" class="press-link">Read Article →</a>
-                </div>
-
-                <div class="press-card" data-aos="fade-up" data-aos-delay="200">
-                    <img src="https://example.com/inc-logo.png" alt="Inc." class="press-logo">
-                    <p class="press-quote">"The go-to experts for scaling course businesses..."</p>
-                    <a href="#" class="press-link">Read Article →</a>
-                </div>
-            </div>
-
-            <div class="section-header" data-aos="fade-up">
-                <h2>Podcast Appearances</h2>
-                <p>Listen to our latest discussions on course creation and business scaling</p>
-            </div>
-            <div class="podcast-list">
-                <div class="podcast-item" data-aos="fade-up">
-                    <img src="https://example.com/podcast1.jpg" alt="Smart Course Creator" class="podcast-icon">
-                    <div class="podcast-info">
-                        <h3>Smart Course Creator</h3>
-                        <p>Episode 127: Scaling Your First Course to $1M</p>
+        <!-- Social Media Section -->
+        <section class="social-media">
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up">Social Media Presence</h2>
+                <div class="social-grid">
+                    <div class="social-card" data-aos="fade-up">
+                        <i class="fab fa-linkedin"></i>
+                        <h3>LinkedIn</h3>
+                        <p>Follow our professional insights and industry updates</p>
+                        <a href="#" class="btn">Connect →</a>
                     </div>
-                </div>
-
-                <div class="podcast-item" data-aos="fade-up" data-aos-delay="100">
-                    <img src="https://example.com/podcast2.jpg" alt="Digital CEO" class="podcast-icon">
-                    <div class="podcast-info">
-                        <h3>Digital CEO Show</h3>
-                        <p>Building a Course Empire from Scratch</p>
+                    <div class="social-card" data-aos="fade-up" data-aos-delay="100">
+                        <i class="fab fa-twitter"></i>
+                        <h3>Twitter</h3>
+                        <p>Stay updated with our latest thoughts and discussions</p>
+                        <a href="#" class="btn">Follow →</a>
                     </div>
-                </div>
-
-                <div class="podcast-item" data-aos="fade-up">
-                    <img src="https://example.com/podcast3.jpg" alt="Online Business" class="podcast-icon">
-                    <div class="podcast-info">
-                        <h3>Online Business Mastery</h3>
-                        <p>The Future of Online Education</p>
-                    </div>
-                </div>
-
-                <div class="podcast-item" data-aos="fade-up" data-aos-delay="100">
-                    <img src="https://example.com/podcast4.jpg" alt="Course Creator" class="podcast-icon">
-                    <div class="podcast-info">
-                        <h3>Course Creator Nation</h3>
-                        <p>Advanced Marketing Strategies for Courses</p>
+                    <div class="social-card" data-aos="fade-up" data-aos-delay="200">
+                        <i class="fab fa-instagram"></i>
+                        <h3>Instagram</h3>
+                        <p>Get behind-the-scenes looks at our events and team</p>
+                        <a href="#" class="btn">Follow →</a>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    [Previous footer section from index.html]
+        <!-- Podcast Features Section -->
+        <section class="podcasts">
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up">Podcast Appearances</h2>
+                <div class="podcast-list">
+                    <div class="podcast-item" data-aos="fade-up">
+                        <div class="podcast-info">
+                            <h3>The Course Creator Show</h3>
+                            <p class="episode">Episode 42: Scaling Your Online Course Business</p>
+                            <p class="description">Discussion on effective strategies for growing your course business and reaching more students.</p>
+                            <a href="#" class="btn">Listen Now →</a>
+                        </div>
+                    </div>
+                    <div class="podcast-item" data-aos="fade-up" data-aos-delay="100">
+                        <div class="podcast-info">
+                            <h3>Digital Education Insights</h3>
+                            <p class="episode">Episode 156: The Future of Online Learning</p>
+                            <p class="description">Exploring trends and innovations in the digital education landscape.</p>
+                            <a href="#" class="btn">Listen Now →</a>
+                        </div>
+                    </div>
+                    <div class="podcast-item" data-aos="fade-up" data-aos-delay="200">
+                        <div class="podcast-info">
+                            <h3>EdTech Today</h3>
+                            <p class="episode">Episode 89: Building Engaging Online Courses</p>
+                            <p class="description">Tips and strategies for creating compelling online learning experiences.</p>
+                            <a href="#" class="btn">Listen Now →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Speaking Engagements Section -->
+        <section class="speaking">
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up">Speaking Engagements</h2>
+                <div class="events-grid">
+                    <div class="event-card" data-aos="fade-up">
+                        <div class="event-date">
+                            <span class="month">APR</span>
+                            <span class="day">15</span>
+                        </div>
+                        <div class="event-info">
+                            <h3>EdTech Conference 2025</h3>
+                            <p class="location">San Francisco, CA</p>
+                            <p class="description">Keynote: "The Evolution of Online Education"</p>
+                            <a href="#" class="btn">Learn More →</a>
+                        </div>
+                    </div>
+                    <div class="event-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="event-date">
+                            <span class="month">MAY</span>
+                            <span class="day">22</span>
+                        </div>
+                        <div class="event-info">
+                            <h3>Digital Learning Summit</h3>
+                            <p class="location">New York, NY</p>
+                            <p class="description">Panel: "Scaling Your Course Business"</p>
+                            <a href="#" class="btn">Learn More →</a>
+                        </div>
+                    </div>
+                    <div class="event-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="event-date">
+                            <span class="month">JUN</span>
+                            <span class="day">10</span>
+                        </div>
+                        <div class="event-info">
+                            <h3>Course Creator Conference</h3>
+                            <p class="location">Austin, TX</p>
+                            <p class="description">Workshop: "Building a Course Empire"</p>
+                            <a href="#" class="btn">Learn More →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact">
+            <div class="container">
+                <div class="contact-content" data-aos="fade-up">
+                    <h2>Book a Speaking Engagement</h2>
+                    <p>Interested in having us speak at your event? Get in touch with our team.</p>
+                    <a href="partner.html" class="btn">Contact Us →</a>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
