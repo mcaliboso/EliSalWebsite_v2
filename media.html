@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media & Press | ScalingWorkshops.com</title>
+    <!-- HubSpot tracking code -->
+    <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/242100136.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #fff;
+            background: #000;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Navigation Styles */
+        [Previous navigation styles from index.html]
+
+        /* Hero Section */
+        .hero {
+            padding: 160px 0 80px;
+            background: radial-gradient(circle at center, rgba(255,107,0,0.15) 0%, rgba(0,0,0,0) 70%);
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 56px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 20px;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+
+        /* Media Sections */
+        .media-section {
+            padding: 80px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .section-header p {
+            font-size: 18px;
+            opacity: 0.8;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Featured Videos */
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .video-card {
+            background: rgba(255,255,255,0.03);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .video-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .video-thumbnail {
+            position: relative;
+            padding-top: 56.25%; /* 16:9 Aspect Ratio */
+            background: #1a1a1a;
+        }
+
+        .video-thumbnail img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .video-content {
+            padding: 25px;
+        }
+
+        .video-title {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .video-meta {
+            font-size: 14px;
+            opacity: 0.7;
+        }
+
+        /* Press Features */
+        .press-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .press-card {
+            background: rgba(255,255,255,0.03);
+            border-radius: 12px;
+            padding: 30px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .press-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .press-logo {
+            height: 40px;
+            margin-bottom: 20px;
+        }
+
+        .press-quote {
+            font-style: italic;
+            margin-bottom: 20px;
+            opacity: 0.9;
+        }
+
+        .press-link {
+            color: #FF6B00;
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.3s ease;
+        }
+
+        .press-link:hover {
+            opacity: 0.8;
+        }
+
+        /* Podcast Features */
+        .podcast-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+
+        .podcast-item {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            background: rgba(255,255,255,0.03);
+            border-radius: 12px;
+            padding: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .podcast-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .podcast-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 12px;
+        }
+
+        .podcast-info h3 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .podcast-info p {
+            font-size: 14px;
+            opacity: 0.7;
+        }
+
+        @media (max-width: 1024px) {
+            .video-grid,
+            .press-grid,
+            .podcast-list {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                padding: 120px 0 60px;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .video-grid,
+            .press-grid,
+            .podcast-list {
+                grid-template-columns: 1fr;
+            }
+
+            .section-header h2 {
+                font-size: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <div class="container">
+            <a href="index.html" class="logo">ScalingWorkshops</a>
+            <div class="nav-menu">
+                <button class="mobile-menu-btn">
+                    <svg fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"/>
+                    </svg>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="workshops.html">Workshops</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="books.html">Books</a></li>
+                    <li><a href="media.html">Media</a></li>
+                    <li><a href="partner.html">Partner With Us</a></li>
+                    <li><a href="about.html">About the Firm</a></li>
+                    <li><a href="careers.html">Careers</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="container">
+            <h1 data-aos="fade-up">Media & Press Coverage</h1>
+            <p data-aos="fade-up" data-aos-delay="100">Discover our latest interviews, press features, and podcast appearances where we share insights on scaling course businesses.</p>
+        </div>
+    </section>
+
+    <section class="media-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Featured Videos</h2>
+                <p>Watch our most impactful talks and interviews on course creation and business scaling</p>
+            </div>
+            <div class="video-grid">
+                <div class="video-card" data-aos="fade-up">
+                    <div class="video-thumbnail">
+                        <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Course Creation Masterclass">
+                    </div>
+                    <div class="video-content">
+                        <h3 class="video-title">Course Creation Masterclass: From Idea to Launch</h3>
+                        <div class="video-meta">TEDx Talk • 18 minutes</div>
+                    </div>
+                </div>
+
+                <div class="video-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="video-thumbnail">
+                        <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Scaling Strategies">
+                    </div>
+                    <div class="video-content">
+                        <h3 class="video-title">Scaling Strategies for Course Creators</h3>
+                        <div class="video-meta">Business Insider • 25 minutes</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-header" data-aos="fade-up">
+                <h2>Press Features</h2>
+                <p>Read what leading publications are saying about our impact in the online education space</p>
+            </div>
+            <div class="press-grid">
+                <div class="press-card" data-aos="fade-up">
+                    <img src="https://example.com/forbes-logo.png" alt="Forbes" class="press-logo">
+                    <p class="press-quote">"Revolutionizing the way course creators scale their businesses..."</p>
+                    <a href="#" class="press-link">Read Article →</a>
+                </div>
+
+                <div class="press-card" data-aos="fade-up" data-aos-delay="100">
+                    <img src="https://example.com/entrepreneur-logo.png" alt="Entrepreneur" class="press-logo">
+                    <p class="press-quote">"Setting new standards in online education business growth..."</p>
+                    <a href="#" class="press-link">Read Article →</a>
+                </div>
+
+                <div class="press-card" data-aos="fade-up" data-aos-delay="200">
+                    <img src="https://example.com/inc-logo.png" alt="Inc." class="press-logo">
+                    <p class="press-quote">"The go-to experts for scaling course businesses..."</p>
+                    <a href="#" class="press-link">Read Article →</a>
+                </div>
+            </div>
+
+            <div class="section-header" data-aos="fade-up">
+                <h2>Podcast Appearances</h2>
+                <p>Listen to our latest discussions on course creation and business scaling</p>
+            </div>
+            <div class="podcast-list">
+                <div class="podcast-item" data-aos="fade-up">
+                    <img src="https://example.com/podcast1.jpg" alt="Smart Course Creator" class="podcast-icon">
+                    <div class="podcast-info">
+                        <h3>Smart Course Creator</h3>
+                        <p>Episode 127: Scaling Your First Course to $1M</p>
+                    </div>
+                </div>
+
+                <div class="podcast-item" data-aos="fade-up" data-aos-delay="100">
+                    <img src="https://example.com/podcast2.jpg" alt="Digital CEO" class="podcast-icon">
+                    <div class="podcast-info">
+                        <h3>Digital CEO Show</h3>
+                        <p>Building a Course Empire from Scratch</p>
+                    </div>
+                </div>
+
+                <div class="podcast-item" data-aos="fade-up">
+                    <img src="https://example.com/podcast3.jpg" alt="Online Business" class="podcast-icon">
+                    <div class="podcast-info">
+                        <h3>Online Business Mastery</h3>
+                        <p>The Future of Online Education</p>
+                    </div>
+                </div>
+
+                <div class="podcast-item" data-aos="fade-up" data-aos-delay="100">
+                    <img src="https://example.com/podcast4.jpg" alt="Course Creator" class="podcast-icon">
+                    <div class="podcast-info">
+                        <h3>Course Creator Nation</h3>
+                        <p>Advanced Marketing Strategies for Courses</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    [Previous footer section from index.html]
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+
+        // Mobile Menu Toggle
+        document.querySelector('.mobile-menu-btn').addEventListener('click', () => {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

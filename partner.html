@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partner With Us | ScalingWorkshops.com</title>
+    <!-- HubSpot tracking code -->
+    <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/242100136.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #fff;
+            background: #000;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Navigation Styles */
+        [Previous navigation styles from index.html]
+
+        /* Hero Section */
+        .hero {
+            padding: 160px 0 80px;
+            background: radial-gradient(circle at center, rgba(255,107,0,0.15) 0%, rgba(0,0,0,0) 70%);
+        }
+
+        .hero h1 {
+            font-size: 56px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 20px;
+            opacity: 0.9;
+            max-width: 600px;
+            margin-bottom: 40px;
+        }
+
+        /* Partnership Benefits */
+        .benefits {
+            padding: 80px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .section-header p {
+            font-size: 18px;
+            opacity: 0.8;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .benefit-card {
+            background: rgba(255,255,255,0.03);
+            border-radius: 12px;
+            padding: 40px 30px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .benefit-icon {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 20px;
+            background: rgba(255,107,0,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .benefit-icon svg {
+            width: 30px;
+            height: 30px;
+            color: #FF6B00;
+        }
+
+        .benefit-title {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .benefit-description {
+            opacity: 0.8;
+            font-size: 16px;
+        }
+
+        /* Partnership Types */
+        .partnership-types {
+            padding: 80px 0;
+            background: rgba(255,107,0,0.03);
+        }
+
+        .type-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+        }
+
+        .type-card {
+            background: rgba(255,255,255,0.03);
+            border-radius: 12px;
+            padding: 40px;
+        }
+
+        .type-title {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #FF6B00;
+        }
+
+        .type-description {
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .type-features {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+
+        .type-features li {
+            margin-bottom: 15px;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        .type-features li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #FF6B00;
+        }
+
+        /* Contact Form */
+        .contact-form {
+            padding: 80px 0;
+        }
+
+        .form-wrapper {
+            max-width: 600px;
+            margin: 0 auto;
+            background: rgba(255,255,255,0.03);
+            border-radius: 12px;
+            padding: 40px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: none;
+            color: #000;
+            background: #FF6B00;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background: #ff8533;
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 1024px) {
+            .benefits-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                padding: 120px 0 60px;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .benefits-grid,
+            .type-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-header h2 {
+                font-size: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <div class="container">
+            <a href="index.html" class="logo">ScalingWorkshops</a>
+            <div class="nav-menu">
+                <button class="mobile-menu-btn">
+                    <svg fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"/>
+                    </svg>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="workshops.html">Workshops</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="books.html">Books</a></li>
+                    <li><a href="media.html">Media</a></li>
+                    <li><a href="partner.html">Partner With Us</a></li>
+                    <li><a href="about.html">About the Firm</a></li>
+                    <li><a href="careers.html">Careers</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="container">
+            <h1 data-aos="fade-up">Partner With Industry Leaders</h1>
+            <p data-aos="fade-up" data-aos-delay="100">Join forces with ScalingWorkshops.com to create exceptional value for course creators worldwide. Together, we can make a bigger impact.</p>
+        </div>
+    </section>
+
+    <section class="benefits">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Partnership Benefits</h2>
+                <p>Discover the advantages of partnering with the leading course creation consulting firm</p>
+            </div>
+            <div class="benefits-grid">
+                <div class="benefit-card" data-aos="fade-up">
+                    <div class="benefit-icon">
+                        <svg fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z"/>
+                        </svg>
+                    </div>
+                    <h3 class="benefit-title">Expanded Network</h3>
+                    <p class="benefit-description">Access our vast network of successful course creators and industry experts.</p>
+                </div>
+
+                <div class="benefit-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="benefit-icon">
+                        <svg fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z"/>
+                            <path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z"/>
+                        </svg>
+                    </div>
+                    <h3 class="benefit-title">Market Insights</h3>
+                    <p class="benefit-description">Get exclusive access to market research and industry trends.</p>
+                </div>
+
+                <div class="benefit-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="benefit-icon">
+                        <svg fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"/>
+                        </svg>
+                    </div>
+                    <h3 class="benefit-title">Co-Creation</h3>
+                    <p class="benefit-description">Collaborate on new products and services for the course creator market.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="partnership-types">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Partnership Opportunities</h2>
+                <p>Choose the partnership model that best aligns with your goals</p>
+            </div>
+            <div class="type-grid">
+                <div class="type-card" data-aos="fade-up">
+                    <h3 class="type-title">Strategic Alliance</h3>
+                    <p class="type-description">Perfect for businesses looking to create long-term value through collaboration.</p>
+                    <ul class="type-features">
+                        <li>Joint marketing initiatives</li>
+                        <li>Shared resource access</li>
+                        <li>Co-branded events</li>
+                        <li>Revenue sharing opportunities</li>
+                    </ul>
+                    <a href="#contact-form" class="btn">Learn More</a>
+                </div>
+
+                <div class="type-card" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="type-title">Technology Integration</h3>
+                    <p class="type-description">For tech companies looking to integrate with our platform and reach course creators.</p>
+                    <ul class="type-features">
+                        <li>API access</li>
+                        <li>Technical support</li>
+                        <li>Joint development</li>
+                        <li>Featured partner status</li>
+                    </ul>
+                    <a href="#contact-form" class="btn">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-form" id="contact-form">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Let's Connect</h2>
+                <p>Tell us about your partnership idea and let's explore how we can work together</p>
+            </div>
+            <div class="form-wrapper" data-aos="fade-up">
+                <div id="partnership-form"></div>
+            </div>
+        </div>
+    </section>
+
+    [Previous footer section from index.html]
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+
+        // Mobile Menu Toggle
+        document.querySelector('.mobile-menu-btn').addEventListener('click', () => {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+
+        // HubSpot Form Embed
+        window.onload = function() {
+            hbspt.forms.create({
+                region: "na1",
+                portalId: "242100136",
+                formId: "YOUR-PARTNERSHIP-FORM-ID",
+                target: "#partnership-form"
+            });
+        };
+    </script>
+</body>
+</html>

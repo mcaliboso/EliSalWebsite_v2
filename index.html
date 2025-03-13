@@ -56,6 +56,76 @@
             text-decoration: none;
         }
 
+        .nav-menu {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .nav-links a:hover {
+            color: #FF6B00;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+            padding: 5px;
+        }
+
+        .mobile-menu-btn svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        @media (max-width: 1024px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: rgba(0,0,0,0.95);
+                backdrop-filter: blur(10px);
+                padding: 20px;
+                flex-direction: column;
+                gap: 15px;
+                border-top: 1px solid rgba(255,255,255,0.1);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .nav-menu {
+                gap: 15px;
+            }
+        }
+
         /* Hero Section */
         .hero {
             min-height: 100vh;
@@ -489,7 +559,23 @@
     <nav class="nav">
         <div class="container">
             <a href="#" class="logo">ScalingWorkshops</a>
-            <a href="#form" class="btn">Get Started</a>
+            <div class="nav-menu">
+                <button class="mobile-menu-btn">
+                    <svg fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"/>
+                    </svg>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="#">Workshops</a></li>
+                    <li><a href="#">Courses</a></li>
+                    <li><a href="#">Books</a></li>
+                    <li><a href="#">Media</a></li>
+                    <li><a href="#">Partner With Us</a></li>
+                    <li><a href="#">About the Firm</a></li>
+                    <li><a href="#">Careers</a></li>
+                </ul>
+                <a href="#form" class="btn">Get Started</a>
+            </div>
         </div>
     </nav>
 
@@ -665,6 +751,11 @@
         AOS.init({
             duration: 800,
             once: true
+        });
+
+        // Mobile Menu Toggle
+        document.querySelector('.mobile-menu-btn').addEventListener('click', () => {
+            document.querySelector('.nav-links').classList.toggle('active');
         });
 
         // FAQ Accordion
