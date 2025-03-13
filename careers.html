@@ -310,6 +310,62 @@
             object-fit: cover;
         }
 
+        /* Footer Styles */
+        footer {
+            padding: 80px 0;
+            background: #1a1a1a;
+            color: #fff;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+        }
+
+        .footer-col {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .footer-col h3 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #fff;
+        }
+
+        .footer-col p {
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 20px;
+        }
+
+        .footer-col ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .footer-col li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-col a:hover {
+            color: #FF6B00;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 20px;
+        }
+
         @media (max-width: 1024px) {
             .benefits-grid,
             .culture-grid {
@@ -341,6 +397,11 @@
 
             .section-header h2 {
                 font-size: 30px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
             }
         }
     </style>
