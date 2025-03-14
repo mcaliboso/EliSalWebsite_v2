@@ -18,81 +18,142 @@
 
         html {
             font-size: 16px;
-            line-height: 1.8;
+            line-height: 1.5;
         }
 
         body {
-            background: #ffffff;
-            color: #2C3E50;
-            line-height: 1.8;
+            font-family: 'Inter', sans-serif;
+            background: #000;
+            color: #fff;
         }
 
-        /* Refined Navigation */
-        .navbar {
-            background: rgba(255, 255, 255, 0.98);
-            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.04);
+        /* Layout */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Navigation */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(0, 0, 0, 0.9);
             padding: 20px 0;
         }
 
-        .nav-link {
-            color: #2C3E50;
+        .nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: #fff;
+            text-decoration: none;
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links li {
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
             font-weight: 500;
             transition: color 0.3s ease;
-            position: relative;
+            display: block;
+            padding: 5px 0;
         }
 
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: #FF6B00;
-            transition: width 0.3s ease;
+        .nav-links a:hover {
+            color: #FF6B00;
         }
 
-        .nav-link:hover::after {
-            width: 100%;
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+            padding: 0;
         }
 
-        /* Refined Hero Section */
+        .mobile-menu-btn svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: rgba(0, 0, 0, 0.9);
+                padding: 20px;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+        }
+
+        /* Hero Section */
         .hero {
-            background: linear-gradient(160deg, #ffffff 0%, #f8f9fa 100%);
-            padding: 140px 0 100px;
+            padding: 160px 0 80px;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('images/hero-bg.jpg');
+            background-size: cover;
+            background-position: center;
             text-align: center;
+            color: #fff;
         }
 
         .hero h1 {
-            color: #2C3E50;
-            font-size: 3.5rem;
-            font-weight: 700;
+            font-size: 48px;
+            font-weight: 800;
+            margin-bottom: 20px;
             line-height: 1.2;
-            margin-bottom: 30px;
         }
 
         .hero p {
-            color: #5D6D7E;
-            font-size: 1.25rem;
-            line-height: 1.8;
-            margin-bottom: 40px;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
+            font-size: 20px;
+            max-width: 600px;
+            margin: 0 auto 40px;
+            opacity: 0.9;
         }
 
-        /* Refined Workshop Cards */
-        .workshop-section {
-            padding: 100px 0;
-            background: #ffffff;
-        }
-
-        .section-title {
-            color: #2C3E50;
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 50px;
-            text-align: center;
+        /* Workshop Grid */
+        .workshops {
+            padding: 80px 0;
         }
 
         .workshop-grid {
@@ -102,201 +163,148 @@
         }
 
         .workshop-card {
-            background: #ffffff;
-            border: 1px solid rgba(0, 0, 0, 0.08);
+            background: rgba(255,255,255,0.03);
             border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
-            overflow: hidden;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            display: flex;
-            flex-direction: column;
+            padding: 40px;
+            transition: transform 0.3s ease;
         }
 
         .workshop-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
         }
 
-        .workshop-image {
-            position: relative;
-            padding-bottom: 56.25%; /* 16:9 aspect ratio */
-            overflow: hidden;
-        }
-
-        .workshop-image img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.3s ease;
-        }
-
-        .workshop-card:hover .workshop-image img {
-            transform: scale(1.05);
-        }
-
-        .workshop-content {
-            padding: 30px;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .workshop-tag {
-            display: inline-block;
-            padding: 6px 16px;
-            background: rgba(255, 107, 0, 0.1);
+        .workshop-date {
             color: #FF6B00;
-            border-radius: 20px;
-            font-size: 0.875rem;
-            font-weight: 500;
+            font-weight: 600;
             margin-bottom: 20px;
         }
 
         .workshop-title {
-            color: #2C3E50;
-            font-size: 1.75rem;
-            font-weight: 600;
+            font-size: 24px;
+            font-weight: 700;
             margin-bottom: 15px;
-            line-height: 1.3;
         }
 
         .workshop-description {
-            color: #5D6D7E;
+            opacity: 0.8;
             margin-bottom: 25px;
-            line-height: 1.8;
-            flex-grow: 1;
         }
 
         .workshop-meta {
             display: flex;
-            align-items: center;
-            gap: 20px;
-            color: #5D6D7E;
-            font-size: 0.875rem;
-            margin-bottom: 25px;
-        }
-
-        .workshop-meta i {
-            color: #FF6B00;
-        }
-
-        .workshop-footer {
-            display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-top: auto;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
         }
 
         .workshop-price {
-            color: #2C3E50;
-            font-size: 1.5rem;
-            font-weight: 600;
-        }
-
-        /* Refined CTA Section */
-        .cta-section {
-            background: #f8f9fa;
-            padding: 100px 0;
-            text-align: center;
-        }
-
-        .cta-content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .cta-title {
-            color: #2C3E50;
-            font-size: 2.5rem;
             font-weight: 700;
-            margin-bottom: 30px;
+            font-size: 20px;
         }
 
-        .cta-text {
-            color: #5D6D7E;
-            font-size: 1.25rem;
-            line-height: 1.8;
-            margin-bottom: 40px;
-        }
-
-        /* Refined Buttons */
         .btn {
-            padding: 12px 28px;
-            font-size: 1rem;
-            font-weight: 500;
-            border-radius: 8px;
-            transition: all 0.3s ease;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-        }
-
-        .btn-primary {
-            background: #FF6B00;
-            border: none;
-            color: #ffffff;
-        }
-
-        .btn-primary:hover {
-            background: #E66000;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(255, 107, 0, 0.2);
-        }
-
-        .btn-outline {
-            border: 2px solid #FF6B00;
-            color: #FF6B00;
-            background: transparent;
-        }
-
-        .btn-outline:hover {
-            background: #FF6B00;
-            color: #ffffff;
-            transform: translateY(-2px);
-        }
-
-        /* Refined Footer */
-        .footer {
-            background: #2C3E50;
-            color: #ffffff;
-            padding: 80px 0 40px;
-        }
-
-        .footer-title {
-            color: #ffffff;
-            font-size: 1.5rem;
+            display: inline-block;
+            padding: 15px 30px;
+            font-size: 16px;
             font-weight: 600;
-            margin-bottom: 25px;
-        }
-
-        .footer-link {
-            color: rgba(255, 255, 255, 0.8);
-            transition: color 0.3s ease;
-        }
-
-        .footer-link:hover {
-            color: #FF6B00;
             text-decoration: none;
+            color: #000;
+            background: #FF6B00;
+            border-radius: 4px;
+            transition: all 0.3s ease;
         }
 
-        .social-icon {
-            color: rgba(255, 255, 255, 0.8);
-            font-size: 1.5rem;
-            margin-right: 20px;
+        .btn:hover {
+            background: #ff8533;
+            transform: translateY(-2px);
+        }
+
+        /* Footer Styles */
+        footer {
+            padding: 80px 0;
+            background: #000;
+            color: #fff;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+        }
+
+        .footer-col {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .footer-col h3 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .footer-links {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .footer-links li {
+            margin-bottom: 15px;
+        }
+
+        .footer-links a {
+            color: #fff;
+            text-decoration: none;
             transition: color 0.3s ease;
         }
 
-        .social-icon:hover {
+        .footer-links a:hover {
             color: #FF6B00;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .footer-bottom {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                padding: 120px 0 60px;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .workshop-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .workshop-card {
+                padding: 30px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-col {
+                margin-bottom: 40px;
+            }
         }
     </style>
 </head>
 <body>
-    <nav class="navbar">
+    <nav class="nav">
         <div class="container">
             <a href="index.html" class="logo">ScalingWorkshops</a>
             <div class="nav-menu">
@@ -306,13 +314,13 @@
                     </svg>
                 </button>
                 <ul class="nav-links">
-                    <li><a href="workshops.html" class="nav-link">Workshops</a></li>
-                    <li><a href="courses.html" class="nav-link">Courses</a></li>
-                    <li><a href="books.html" class="nav-link">Books</a></li>
-                    <li><a href="media.html" class="nav-link">Media</a></li>
-                    <li><a href="partner.html" class="nav-link">Partner With Us</a></li>
-                    <li><a href="about.html" class="nav-link">About the Firm</a></li>
-                    <li><a href="careers.html" class="nav-link">Careers</a></li>
+                    <li><a href="workshops.html">Workshops</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="books.html">Books</a></li>
+                    <li><a href="media.html">Media</a></li>
+                    <li><a href="partner.html">Partner With Us</a></li>
+                    <li><a href="about.html">About the Firm</a></li>
+                    <li><a href="careers.html">Careers</a></li>
                 </ul>
             </div>
         </div>
@@ -325,112 +333,91 @@
         </div>
     </section>
 
-    <section class="workshop-section">
+    <section class="workshops">
         <div class="container">
-            <h2 class="section-title">Upcoming Workshops</h2>
             <div class="workshop-grid">
                 <div class="workshop-card" data-aos="fade-up">
-                    <div class="workshop-image">
-                        <img src="https://picsum.photos/200/300" alt="Workshop Image">
-                    </div>
-                    <div class="workshop-content">
-                        <div class="workshop-tag">March 25-26, 2025</div>
-                        <h3 class="workshop-title">Course Creation Mastery</h3>
-                        <p class="workshop-description">A two-day intensive workshop covering everything from course design to pricing strategy. Learn how to create high-value courses that sell.</p>
-                        <div class="workshop-meta">
-                            <div class="workshop-price">$2,997</div>
-                            <a href="#" class="btn btn-primary">Register Now</a>
-                        </div>
+                    <div class="workshop-date">March 25-26, 2025</div>
+                    <h3 class="workshop-title">Course Creation Mastery</h3>
+                    <p class="workshop-description">A two-day intensive workshop covering everything from course design to pricing strategy. Learn how to create high-value courses that sell.</p>
+                    <div class="workshop-meta">
+                        <div class="workshop-price">$2,997</div>
+                        <a href="#" class="btn">Register Now</a>
                     </div>
                 </div>
 
                 <div class="workshop-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="workshop-image">
-                        <img src="https://picsum.photos/200/301" alt="Workshop Image">
-                    </div>
-                    <div class="workshop-content">
-                        <div class="workshop-tag">April 15-16, 2025</div>
-                        <h3 class="workshop-title">Sales Automation Summit</h3>
-                        <p class="workshop-description">Master the art of automated sales systems. Build funnels that convert and scale your course business without hiring a sales team.</p>
-                        <div class="workshop-meta">
-                            <div class="workshop-price">$3,497</div>
-                            <a href="#" class="btn btn-primary">Register Now</a>
-                        </div>
+                    <div class="workshop-date">April 15-16, 2025</div>
+                    <h3 class="workshop-title">Sales Automation Summit</h3>
+                    <p class="workshop-description">Master the art of automated sales systems. Build funnels that convert and scale your course business without hiring a sales team.</p>
+                    <div class="workshop-meta">
+                        <div class="workshop-price">$3,497</div>
+                        <a href="#" class="btn">Register Now</a>
                     </div>
                 </div>
 
                 <div class="workshop-card" data-aos="fade-up">
-                    <div class="workshop-image">
-                        <img src="https://picsum.photos/200/302" alt="Workshop Image">
-                    </div>
-                    <div class="workshop-content">
-                        <div class="workshop-tag">May 10-11, 2025</div>
-                        <h3 class="workshop-title">Marketing Optimization</h3>
-                        <p class="workshop-description">Learn advanced marketing strategies specifically for course creators. Optimize your campaigns and reduce acquisition costs.</p>
-                        <div class="workshop-meta">
-                            <div class="workshop-price">$2,997</div>
-                            <a href="#" class="btn btn-primary">Register Now</a>
-                        </div>
+                    <div class="workshop-date">May 10-11, 2025</div>
+                    <h3 class="workshop-title">Marketing Optimization</h3>
+                    <p class="workshop-description">Learn advanced marketing strategies specifically for course creators. Optimize your campaigns and reduce acquisition costs.</p>
+                    <div class="workshop-meta">
+                        <div class="workshop-price">$2,997</div>
+                        <a href="#" class="btn">Register Now</a>
                     </div>
                 </div>
 
                 <div class="workshop-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="workshop-image">
-                        <img src="https://picsum.photos/200/303" alt="Workshop Image">
-                    </div>
-                    <div class="workshop-content">
-                        <div class="workshop-tag">June 5-6, 2025</div>
-                        <h3 class="workshop-title">Scaling to 8-Figures</h3>
-                        <p class="workshop-description">Advanced strategies for established course creators. Learn how to scale your business while maintaining profitability and quality.</p>
-                        <div class="workshop-meta">
-                            <div class="workshop-price">$4,997</div>
-                            <a href="#" class="btn btn-primary">Register Now</a>
-                        </div>
+                    <div class="workshop-date">June 5-6, 2025</div>
+                    <h3 class="workshop-title">Scaling to 8-Figures</h3>
+                    <p class="workshop-description">Advanced strategies for established course creators. Learn how to scale your business while maintaining profitability and quality.</p>
+                    <div class="workshop-meta">
+                        <div class="workshop-price">$4,997</div>
+                        <a href="#" class="btn">Register Now</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="footer">
+    <footer>
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
-                    <h3 class="footer-title">ScalingWorkshops</h3>
+                    <h3>ScalingWorkshops</h3>
                     <p>Helping course creators scale to $5M+ in net profit through proven strategies and systems.</p>
                 </div>
                 <div class="footer-col">
-                    <h3 class="footer-title">Company</h3>
+                    <h3>Company</h3>
                     <ul class="footer-links">
-                        <li><a href="index.html" class="footer-link">Home</a></li>
-                        <li><a href="workshops.html" class="footer-link">Workshops</a></li>
-                        <li><a href="courses.html" class="footer-link">Courses</a></li>
-                        <li><a href="books.html" class="footer-link">Books</a></li>
-                        <li><a href="media.html" class="footer-link">Media</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="workshops.html">Workshops</a></li>
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="books.html">Books</a></li>
+                        <li><a href="media.html">Media</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h3 class="footer-title">Resources</h3>
+                    <h3>Resources</h3>
                     <ul class="footer-links">
-                        <li><a href="partner.html" class="footer-link">Partner With Us</a></li>
-                        <li><a href="about.html" class="footer-link">About the Firm</a></li>
-                        <li><a href="careers.html" class="footer-link">Careers</a></li>
+                        <li><a href="partner.html">Partner With Us</a></li>
+                        <li><a href="about.html">About the Firm</a></li>
+                        <li><a href="careers.html">Careers</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h3 class="footer-title">Contact</h3>
+                    <h3>Contact</h3>
                     <ul class="footer-links">
-                        <li><a href="mailto:eli@scalingworkshops.com" class="footer-link">eli@scalingworkshops.com</a></li>
-                        <li><a href="tel:+1234567890" class="footer-link">+1 (234) 567-890</a></li>
+                        <li><a href="mailto:eli@scalingworkshops.com">eli@scalingworkshops.com</a></li>
+                        <li><a href="tel:+1234567890">+1 (234) 567-890</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2025 ScalingWorkshops.com. All rights reserved.</p>
                 <div class="social-links">
-                    <a href="https://www.linkedin.com" target="_blank" class="social-icon">LinkedIn</a>
-                    <a href="https://twitter.com" target="_blank" class="social-icon">Twitter</a>
-                    <a href="https://www.instagram.com" target="_blank" class="social-icon">Instagram</a>
+                    <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
+                    <a href="https://twitter.com" target="_blank">Twitter</a>
+                    <a href="https://www.instagram.com" target="_blank">Instagram</a>
                 </div>
             </div>
         </div>
