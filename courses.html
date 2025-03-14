@@ -133,19 +133,19 @@
         }
 
         .hero h1 {
-            font-size: 56px;
+            font-size: 48px;
             font-weight: 800;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
             line-height: 1.2;
             color: #1A1A1A;
         }
 
         .hero p {
             font-size: 20px;
-            opacity: 0.9;
-            max-width: 700px;
-            margin: 0 auto 40px;
+            margin-bottom: 40px;
             color: #4A4A4A;
+            max-width: 700px;
+            margin: 0 auto 50px;
         }
 
         /* Course Grid */
@@ -154,10 +154,30 @@
             background: #fff;
         }
 
+        .section-header {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 80px;
+        }
+
+        .section-header h2 {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 25px;
+            color: #1A1A1A;
+        }
+
+        .section-header p {
+            font-size: 18px;
+            color: #4A4A4A;
+            line-height: 1.6;
+        }
+
         .course-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 40px;
+            margin-bottom: 80px;
         }
 
         .course-card {
@@ -177,18 +197,11 @@
         .course-image {
             width: 100%;
             height: 240px;
-            overflow: hidden;
-            position: relative;
-        }
-
-        .course-image img {
-            width: 100%;
-            height: 100%;
             object-fit: cover;
         }
 
         .course-content {
-            padding: 30px;
+            padding: 40px;
         }
 
         .course-tag {
@@ -206,7 +219,7 @@
             font-size: 24px;
             font-weight: 700;
             color: #1A1A1A;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
             line-height: 1.3;
         }
 
@@ -219,16 +232,26 @@
         .course-meta {
             display: flex;
             align-items: center;
-            justify-content: space-between;
-            margin-top: 30px;
-            padding-top: 20px;
-            border-top: 1px solid rgba(0,0,0,0.1);
+            gap: 20px;
+            margin-bottom: 30px;
+            color: #4A4A4A;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .meta-item i {
+            color: #FF6B00;
         }
 
         .course-price {
             font-size: 24px;
             font-weight: 700;
             color: #1A1A1A;
+            margin-bottom: 30px;
         }
 
         .btn {
@@ -252,6 +275,191 @@
             background: transparent;
             color: #FF6B00;
             box-shadow: 0 10px 20px rgba(255, 107, 0, 0.2);
+        }
+
+        /* Featured Course */
+        .featured-course {
+            padding: 100px 0;
+            background: #F8F9FA;
+            border-top: 1px solid rgba(0,0,0,0.1);
+        }
+
+        .featured-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .featured-image {
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .featured-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .featured-content {
+            padding-left: 40px;
+        }
+
+        .featured-content h2 {
+            font-size: 36px;
+            font-weight: 700;
+            color: #1A1A1A;
+            margin-bottom: 30px;
+            line-height: 1.2;
+        }
+
+        .featured-content p {
+            color: #4A4A4A;
+            margin-bottom: 40px;
+            line-height: 1.6;
+        }
+
+        .featured-meta {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .featured-stat {
+            text-align: center;
+            padding: 30px;
+            background: #fff;
+            border: 1px solid rgba(0,0,0,0.1);
+            border-radius: 20px;
+        }
+
+        .stat-number {
+            font-size: 36px;
+            font-weight: 700;
+            color: #FF6B00;
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            color: #4A4A4A;
+            font-weight: 500;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            padding: 100px 0;
+            background: #fff;
+            border-top: 1px solid rgba(0,0,0,0.1);
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+
+        .testimonial-card {
+            background: #F8F9FA;
+            border: 1px solid rgba(0,0,0,0.1);
+            border-radius: 20px;
+            padding: 40px;
+            transition: all 0.3s ease;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(255, 107, 0, 0.3);
+            box-shadow: 0 20px 40px rgba(255, 107, 0, 0.1);
+        }
+
+        .testimonial-content {
+            color: #4A4A4A;
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .author-image {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+
+        .author-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .author-info h4 {
+            font-size: 18px;
+            font-weight: 700;
+            color: #1A1A1A;
+            margin-bottom: 5px;
+        }
+
+        .author-info p {
+            color: #4A4A4A;
+            font-size: 14px;
+        }
+
+        @media (max-width: 1024px) {
+            .course-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .featured-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .featured-content {
+                padding-left: 0;
+            }
+
+            .testimonial-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                padding: 120px 0 80px;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero p {
+                font-size: 18px;
+            }
+
+            .course-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .course-content {
+                padding: 30px;
+            }
+
+            .featured-meta {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .testimonial-grid {
+                grid-template-columns: 1fr;
+            }
         }
 
         /* Footer Styles */
@@ -314,34 +522,6 @@
         .footer-bottom p {
             color: #4A4A4A;
         }
-
-        @media (max-width: 1024px) {
-            .course-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        @media (max-width: 768px) {
-            .hero {
-                padding: 120px 0 60px;
-            }
-
-            .hero h1 {
-                font-size: 40px;
-            }
-
-            .course-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .footer-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .course-content {
-                padding: 20px;
-            }
-        }
     </style>
 </head>
 <body>
@@ -376,6 +556,10 @@
 
     <section class="courses">
         <div class="container">
+            <div class="section-header">
+                <h2>Our Courses</h2>
+                <p>Learn the skills you need to succeed in the course creation industry.</p>
+            </div>
             <div class="course-grid">
                 <div class="course-card" data-aos="fade-up">
                     <div class="course-image">
