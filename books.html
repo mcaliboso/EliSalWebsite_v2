@@ -71,6 +71,7 @@
             text-decoration: none;
             font-weight: 500;
             transition: color 0.3s ease;
+            font-size: 16px;
         }
 
         .nav-links a:hover {
@@ -83,6 +84,13 @@
             border: none;
             color: #fff;
             cursor: pointer;
+            padding: 8px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-menu-btn:hover {
+            background: rgba(255, 107, 0, 0.1);
         }
 
         .mobile-menu-btn svg {
@@ -101,14 +109,43 @@
                 top: 100%;
                 left: 0;
                 right: 0;
-                background: rgba(0, 0, 0, 0.9);
+                background: rgba(0, 0, 0, 0.95);
+                backdrop-filter: blur(10px);
                 padding: 20px;
                 flex-direction: column;
                 align-items: center;
+                gap: 20px;
+                border-top: 1px solid rgba(255, 255, 255, 0.1);
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
             }
 
             .nav-links.active {
                 display: flex;
+                animation: slideDown 0.3s ease forwards;
+            }
+
+            @keyframes slideDown {
+                from {
+                    opacity: 0;
+                    transform: translateY(-10px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            .nav-links a {
+                font-size: 18px;
+                padding: 10px 0;
+                width: 100%;
+                text-align: center;
+                border-radius: 8px;
+                transition: all 0.3s ease;
+            }
+
+            .nav-links a:hover {
+                background: rgba(255, 107, 0, 0.1);
             }
         }
 
@@ -140,10 +177,59 @@
             color: rgba(255, 255, 255, 0.9);
         }
 
+        .hero-stats {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 800px;
+            margin: 40px auto 0;
+            gap: 20px;
+        }
+
+        .stat-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 36px;
+            font-weight: 700;
+            color: #FF6B00;
+            line-height: 1;
+        }
+
+        .stat-label {
+            font-size: 16px;
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.4;
+        }
+
         /* Books Section */
         .books {
             padding: 80px 0;
             background: linear-gradient(180deg, #000 0%, #111 100%);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-header h2 {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .section-header p {
+            font-size: 18px;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+            color: rgba(255, 255, 255, 0.8);
         }
 
         .book-grid {
@@ -217,6 +303,27 @@
             line-height: 1.8;
         }
 
+        .feature-list {
+            list-style: none;
+            margin: 20px 0 30px;
+            padding: 0;
+        }
+
+        .feature-list li {
+            font-size: 16px;
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 12px;
+            padding-left: 24px;
+            position: relative;
+        }
+
+        .feature-list li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #FF6B00;
+        }
+
         .book-meta {
             display: flex;
             justify-content: space-between;
@@ -258,6 +365,18 @@
             .hero h1 {
                 font-size: 48px;
             }
+
+            .hero-stats {
+                padding: 0 20px;
+            }
+
+            .stat-number {
+                font-size: 32px;
+            }
+
+            .stat-label {
+                font-size: 14px;
+            }
         }
 
         @media (max-width: 768px) {
@@ -275,6 +394,25 @@
 
             .hero h1 {
                 font-size: 36px;
+                padding: 0 20px;
+            }
+
+            .hero p {
+                font-size: 18px;
+                padding: 0 20px;
+            }
+
+            .hero-stats {
+                flex-direction: column;
+                gap: 30px;
+            }
+
+            .stat-number {
+                font-size: 36px;
+            }
+
+            .stat-label {
+                font-size: 16px;
             }
 
             .book-title {
@@ -285,6 +423,18 @@
                 flex-direction: column;
                 gap: 20px;
                 align-items: flex-start;
+            }
+
+            .section-header {
+                padding: 0 20px;
+            }
+
+            .section-header h2 {
+                font-size: 32px;
+            }
+
+            .section-header p {
+                font-size: 16px;
             }
         }
 
@@ -370,25 +520,49 @@
 
     <section class="hero">
         <div class="container">
-            <h1 data-aos="fade-up">Essential Reading for Course Creators</h1>
-            <p data-aos="fade-up" data-aos-delay="100">Dive deep into proven strategies and frameworks through our collection of best-selling books.</p>
+            <h1 data-aos="fade-up">Battle-Tested Systems For Course Creators</h1>
+            <p data-aos="fade-up" data-aos-delay="100">We don't teach theory. We provide proven frameworks that have helped 500+ course creators build predictable 7-figure businesses. No fluff, just results.</p>
+            <div class="hero-stats" data-aos="fade-up" data-aos-delay="200">
+                <div class="stat-item">
+                    <div class="stat-number">500+</div>
+                    <div class="stat-label">Course Creators Scaled</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">$250M+</div>
+                    <div class="stat-label">Student Revenue Generated</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">4.9★</div>
+                    <div class="stat-label">From 2,000+ Reviews</div>
+                </div>
+            </div>
         </div>
     </section>
 
     <section class="books">
         <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Master The Full Stack</h2>
+                <p>Most course creators focus on just content creation. But to build a real empire, you need to master the entire stack.</p>
+            </div>
             <div class="book-grid">
                 <div class="book-card" data-aos="fade-up">
                     <div class="book-image">
                         <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="The Course Empire">
                     </div>
                     <div class="book-content">
-                        <span class="book-tag">Best Seller</span>
+                        <span class="book-tag">Foundation System</span>
                         <h3 class="book-title">The Course Empire</h3>
-                        <p class="book-description">The definitive guide to building a sustainable and profitable course business. Learn the exact systems and strategies we've used to help hundreds of course creators scale to 7-figures and beyond.</p>
+                        <p class="book-description">Transform from a struggling course creator into a systematic empire builder. Master the exact frameworks we've used to help everyday people build predictable 7-figure course businesses. You'll learn:</p>
+                        <ul class="feature-list">
+                            <li>Scientific niche selection & validation</li>
+                            <li>High-ticket course development</li>
+                            <li>Automated marketing systems</li>
+                            <li>Sales psychology & frameworks</li>
+                        </ul>
                         <div class="book-meta">
                             <div class="book-price">$24.99</div>
-                            <a href="#" class="btn">Buy Now</a>
+                            <a href="#" class="btn">Get The System</a>
                         </div>
                     </div>
                 </div>
@@ -398,12 +572,18 @@
                         <img src="https://images.unsplash.com/photo-1589998059171-988d887df646?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Course Marketing Mastery">
                     </div>
                     <div class="book-content">
-                        <span class="book-tag">New Release</span>
+                        <span class="book-tag">Marketing Blueprint</span>
                         <h3 class="book-title">Course Marketing Mastery</h3>
-                        <p class="book-description">A comprehensive guide to marketing your online courses. From social media strategies to email marketing campaigns, learn how to attract and convert your ideal students.</p>
+                        <p class="book-description">Stop gambling with your marketing budget. Learn our scientific system for generating a predictable flow of qualified leads who are ready to invest in your course. You'll master:</p>
+                        <ul class="feature-list">
+                            <li>High-ROI traffic generation</li>
+                            <li>Automated lead nurturing</li>
+                            <li>Conversion optimization</li>
+                            <li>Analytics & optimization</li>
+                        </ul>
                         <div class="book-meta">
                             <div class="book-price">$19.99</div>
-                            <a href="#" class="btn">Pre-order Now</a>
+                            <a href="#" class="btn">Master Marketing</a>
                         </div>
                     </div>
                 </div>
@@ -413,12 +593,18 @@
                         <img src="https://images.unsplash.com/photo-1541963463532-d68292c34b19?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Scaling Systems">
                     </div>
                     <div class="book-content">
-                        <span class="book-tag">Advanced</span>
+                        <span class="book-tag">Scale Framework</span>
                         <h3 class="book-title">Scaling Systems</h3>
-                        <p class="book-description">The ultimate playbook for scaling your course business. Learn how to build systems and processes that allow you to scale without sacrificing quality or burning out.</p>
+                        <p class="book-description">Turn your chaotic course business into a systematic machine. Deploy the exact processes that have helped our clients scale to $5M+ without working 80-hour weeks. You'll implement:</p>
+                        <ul class="feature-list">
+                            <li>Operational automation</li>
+                            <li>Team building & management</li>
+                            <li>Financial optimization</li>
+                            <li>Strategic partnerships</li>
+                        </ul>
                         <div class="book-meta">
                             <div class="book-price">$29.99</div>
-                            <a href="#" class="btn">Buy Now</a>
+                            <a href="#" class="btn">Scale Your Empire</a>
                         </div>
                     </div>
                 </div>
@@ -428,12 +614,18 @@
                         <img src="https://images.unsplash.com/photo-1543002588-bfa74002ed7e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Course Creator's Mindset">
                     </div>
                     <div class="book-content">
-                        <span class="book-tag">Personal Development</span>
+                        <span class="book-tag">Mental Framework</span>
                         <h3 class="book-title">Course Creator's Mindset</h3>
-                        <p class="book-description">Develop the mindset needed to succeed in the competitive world of online education. Learn how to overcome common obstacles and maintain peak performance.</p>
+                        <p class="book-description">Your business can only grow as fast as your psychology allows. Master the proven mental frameworks used by top course creators to maintain peak performance. You'll develop:</p>
+                        <ul class="feature-list">
+                            <li>Decision-making clarity</li>
+                            <li>Peak performance habits</li>
+                            <li>Strategic thinking</li>
+                            <li>Execution discipline</li>
+                        </ul>
                         <div class="book-meta">
                             <div class="book-price">$21.99</div>
-                            <a href="#" class="btn">Buy Now</a>
+                            <a href="#" class="btn">Upgrade Your Mind</a>
                         </div>
                     </div>
                 </div>
@@ -446,10 +638,10 @@
             <div class="footer-grid">
                 <div class="footer-col">
                     <h3>ScalingWorkshops</h3>
-                    <p>Helping course creators scale to $5M+ in net profit through proven strategies and systems.</p>
+                    <p>Helping course creators scale to $5M+ in net profit through proven systems and frameworks. No theory, just results.</p>
                 </div>
                 <div class="footer-col">
-                    <h3>Company</h3>
+                    <h3>Resources</h3>
                     <ul class="footer-links">
                         <li><a href="index.html">Home</a></li>
                         <li><a href="workshops.html">Workshops</a></li>
@@ -459,28 +651,27 @@
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h3>Resources</h3>
+                    <h3>Scale With Us</h3>
                     <ul class="footer-links">
                         <li><a href="partner.html">Partner With Us</a></li>
                         <li><a href="about.html">About the Firm</a></li>
-                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="careers.html">Join Our Team</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h3>Contact</h3>
+                    <h3>Connect</h3>
                     <ul class="footer-links">
-                        <li><a href="mailto:contact@scalingworkshops.com">contact@scalingworkshops.com</a></li>
-                        <li><a href="tel:+1234567890">+1 (234) 567-890</a></li>
+                        <li><a href="mailto:eli@scalingworkshops.com">eli@scalingworkshops.com</a></li>
                     </ul>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
+                        <a href="https://twitter.com" target="_blank">Twitter</a>
+                        <a href="https://www.instagram.com" target="_blank">Instagram</a>
+                    </div>
                 </div>
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2025 ScalingWorkshops.com. All rights reserved.</p>
-                <div class="social-links">
-                    <a href="#" target="_blank">LinkedIn</a>
-                    <a href="#" target="_blank">Twitter</a>
-                    <a href="#" target="_blank">Instagram</a>
-                </div>
             </div>
         </div>
     </footer>
