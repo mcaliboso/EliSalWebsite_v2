@@ -305,10 +305,10 @@
             box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
         }
 
-        .podcast-image {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
+        .podcast-header {
+            padding: 30px 30px 20px;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+            background: #f7f7f7;
         }
 
         .podcast-content {
@@ -341,8 +341,22 @@
             gap: 5px;
         }
 
+        .podcast-platform-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 12px;
+            background: #fff;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            color: #1A1A1A;
+            border: 1px solid rgba(0,0,0,0.1);
+            margin-bottom: 15px;
+        }
+
         .podcast-title {
-            font-size: 20px;
+            font-size: 24px;
             font-weight: 700;
             color: #1A1A1A;
             margin-bottom: 12px;
@@ -365,7 +379,7 @@
             border-top: 1px solid rgba(0,0,0,0.1);
         }
 
-        .podcast-platform {
+        .podcast-host {
             display: flex;
             align-items: center;
             gap: 8px;
@@ -758,7 +772,13 @@
                 <h2 class="section-title" data-aos="fade-up">Podcast Appearances</h2>
                 <div class="podcast-grid">
                     <div class="podcast-card" data-aos="fade-up">
-                        <img src="images/podcast1.jpg" alt="Tech Talks Podcast" class="podcast-image">
+                        <div class="podcast-header">
+                            <div class="podcast-platform-badge">
+                                <i class="fas fa-podcast"></i>
+                                Tech Talks
+                            </div>
+                            <h3 class="podcast-title">The Future of AI Development</h3>
+                        </div>
                         <div class="podcast-content">
                             <div class="podcast-meta">
                                 <span class="podcast-date">
@@ -770,12 +790,11 @@
                                     45 min
                                 </span>
                             </div>
-                            <h3 class="podcast-title">The Future of AI Development</h3>
                             <p class="podcast-description">Join us as we discuss the evolving landscape of AI development and its impact on modern software engineering practices.</p>
                             <div class="podcast-footer">
-                                <div class="podcast-platform">
-                                    <i class="fas fa-podcast"></i>
-                                    Tech Talks
+                                <div class="podcast-host">
+                                    <i class="far fa-user"></i>
+                                    Hosted by Sarah Chen
                                 </div>
                                 <a href="#" class="listen-button">
                                     <i class="fas fa-play"></i>
@@ -786,7 +805,13 @@
                     </div>
 
                     <div class="podcast-card" data-aos="fade-up" data-aos-delay="100">
-                        <img src="images/podcast2.jpg" alt="Developer Stories" class="podcast-image">
+                        <div class="podcast-header">
+                            <div class="podcast-platform-badge">
+                                <i class="fas fa-podcast"></i>
+                                Developer Stories
+                            </div>
+                            <h3 class="podcast-title">Building Scalable Solutions</h3>
+                        </div>
                         <div class="podcast-content">
                             <div class="podcast-meta">
                                 <span class="podcast-date">
@@ -798,12 +823,11 @@
                                     60 min
                                 </span>
                             </div>
-                            <h3 class="podcast-title">Building Scalable Solutions</h3>
                             <p class="podcast-description">Discover the key principles and best practices for creating scalable software solutions in today's dynamic tech landscape.</p>
                             <div class="podcast-footer">
-                                <div class="podcast-platform">
-                                    <i class="fas fa-podcast"></i>
-                                    Developer Stories
+                                <div class="podcast-host">
+                                    <i class="far fa-user"></i>
+                                    Hosted by Mike Johnson
                                 </div>
                                 <a href="#" class="listen-button">
                                     <i class="fas fa-play"></i>
@@ -814,7 +838,13 @@
                     </div>
 
                     <div class="podcast-card" data-aos="fade-up" data-aos-delay="200">
-                        <img src="images/podcast3.jpg" alt="Code & Coffee" class="podcast-image">
+                        <div class="podcast-header">
+                            <div class="podcast-platform-badge">
+                                <i class="fas fa-podcast"></i>
+                                Code & Coffee
+                            </div>
+                            <h3 class="podcast-title">Modern Development Workflows</h3>
+                        </div>
                         <div class="podcast-content">
                             <div class="podcast-meta">
                                 <span class="podcast-date">
@@ -826,12 +856,11 @@
                                     30 min
                                 </span>
                             </div>
-                            <h3 class="podcast-title">Modern Development Workflows</h3>
                             <p class="podcast-description">Learn about the latest tools and techniques that are revolutionizing software development workflows.</p>
                             <div class="podcast-footer">
-                                <div class="podcast-platform">
-                                    <i class="fas fa-podcast"></i>
-                                    Code & Coffee
+                                <div class="podcast-host">
+                                    <i class="far fa-user"></i>
+                                    Hosted by Alex Rivera
                                 </div>
                                 <a href="#" class="listen-button">
                                     <i class="fas fa-play"></i>
