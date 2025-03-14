@@ -780,6 +780,203 @@
             0% { background-position: -1000px 0; }
             100% { background-position: 1000px 0; }
         }
+
+        /* Professional Styling */
+        body {
+            background: #ffffff;
+            color: #2C3E50;
+            line-height: 1.8;
+        }
+
+        /* Refined Navigation */
+        .navbar {
+            background: rgba(255, 255, 255, 0.98);
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.04);
+            padding: 20px 0;
+        }
+
+        .nav-link {
+            color: #2C3E50;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #FF6B00;
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        /* Refined Hero Section */
+        .hero {
+            background: linear-gradient(160deg, #ffffff 0%, #f8f9fa 100%);
+            padding: 140px 0 100px;
+        }
+
+        .hero h1 {
+            color: #2C3E50;
+            font-size: 3.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 30px;
+        }
+
+        .hero p {
+            color: #5D6D7E;
+            font-size: 1.25rem;
+            line-height: 1.8;
+            margin-bottom: 40px;
+        }
+
+        /* Refined Cards */
+        .card {
+            background: #ffffff;
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+        }
+
+        .card-title {
+            color: #2C3E50;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .card-text {
+            color: #5D6D7E;
+            line-height: 1.8;
+        }
+
+        /* Refined Buttons */
+        .btn {
+            padding: 12px 28px;
+            font-size: 1rem;
+            font-weight: 500;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background: #FF6B00;
+            border: none;
+            color: #ffffff;
+        }
+
+        .btn-primary:hover {
+            background: #E66000;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 107, 0, 0.2);
+        }
+
+        .btn-outline {
+            border: 2px solid #FF6B00;
+            color: #FF6B00;
+            background: transparent;
+        }
+
+        .btn-outline:hover {
+            background: #FF6B00;
+            color: #ffffff;
+            transform: translateY(-2px);
+        }
+
+        /* Refined Features Section */
+        .features {
+            padding: 100px 0;
+            background: #ffffff;
+        }
+
+        .section-title {
+            color: #2C3E50;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 50px;
+            text-align: center;
+        }
+
+        .feature-icon {
+            color: #FF6B00;
+            font-size: 2.5rem;
+            margin-bottom: 25px;
+        }
+
+        /* Refined Testimonials */
+        .testimonials {
+            background: #f8f9fa;
+            padding: 100px 0;
+        }
+
+        .testimonial-card {
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+        }
+
+        .testimonial-text {
+            color: #2C3E50;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            font-style: italic;
+            margin-bottom: 25px;
+        }
+
+        .testimonial-author {
+            color: #5D6D7E;
+            font-weight: 600;
+        }
+
+        /* Refined Footer */
+        .footer {
+            background: #2C3E50;
+            color: #ffffff;
+            padding: 80px 0 40px;
+        }
+
+        .footer-title {
+            color: #ffffff;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 25px;
+        }
+
+        .footer-link {
+            color: rgba(255, 255, 255, 0.8);
+            transition: color 0.3s ease;
+        }
+
+        .footer-link:hover {
+            color: #FF6B00;
+            text-decoration: none;
+        }
+
+        .social-icon {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1.5rem;
+            margin-right: 20px;
+            transition: color 0.3s ease;
+        }
+
+        .social-icon:hover {
+            color: #FF6B00;
+        }
     </style>
 </head>
 <body>

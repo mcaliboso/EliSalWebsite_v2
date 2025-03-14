@@ -431,26 +431,340 @@
                 gap: 40px;
             }
         }
+
+        /* Professional Styling */
+        body {
+            background: #ffffff;
+            color: #2C3E50;
+            line-height: 1.8;
+        }
+
+        /* Refined Navigation */
+        .navbar {
+            background: rgba(255, 255, 255, 0.98);
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.04);
+            padding: 20px 0;
+        }
+
+        .nav-link {
+            color: #2C3E50;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #FF6B00;
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        /* Refined Hero Section */
+        .hero {
+            background: linear-gradient(160deg, #ffffff 0%, #f8f9fa 100%);
+            padding: 140px 0 100px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            color: #2C3E50;
+            font-size: 3.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 30px;
+        }
+
+        .hero p {
+            color: #5D6D7E;
+            font-size: 1.25rem;
+            line-height: 1.8;
+            margin-bottom: 40px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Refined Career Section */
+        .career-section {
+            padding: 100px 0;
+            background: #ffffff;
+        }
+
+        .section-title {
+            color: #2C3E50;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 50px;
+            text-align: center;
+        }
+
+        .career-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+        }
+
+        .career-card {
+            background: #ffffff;
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            padding: 40px;
+        }
+
+        .career-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+        }
+
+        .career-tag {
+            display: inline-block;
+            padding: 6px 16px;
+            background: rgba(255, 107, 0, 0.1);
+            color: #FF6B00;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+
+        .career-title {
+            color: #2C3E50;
+            font-size: 1.75rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+
+        .career-description {
+            color: #5D6D7E;
+            margin-bottom: 25px;
+            line-height: 1.8;
+        }
+
+        .career-meta {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            color: #5D6D7E;
+            font-size: 0.875rem;
+            margin-bottom: 25px;
+        }
+
+        .career-meta i {
+            color: #FF6B00;
+        }
+
+        .career-requirements {
+            margin: 25px 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .career-requirements li {
+            color: #5D6D7E;
+            margin-bottom: 12px;
+            padding-left: 24px;
+            position: relative;
+        }
+
+        .career-requirements li::before {
+            content: '•';
+            color: #FF6B00;
+            position: absolute;
+            left: 0;
+        }
+
+        /* Refined Values Section */
+        .values-section {
+            background: #f8f9fa;
+            padding: 100px 0;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+
+        .value-card {
+            background: #ffffff;
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+            padding: 30px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .value-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+        }
+
+        .value-icon {
+            color: #FF6B00;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .value-title {
+            color: #2C3E50;
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .value-description {
+            color: #5D6D7E;
+            line-height: 1.8;
+        }
+
+        /* Refined Application Form */
+        .application-section {
+            padding: 100px 0;
+            background: #ffffff;
+        }
+
+        .application-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-label {
+            display: block;
+            color: #2C3E50;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            font-size: 1rem;
+            color: #2C3E50;
+            transition: all 0.3s ease;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: #FF6B00;
+            box-shadow: 0 0 0 3px rgba(255, 107, 0, 0.1);
+        }
+
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        /* Refined Buttons */
+        .btn {
+            padding: 12px 28px;
+            font-size: 1rem;
+            font-weight: 500;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: #FF6B00;
+            border: none;
+            color: #ffffff;
+        }
+
+        .btn-primary:hover {
+            background: #E66000;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 107, 0, 0.2);
+        }
+
+        .btn-outline {
+            border: 2px solid #FF6B00;
+            color: #FF6B00;
+            background: transparent;
+        }
+
+        .btn-outline:hover {
+            background: #FF6B00;
+            color: #ffffff;
+            transform: translateY(-2px);
+        }
+
+        /* Refined Footer */
+        .footer {
+            background: #2C3E50;
+            color: #ffffff;
+            padding: 80px 0 40px;
+        }
+
+        .footer-title {
+            color: #ffffff;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 25px;
+        }
+
+        .footer-link {
+            color: rgba(255, 255, 255, 0.8);
+            transition: color 0.3s ease;
+        }
+
+        .footer-link:hover {
+            color: #FF6B00;
+            text-decoration: none;
+        }
+
+        .social-icon {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1.5rem;
+            margin-right: 20px;
+            transition: color 0.3s ease;
+        }
+
+        .social-icon:hover {
+            color: #FF6B00;
+        }
     </style>
 </head>
 <body>
-    <nav class="nav">
+    <nav class="navbar">
         <div class="container">
             <a href="index.html" class="logo">ScalingWorkshops</a>
             <div class="nav-menu">
-                <button class="mobile-menu-btn">
-                    <svg fill="currentColor" viewBox="0 0 20 20">
-                        <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"/>
-                    </svg>
-                </button>
                 <ul class="nav-links">
-                    <li><a href="workshops.html">Workshops</a></li>
-                    <li><a href="courses.html">Courses</a></li>
-                    <li><a href="books.html">Books</a></li>
-                    <li><a href="media.html">Media</a></li>
-                    <li><a href="partner.html">Partner With Us</a></li>
-                    <li><a href="about.html">About the Firm</a></li>
-                    <li><a href="careers.html">Careers</a></li>
+                    <li><a href="workshops.html" class="nav-link">Workshops</a></li>
+                    <li><a href="courses.html" class="nav-link">Courses</a></li>
+                    <li><a href="books.html" class="nav-link">Books</a></li>
+                    <li><a href="media.html" class="nav-link">Media</a></li>
+                    <li><a href="partner.html" class="nav-link">Partner With Us</a></li>
+                    <li><a href="about.html" class="nav-link">About the Firm</a></li>
+                    <li><a href="careers.html" class="nav-link">Careers</a></li>
                 </ul>
             </div>
         </div>
@@ -458,161 +772,155 @@
 
     <section class="hero">
         <div class="container">
-            <h1 data-aos="fade-up">Join Our Mission</h1>
-            <p data-aos="fade-up" data-aos-delay="100">Help us empower course creators to build impactful businesses while working with a team of passionate experts.</p>
+            <h1>Join Our Team</h1>
+            <p>Help us transform the future of online education while working with the world's top course creators.</p>
         </div>
     </section>
 
-    <section class="benefits">
+    <section class="values-section">
         <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <h2>Why Work With Us</h2>
-                <p>Join a team that values growth, innovation, and work-life balance</p>
-            </div>
-            <div class="benefits-grid">
-                <div class="benefit-card" data-aos="fade-up">
-                    <div class="benefit-icon">
-                        <svg fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z"/>
-                        </svg>
+            <h2 class="section-title">Our Values</h2>
+            <div class="values-grid">
+                <div class="value-card" data-aos="fade-up">
+                    <div class="value-icon">
+                        <i class="fas fa-rocket"></i>
                     </div>
-                    <h3 class="benefit-title">Learning & Development</h3>
-                    <p class="benefit-description">Continuous learning opportunities and professional development programs.</p>
+                    <h3 class="value-title">Innovation</h3>
+                    <p class="value-description">We push boundaries and embrace new ideas to create breakthrough solutions.</p>
                 </div>
-
-                <div class="benefit-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="benefit-icon">
-                        <svg fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M6.625 2.655A9 9 0 0119 11a1 1 0 11-2 0 7 7 0 00-9.625-6.492 1 1 0 11-.75-1.853zM4.662 4.959A1 1 0 014.75 6.37 6.97 6.97 0 003 11a1 1 0 11-2 0 8.97 8.97 0 012.25-5.953 1 1 0 011.412-.088z" clip-rule="evenodd"/>
-                            <path fill-rule="evenodd" d="M5 11a5 5 0 1110 0 5 5 0 01-10 0zm6-3a1 1 0 10-2 0v3.586l-1.293-1.293a1 1 0 10-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 11.586V8z" clip-rule="evenodd"/>
-                        </svg>
+                <div class="value-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="value-icon">
+                        <i class="fas fa-users"></i>
                     </div>
-                    <h3 class="benefit-title">Flexible Work</h3>
-                    <p class="benefit-description">Remote-first culture with flexible hours and work-life balance.</p>
+                    <h3 class="value-title">Collaboration</h3>
+                    <p class="value-description">We believe in the power of teamwork and diverse perspectives.</p>
                 </div>
-
-                <div class="benefit-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="benefit-icon">
-                        <svg fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M6.625 2.655A9 9 0 0119 11a1 1 0 11-2 0 7 7 0 00-9.625-6.492 1 1 0 11-.75-1.853zM4.662 4.959A1 1 0 014.75 6.37 6.97 6.97 0 003 11a1 1 0 11-2 0 8.97 8.97 0 012.25-5.953 1 1 0 011.412-.088z" clip-rule="evenodd"/>
-                            <path fill-rule="evenodd" d="M5 11a5 5 0 1110 0 5 5 0 01-10 0zm6-3a1 1 0 10-2 0v3.586l-1.293-1.293a1 1 0 10-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 11.586V8z" clip-rule="evenodd"/>
-                        </svg>
+                <div class="value-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="value-icon">
+                        <i class="fas fa-chart-line"></i>
                     </div>
-                    <h3 class="benefit-title">Competitive Package</h3>
-                    <p class="benefit-description">Attractive compensation, equity options, and comprehensive benefits.</p>
+                    <h3 class="value-title">Growth</h3>
+                    <p class="value-description">We invest in continuous learning and personal development.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="positions">
+    <section class="career-section">
         <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <h2>Open Positions</h2>
-                <p>Join our team and make an impact in the course creation industry</p>
-            </div>
-            <div class="position-filters" data-aos="fade-up">
-                <button class="filter-btn active">All Positions</button>
-                <button class="filter-btn">Engineering</button>
-                <button class="filter-btn">Marketing</button>
-                <button class="filter-btn">Product</button>
-                <button class="filter-btn">Operations</button>
-            </div>
-            <div class="position-grid">
-                <div class="position-card" data-aos="fade-up">
-                    <span class="position-type">Engineering</span>
-                    <h3 class="position-title">Senior Full Stack Developer</h3>
-                    <p class="position-location">Remote (US/Europe)</p>
-                    <p class="position-description">Join our engineering team to build scalable solutions for course creators. Experience with React, Node.js, and AWS required.</p>
-                    <a href="#" class="btn">Apply Now</a>
+            <h2 class="section-title">Open Positions</h2>
+            <div class="career-grid">
+                <div class="career-card" data-aos="fade-up">
+                    <span class="career-tag">Full-time</span>
+                    <h3 class="career-title">Senior Course Strategist</h3>
+                    <p class="career-description">Lead the development of course creation strategies for our top clients.</p>
+                    <div class="career-meta">
+                        <span><i class="fas fa-map-marker-alt"></i> Remote</span>
+                        <span><i class="fas fa-clock"></i> Flexible Hours</span>
+                    </div>
+                    <ul class="career-requirements">
+                        <li>5+ years experience in online course creation</li>
+                        <li>Proven track record of successful course launches</li>
+                        <li>Strong analytical and strategic thinking skills</li>
+                        <li>Excellent communication and presentation abilities</li>
+                    </ul>
+                    <a href="#apply" class="btn btn-primary">Apply Now</a>
                 </div>
 
-                <div class="position-card" data-aos="fade-up" data-aos-delay="100">
-                    <span class="position-type">Marketing</span>
-                    <h3 class="position-title">Growth Marketing Manager</h3>
-                    <p class="position-location">Remote (US)</p>
-                    <p class="position-description">Drive our marketing initiatives and help course creators scale their businesses through effective strategies.</p>
-                    <a href="#" class="btn">Apply Now</a>
-                </div>
-
-                <div class="position-card" data-aos="fade-up">
-                    <span class="position-type">Product</span>
-                    <h3 class="position-title">Product Manager</h3>
-                    <p class="position-location">Remote (US)</p>
-                    <p class="position-description">Shape the future of our product offerings and help define the roadmap for our course creation platform.</p>
-                    <a href="#" class="btn">Apply Now</a>
-                </div>
-
-                <div class="position-card" data-aos="fade-up" data-aos-delay="100">
-                    <span class="position-type">Operations</span>
-                    <h3 class="position-title">Client Success Manager</h3>
-                    <p class="position-location">Remote (US/Europe)</p>
-                    <p class="position-description">Work directly with course creators to ensure their success and help them achieve their business goals.</p>
-                    <a href="#" class="btn">Apply Now</a>
+                <div class="career-card" data-aos="fade-up" data-aos-delay="100">
+                    <span class="career-tag">Full-time</span>
+                    <h3 class="career-title">Marketing Manager</h3>
+                    <p class="career-description">Drive growth and engagement for our client's course launches.</p>
+                    <div class="career-meta">
+                        <span><i class="fas fa-map-marker-alt"></i> Remote</span>
+                        <span><i class="fas fa-clock"></i> Flexible Hours</span>
+                    </div>
+                    <ul class="career-requirements">
+                        <li>3+ years experience in digital marketing</li>
+                        <li>Expertise in paid advertising and funnel optimization</li>
+                        <li>Data-driven approach to marketing strategy</li>
+                        <li>Experience with course creator marketing preferred</li>
+                    </ul>
+                    <a href="#apply" class="btn btn-primary">Apply Now</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="culture">
+    <section class="application-section" id="apply">
         <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <h2>Life at ScalingWorkshops</h2>
-                <p>Experience a culture of innovation, growth, and collaboration</p>
-            </div>
-            <div class="culture-grid">
-                <div class="culture-image" data-aos="fade-up">
-                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Team Collaboration">
-                </div>
-                <div class="culture-image" data-aos="fade-up" data-aos-delay="100">
-                    <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Team Meeting">
-                </div>
-                <div class="culture-image" data-aos="fade-up" data-aos-delay="200">
-                    <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Office Culture">
-                </div>
+            <div class="application-form" data-aos="fade-up">
+                <h2 class="section-title">Apply Now</h2>
+                <form>
+                    <div class="form-group">
+                        <label class="form-label">Full Name</label>
+                        <input type="text" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Email</label>
+                        <input type="email" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Position</label>
+                        <select class="form-control" required>
+                            <option value="">Select a position</option>
+                            <option value="strategist">Senior Course Strategist</option>
+                            <option value="marketing">Marketing Manager</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Cover Letter</label>
+                        <textarea class="form-control" rows="5" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Resume/CV</label>
+                        <input type="file" class="form-control" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit Application</button>
+                </form>
             </div>
         </div>
     </section>
 
-    <footer>
+    <footer class="footer">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
-                    <h3>ScalingWorkshops</h3>
+                    <h3 class="footer-title">ScalingWorkshops</h3>
                     <p>Helping course creators scale to $5M+ in net profit through proven strategies and systems.</p>
                 </div>
                 <div class="footer-col">
-                    <h3>Company</h3>
-                    <ul class="footer-links">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="workshops.html">Workshops</a></li>
-                        <li><a href="courses.html">Courses</a></li>
-                        <li><a href="books.html">Books</a></li>
-                        <li><a href="media.html">Media</a></li>
+                    <h3 class="footer-title">Company</h3>
+                    <ul>
+                        <li><a href="index.html" class="footer-link">Home</a></li>
+                        <li><a href="workshops.html" class="footer-link">Workshops</a></li>
+                        <li><a href="courses.html" class="footer-link">Courses</a></li>
+                        <li><a href="books.html" class="footer-link">Books</a></li>
+                        <li><a href="media.html" class="footer-link">Media</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h3>Resources</h3>
-                    <ul class="footer-links">
-                        <li><a href="partner.html">Partner With Us</a></li>
-                        <li><a href="about.html">About the Firm</a></li>
-                        <li><a href="careers.html">Careers</a></li>
+                    <h3 class="footer-title">Resources</h3>
+                    <ul>
+                        <li><a href="partner.html" class="footer-link">Partner With Us</a></li>
+                        <li><a href="about.html" class="footer-link">About the Firm</a></li>
+                        <li><a href="careers.html" class="footer-link">Careers</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h3>Contact</h3>
-                    <ul class="footer-links">
-                        <li><a href="mailto:eli@scalingworkshops.com">eli@scalingworkshops.com</a></li>
-                        <li><a href="tel:+1234567890">+1 (234) 567-890</a></li>
+                    <h3 class="footer-title">Contact</h3>
+                    <ul>
+                        <li><a href="mailto:eli@scalingworkshops.com" class="footer-link">eli@scalingworkshops.com</a></li>
+                        <li><a href="tel:+1234567890" class="footer-link">+1 (234) 567-890</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2025 ScalingWorkshops.com. All rights reserved.</p>
                 <div class="social-links">
-                    <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
-                    <a href="https://twitter.com" target="_blank">Twitter</a>
-                    <a href="https://www.instagram.com" target="_blank">Instagram</a>
+                    <a href="https://www.linkedin.com" target="_blank" class="social-icon">LinkedIn</a>
+                    <a href="https://twitter.com" target="_blank" class="social-icon">Twitter</a>
+                    <a href="https://www.instagram.com" target="_blank" class="social-icon">Instagram</a>
                 </div>
             </div>
         </div>
@@ -624,14 +932,6 @@
             duration: 800,
             offset: 50,
             once: true
-        });
-
-        // Mobile menu toggle
-        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-        const navLinks = document.querySelector('.nav-links');
-
-        mobileMenuBtn.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
         });
     </script>
 </body>
