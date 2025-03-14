@@ -29,7 +29,7 @@
             padding: 0 20px;
         }
 
-        /* Navigation */
+        /* Navigation Styles */
         .nav {
             position: fixed;
             top: 0;
@@ -70,9 +70,9 @@
         .nav-links a {
             color: #1A1A1A;
             text-decoration: none;
+            font-size: 16px;
             font-weight: 500;
             transition: color 0.3s ease;
-            font-size: 16px;
         }
 
         .nav-links a:hover {
@@ -107,8 +107,6 @@
                 padding: 20px;
                 flex-direction: column;
                 align-items: center;
-                border-top: 1px solid rgba(0,0,0,0.1);
-                border-bottom: 1px solid rgba(0,0,0,0.1);
             }
 
             .nav-links.active {
@@ -118,31 +116,31 @@
 
         /* Hero Section */
         .hero {
-            padding: 160px 0 100px;
+            padding: 200px 0 100px;
             text-align: center;
-            background: #F8F9FA;
+            background: #f7f7f7;
             border-bottom: 1px solid rgba(0,0,0,0.1);
         }
 
         .hero h1 {
-            font-size: 56px;
+            font-size: 48px;
             font-weight: 800;
             margin-bottom: 20px;
-            line-height: 1.2;
             color: #1A1A1A;
         }
 
         .hero p {
             font-size: 20px;
-            opacity: 0.9;
+            color: rgba(0,0,0,0.7);
             max-width: 600px;
-            margin-bottom: 40px;
-            color: #4A4A4A;
+            margin: 0 auto;
         }
 
         /* Partnership Benefits */
         .benefits {
             padding: 80px 0;
+            background: #f7f7f7;
+            border-top: 1px solid rgba(0,0,0,0.1);
         }
 
         .section-header {
@@ -159,60 +157,43 @@
 
         .section-header p {
             font-size: 18px;
-            opacity: 0.8;
+            color: rgba(0,0,0,0.7);
             max-width: 600px;
             margin: 0 auto;
-            color: #4A4A4A;
         }
 
         .benefits-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 30px;
-            margin-bottom: 60px;
+            margin-top: 40px;
         }
 
         .benefit-card {
-            background: #F8F9FA;
-            border: 1px solid rgba(0,0,0,0.1);
-            border-radius: 20px;
-            padding: 40px;
+            background: #fff;
+            border-radius: 12px;
+            padding: 30px;
             text-align: center;
-            transition: all 0.3s ease;
-        }
-
-        .benefit-card:hover {
-            transform: translateY(-5px);
-            border-color: rgba(255, 107, 0, 0.3);
-            box-shadow: 0 20px 40px rgba(255, 107, 0, 0.1);
-        }
-
-        .benefit-icon {
-            color: #FF6B00;
-            margin-bottom: 30px;
-        }
-
-        .benefit-icon svg {
-            width: 48px;
-            height: 48px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            border: 1px solid rgba(0,0,0,0.1);
         }
 
         .benefit-title {
             font-size: 20px;
             font-weight: 700;
-            margin-bottom: 15px;
+            margin: 20px 0 10px;
             color: #1A1A1A;
         }
 
         .benefit-description {
-            opacity: 0.8;
             font-size: 16px;
-            color: #4A4A4A;
+            color: rgba(0,0,0,0.7);
+            line-height: 1.6;
         }
 
         /* Partnership Types */
         .partnership-types {
-            padding: 100px 0;
+            padding: 80px 0;
             background: #fff;
         }
 
@@ -223,17 +204,11 @@
         }
 
         .type-card {
+            background: #fff;
+            border-radius: 12px;
             padding: 40px;
-            background: #F8F9FA;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
             border: 1px solid rgba(0,0,0,0.1);
-            border-radius: 20px;
-            transition: all 0.3s ease;
-        }
-
-        .type-card:hover {
-            transform: translateY(-5px);
-            border-color: rgba(255, 107, 0, 0.3);
-            box-shadow: 0 20px 40px rgba(255, 107, 0, 0.1);
         }
 
         .type-title {
@@ -245,8 +220,7 @@
 
         .type-description {
             margin-bottom: 30px;
-            opacity: 0.9;
-            color: #4A4A4A;
+            color: rgba(0,0,0,0.7);
         }
 
         .type-features {
@@ -258,11 +232,10 @@
             margin-bottom: 15px;
             padding-left: 30px;
             position: relative;
-            color: #4A4A4A;
         }
 
         .type-features li:before {
-            content: "→";
+            content: "✓";
             position: absolute;
             left: 0;
             color: #FF6B00;
@@ -270,31 +243,27 @@
 
         .btn {
             display: inline-block;
-            padding: 15px 30px;
-            font-size: 16px;
-            font-weight: 700;
-            text-decoration: none;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: #fff;
             background: #FF6B00;
-            border: 2px solid #FF6B00;
+            color: #fff;
+            padding: 12px 30px;
             border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
             transition: all 0.3s ease;
-            cursor: pointer;
+            border: 2px solid #FF6B00;
         }
 
         .btn:hover {
-            transform: translateY(-3px);
             background: transparent;
             color: #FF6B00;
+            transform: translateY(-3px);
             box-shadow: 0 10px 20px rgba(255, 107, 0, 0.2);
         }
 
         /* Contact Form */
         .contact {
             padding: 100px 0;
-            background: #F8F9FA;
+            background: #fff;
             border-top: 1px solid rgba(0,0,0,0.1);
         }
 
@@ -326,7 +295,7 @@
 
         .contact-content p {
             font-size: 18px;
-            color: #4A4A4A;
+            color: rgba(0,0,0,0.7);
             margin-bottom: 40px;
             line-height: 1.6;
         }
@@ -334,11 +303,11 @@
         .form-container {
             background: #fff;
             padding: 40px;
-            border: 1px solid rgba(0,0,0,0.1);
             border-radius: 20px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            border: 1px solid rgba(0,0,0,0.1);
             max-width: 600px;
             margin: 0 auto;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
         }
 
         /* HubSpot Form Styling Overrides */
@@ -363,9 +332,9 @@
         .form-container .hs-input {
             width: 100%;
             padding: 12px 15px;
-            border: 1px solid rgba(0,0,0,0.1);
+            border: 1px solid rgba(0,0,0,0.2);
             border-radius: 8px;
-            background: #F8F9FA;
+            background: #fff;
             color: #1A1A1A;
             font-size: 16px;
             transition: all 0.3s ease;
@@ -448,8 +417,9 @@
         /* Footer Styles */
         footer {
             padding: 80px 0 40px;
-            background: #F8F9FA;
+            background: #f7f7f7;
             border-top: 1px solid rgba(0,0,0,0.1);
+            color: #1A1A1A;
         }
 
         .footer-grid {
@@ -477,7 +447,7 @@
         }
 
         .footer-links a {
-            color: #4A4A4A;
+            color: rgba(0,0,0,0.7);
             text-decoration: none;
             transition: color 0.3s ease;
         }
@@ -489,11 +459,6 @@
         .footer-bottom {
             margin-top: 40px;
             text-align: center;
-            border-top: 1px solid rgba(0,0,0,0.1);
-        }
-
-        .footer-bottom p {
-            color: #4A4A4A;
         }
 
         .social-links {
@@ -503,7 +468,7 @@
         }
 
         .social-links a {
-            color: #4A4A4A;
+            color: rgba(0,0,0,0.7);
             text-decoration: none;
             transition: color 0.3s ease;
         }
