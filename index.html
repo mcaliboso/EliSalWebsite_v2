@@ -20,8 +20,8 @@
 
         body {
             line-height: 1.6;
-            color: #fff;
-            background: #000;
+            color: #1A1A1A;
+            background: #fff;
             overflow-x: hidden;
         }
 
@@ -38,9 +38,10 @@
             left: 0;
             right: 0;
             padding: 20px 0;
-            background: rgba(0,0,0,0.95);
+            background: rgba(255,255,255,0.95);
             z-index: 1000;
             backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(0,0,0,0.1);
         }
 
         .nav .container {
@@ -52,7 +53,7 @@
         .logo {
             font-size: 24px;
             font-weight: 800;
-            color: #fff;
+            color: #1A1A1A;
             text-decoration: none;
         }
 
@@ -72,7 +73,7 @@
         }
 
         .nav-links a {
-            color: #fff;
+            color: #1A1A1A;
             text-decoration: none;
             font-size: 16px;
             font-weight: 500;
@@ -88,7 +89,7 @@
             display: none;
             background: none;
             border: none;
-            color: #fff;
+            color: #1A1A1A;
             cursor: pointer;
             padding: 5px;
         }
@@ -99,18 +100,23 @@
         }
 
         @media (max-width: 1024px) {
+            .nav {
+                padding: 15px 0;
+            }
+
             .nav-links {
                 display: none;
                 position: absolute;
                 top: 100%;
                 left: 0;
                 right: 0;
-                background: rgba(0,0,0,0.95);
+                background: rgba(255,255,255,0.95);
                 backdrop-filter: blur(10px);
                 padding: 20px;
                 flex-direction: column;
                 gap: 15px;
-                border-top: 1px solid rgba(255,255,255,0.1);
+                border-top: 1px solid rgba(0,0,0,0.1);
+                border-bottom: 1px solid rgba(0,0,0,0.1);
             }
 
             .nav-links.active {
@@ -136,6 +142,7 @@
             padding: 120px 0 100px;
             position: relative;
             overflow: hidden;
+            background: #F8F9FA;
         }
 
         .hero::before {
@@ -145,7 +152,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: radial-gradient(circle at center, rgba(255,107,0,0.15) 0%, rgba(0,0,0,0) 70%);
+            background: radial-gradient(circle at center, rgba(255,107,0,0.08) 0%, rgba(255,255,255,0) 70%);
         }
 
         .hero h1 {
@@ -153,6 +160,7 @@
             line-height: 1.1;
             margin-bottom: 30px;
             font-weight: 800;
+            color: #1A1A1A;
         }
 
         .hero .highlight {
@@ -167,6 +175,7 @@
             max-width: 800px;
             margin-left: auto;
             margin-right: auto;
+            color: #4A4A4A;
         }
 
         .hero-stats {
@@ -180,9 +189,9 @@
         .stat-item {
             text-align: center;
             padding: 20px;
-            background: rgba(255, 107, 0, 0.05);
-            border-radius: 12px;
-            border: 1px solid rgba(255, 107, 0, 0.1);
+            background: #fff;
+            border: 1px solid rgba(255, 107, 0, 0.2);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
             min-width: 200px;
         }
 
@@ -199,7 +208,7 @@
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 1px;
-            color: rgba(255, 255, 255, 0.9);
+            color: #4A4A4A;
             line-height: 1.4;
         }
 
@@ -234,8 +243,8 @@
         .results {
             padding: 120px 0;
             text-align: center;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            background: #080808;
+            border-top: 1px solid rgba(0,0,0,0.1);
+            background: #fff;
         }
 
         .stat-grid {
@@ -247,13 +256,16 @@
 
         .stat-card {
             padding: 40px;
-            background: rgba(255,255,255,0.03);
-            border-radius: 8px;
+            background: #F8F9FA;
+            border: 1px solid rgba(0,0,0,0.1);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
             transition: transform 0.3s ease;
         }
 
         .stat-card:hover {
             transform: translateY(-5px);
+            border-color: rgba(255, 107, 0, 0.3);
+            box-shadow: 0 20px 40px rgba(255, 107, 0, 0.1);
         }
 
         .stat-number {
@@ -270,16 +282,21 @@
             letter-spacing: 1px;
         }
 
+        .stat-card p {
+            color: #4A4A4A;
+        }
+
         /* Process Section */
         .process {
             padding: 120px 0;
-            background: #000;
+            background: #F8F9FA;
         }
 
         .process h2 {
             font-size: 48px;
             text-align: center;
             margin-bottom: 60px;
+            color: #1A1A1A;
         }
 
         .process-grid {
@@ -290,9 +307,9 @@
 
         .process-card {
             padding: 40px;
-            background: rgba(255,255,255,0.03);
-            border-radius: 20px;
-            border: 1px solid rgba(255,255,255,0.1);
+            background: #fff;
+            border: 1px solid rgba(0,0,0,0.1);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
             transition: all 0.3s ease;
             backdrop-filter: blur(10px);
         }
@@ -317,7 +334,7 @@
             font-size: 24px;
             font-weight: 700;
             margin-bottom: 20px;
-            color: #fff;
+            color: #1A1A1A;
         }
 
         .feature-list {
@@ -330,7 +347,7 @@
             margin-bottom: 12px;
             padding-left: 24px;
             position: relative;
-            color: rgba(255, 255, 255, 0.9);
+            color: #4A4A4A;
         }
 
         .feature-list li:before {
@@ -343,8 +360,8 @@
         /* About Section */
         .about {
             padding: 120px 0;
-            background: #000;
-            border-top: 1px solid rgba(255,255,255,0.1);
+            background: #fff;
+            border-top: 1px solid rgba(0,0,0,0.1);
         }
 
         .about-grid {
@@ -358,12 +375,14 @@
             font-size: 48px;
             margin-bottom: 30px;
             line-height: 1.2;
+            color: #1A1A1A;
         }
 
         .about-content p {
             font-size: 18px;
             margin-bottom: 20px;
             opacity: 0.9;
+            color: #4A4A4A;
         }
 
         .about-image {
@@ -381,17 +400,17 @@
         /* CTA Section */
         .cta {
             padding: 120px 0;
-            background: #080808;
-            border-top: 1px solid rgba(255,255,255,0.1);
+            background: #fff;
+            border-top: 1px solid rgba(0,0,0,0.1);
         }
 
         .form-wrapper {
             max-width: 600px;
             margin: 0 auto;
             padding: 60px;
-            background: rgba(255,255,255,0.03);
-            border-radius: 12px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+            background: #F8F9FA;
+            border: 1px solid rgba(0,0,0,0.1);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
         }
 
         .form-header {
@@ -402,19 +421,25 @@
         .form-header h2 {
             font-size: 36px;
             margin-bottom: 20px;
+            color: #1A1A1A;
+        }
+
+        .form-header p {
+            color: #4A4A4A;
         }
 
         /* FAQ Section */
         .faq {
             padding: 120px 0;
-            background: #000;
-            border-top: 1px solid rgba(255,255,255,0.1);
+            background: #F8F9FA;
+            border-top: 1px solid rgba(0,0,0,0.1);
         }
 
         .faq h2 {
             font-size: 48px;
             text-align: center;
             margin-bottom: 60px;
+            color: #1A1A1A;
         }
 
         .faq-grid {
@@ -425,8 +450,9 @@
         }
 
         .faq-item {
-            background: rgba(255,255,255,0.03);
-            border-radius: 8px;
+            background: #fff;
+            border: 1px solid rgba(0,0,0,0.1);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
             overflow: hidden;
         }
 
@@ -437,6 +463,7 @@
             align-items: center;
             cursor: pointer;
             transition: all 0.3s ease;
+            color: #1A1A1A;
         }
 
         .faq-question h3 {
@@ -478,6 +505,7 @@
             max-height: 0;
             overflow: hidden;
             transition: all 0.3s ease;
+            color: #4A4A4A;
         }
 
         .faq-item.active .faq-question {
@@ -497,9 +525,9 @@
         /* Footer */
         footer {
             padding: 80px 0 40px;
-            background: #080808;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            color: #fff;
+            background: #F8F9FA;
+            border-top: 1px solid rgba(0,0,0,0.1);
+            color: #1A1A1A;
         }
 
         .footer-grid {
@@ -513,7 +541,7 @@
             font-size: 18px;
             font-weight: 700;
             margin-bottom: 20px;
-            color: #fff;
+            color: #1A1A1A;
         }
 
         .footer-col p {
@@ -521,6 +549,7 @@
             opacity: 0.7;
             margin-bottom: 20px;
             max-width: 300px;
+            color: #4A4A4A;
         }
 
         .footer-links {
@@ -532,7 +561,7 @@
         }
 
         .footer-links a {
-            color: rgba(255,255,255,0.7);
+            color: #4A4A4A;
             text-decoration: none;
             font-size: 16px;
             transition: color 0.3s ease;
@@ -544,7 +573,7 @@
 
         .footer-bottom {
             padding-top: 40px;
-            border-top: 1px solid rgba(255,255,255,0.1);
+            border-top: 1px solid rgba(0,0,0,0.1);
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -553,6 +582,7 @@
         .footer-bottom p {
             opacity: 0.7;
             font-size: 14px;
+            color: #4A4A4A;
         }
 
         .social-links {
@@ -561,7 +591,7 @@
         }
 
         .social-links a {
-            color: rgba(255,255,255,0.7);
+            color: #4A4A4A;
             text-decoration: none;
             transition: color 0.3s ease;
         }

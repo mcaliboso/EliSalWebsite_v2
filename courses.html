@@ -18,20 +18,14 @@
 
         html {
             font-size: 16px;
-            line-height: 1.5;
+            line-height: 1.6;
         }
 
         body {
             font-family: 'Inter', sans-serif;
-            background: #000;
-            color: #fff;
-        }
-
-        /* Layout */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
+            color: #1A1A1A;
+            background: #fff;
+            overflow-x: hidden;
         }
 
         /* Navigation */
@@ -40,9 +34,11 @@
             top: 0;
             left: 0;
             right: 0;
-            z-index: 1000;
-            background: rgba(0, 0, 0, 0.9);
             padding: 20px 0;
+            background: rgba(255,255,255,0.95);
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(0,0,0,0.1);
         }
 
         .nav .container {
@@ -52,10 +48,10 @@
         }
 
         .logo {
-            color: #fff;
-            text-decoration: none;
             font-size: 24px;
-            font-weight: 700;
+            font-weight: 800;
+            color: #1A1A1A;
+            text-decoration: none;
         }
 
         .nav-menu {
@@ -79,12 +75,11 @@
         }
 
         .nav-links a {
-            color: #fff;
+            color: #1A1A1A;
             text-decoration: none;
             font-weight: 500;
             transition: color 0.3s ease;
-            display: block;
-            padding: 5px 0;
+            font-size: 16px;
         }
 
         .nav-links a:hover {
@@ -95,7 +90,7 @@
             display: none;
             background: none;
             border: none;
-            color: #fff;
+            color: #1A1A1A;
             cursor: pointer;
             padding: 0;
         }
@@ -116,10 +111,12 @@
                 top: 100%;
                 left: 0;
                 right: 0;
-                background: rgba(0, 0, 0, 0.9);
+                background: rgba(255,255,255,0.95);
                 padding: 20px;
                 flex-direction: column;
                 align-items: center;
+                border-top: 1px solid rgba(0,0,0,0.1);
+                border-bottom: 1px solid rgba(0,0,0,0.1);
             }
 
             .nav-links.active {
@@ -129,12 +126,10 @@
 
         /* Hero Section */
         .hero {
-            padding: 160px 0 80px;
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('images/hero-bg.jpg');
-            background-size: cover;
-            background-position: center;
+            padding: 160px 0 100px;
             text-align: center;
-            color: #fff;
+            background: #F8F9FA;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
         }
 
         .hero h1 {
@@ -142,6 +137,7 @@
             font-weight: 800;
             margin-bottom: 20px;
             line-height: 1.2;
+            color: #1A1A1A;
         }
 
         .hero p {
@@ -149,36 +145,40 @@
             opacity: 0.9;
             max-width: 700px;
             margin: 0 auto 40px;
+            color: #4A4A4A;
         }
 
         /* Course Grid */
         .courses {
-            padding: 80px 0;
+            padding: 100px 0;
+            background: #fff;
         }
 
         .course-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
+            gap: 40px;
         }
 
         .course-card {
-            background: rgba(255,255,255,0.03);
-            border-radius: 12px;
+            background: #F8F9FA;
+            border: 1px solid rgba(0,0,0,0.1);
+            border-radius: 20px;
             overflow: hidden;
-            transition: transform 0.3s ease;
+            transition: all 0.3s ease;
         }
 
         .course-card:hover {
             transform: translateY(-5px);
+            border-color: rgba(255, 107, 0, 0.3);
+            box-shadow: 0 20px 40px rgba(255, 107, 0, 0.1);
         }
 
         .course-image {
             width: 100%;
-            height: 200px;
-            background: #1a1a1a;
-            position: relative;
+            height: 240px;
             overflow: hidden;
+            position: relative;
         }
 
         .course-image img {
@@ -193,62 +193,72 @@
 
         .course-tag {
             display: inline-block;
-            padding: 5px 12px;
-            background: rgba(255,107,0,0.1);
+            padding: 6px 12px;
+            background: rgba(255, 107, 0, 0.1);
             color: #FF6B00;
             border-radius: 20px;
             font-size: 14px;
-            font-weight: 500;
-            margin-bottom: 15px;
+            font-weight: 600;
+            margin-bottom: 20px;
         }
 
         .course-title {
-            font-size: 22px;
+            font-size: 24px;
             font-weight: 700;
+            color: #1A1A1A;
             margin-bottom: 15px;
             line-height: 1.3;
         }
 
         .course-description {
-            opacity: 0.8;
-            margin-bottom: 25px;
-            font-size: 16px;
+            color: #4A4A4A;
+            margin-bottom: 30px;
+            line-height: 1.6;
         }
 
         .course-meta {
             display: flex;
-            justify-content: space-between;
             align-items: center;
+            justify-content: space-between;
+            margin-top: 30px;
             padding-top: 20px;
-            border-top: 1px solid rgba(255,255,255,0.1);
+            border-top: 1px solid rgba(0,0,0,0.1);
         }
 
         .course-price {
+            font-size: 24px;
             font-weight: 700;
-            font-size: 20px;
+            color: #1A1A1A;
         }
 
         .btn {
             display: inline-block;
             padding: 15px 30px;
             font-size: 16px;
-            font-weight: 600;
+            font-weight: 700;
             text-decoration: none;
-            color: #000;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #fff;
             background: #FF6B00;
-            border-radius: 4px;
+            border: 2px solid #FF6B00;
+            border-radius: 30px;
             transition: all 0.3s ease;
+            cursor: pointer;
         }
 
         .btn:hover {
-            background: #ff8533;
-            transform: translateY(-2px);
+            transform: translateY(-3px);
+            background: transparent;
+            color: #FF6B00;
+            box-shadow: 0 10px 20px rgba(255, 107, 0, 0.2);
         }
 
         /* Footer Styles */
         footer {
-            padding: 80px 0;
-            background: #1a1a1a;
+            padding: 80px 0 40px;
+            background: #F8F9FA;
+            border-top: 1px solid rgba(0,0,0,0.1);
         }
 
         .footer-grid {
@@ -267,6 +277,7 @@
             font-size: 18px;
             font-weight: 700;
             margin-bottom: 15px;
+            color: #1A1A1A;
         }
 
         .footer-col ul {
@@ -280,7 +291,7 @@
         }
 
         .footer-col a {
-            color: #fff;
+            color: #4A4A4A;
             text-decoration: none;
             transition: color 0.3s ease;
         }
@@ -297,7 +308,11 @@
         .footer-bottom {
             margin-top: 40px;
             padding-top: 20px;
-            border-top: 1px solid rgba(255,255,255,0.1);
+            border-top: 1px solid rgba(0,0,0,0.1);
+        }
+
+        .footer-bottom p {
+            color: #4A4A4A;
         }
 
         @media (max-width: 1024px) {
@@ -321,6 +336,10 @@
 
             .footer-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .course-content {
+                padding: 20px;
             }
         }
     </style>
