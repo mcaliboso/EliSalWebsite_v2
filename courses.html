@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Business Scaling Programs | ScalingWorkshops.com</title>
+    <title>Online Courses | ScalingWorkshops.com</title>
     <!-- HubSpot tracking code -->
     <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/242100136.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -151,14 +151,18 @@
             margin: 0 auto;
         }
 
-        /* Programs Grid */
-        .programs-grid {
+        /* Course Grid */
+        .courses {
+            padding: 80px 0;
+        }
+
+        .course-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 30px;
         }
 
-        .program-card {
+        .course-card {
             background: #fff;
             border-radius: 12px;
             overflow: hidden;
@@ -167,56 +171,67 @@
             transition: transform 0.3s ease;
         }
 
-        .program-card:hover {
+        .course-card:hover {
             transform: translateY(-5px);
         }
 
-        .program-header {
-            padding: 30px;
-            border-bottom: 1px solid rgba(0,0,0,0.1);
+        .course-image {
+            width: 100%;
+            height: 200px;
+            background: #1a1a1a;
+            position: relative;
+            overflow: hidden;
         }
 
-        .program-header h3 {
+        .course-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .course-content {
+            padding: 30px;
+        }
+
+        .course-tag {
+            display: inline-block;
+            padding: 5px 12px;
+            background: rgba(255,107,0,0.1);
+            color: #FF6B00;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+
+        .course-title {
             font-size: 24px;
             font-weight: 700;
             margin-bottom: 15px;
             color: #1A1A1A;
         }
 
-        .program-header .price {
-            font-weight: 700;
-            font-size: 20px;
-        }
-
-        .program-content {
-            padding: 30px;
-        }
-
-        .program-content .description {
+        .course-description {
             font-size: 16px;
             color: rgba(0,0,0,0.7);
             margin-bottom: 20px;
             line-height: 1.6;
         }
 
-        .program-content .features {
-            list-style: none;
-            margin: 0;
-            padding: 0;
+        .course-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(0,0,0,0.1);
         }
 
-        .program-content .features li {
-            margin-bottom: 10px;
+        .course-price {
+            font-weight: 700;
+            font-size: 20px;
         }
 
-        .program-content .features li::before {
-            content: "\2022";
-            font-size: 18px;
-            color: #FF6B00;
-            margin-right: 10px;
-        }
-
-        .program-content .btn {
+        .btn {
             display: inline-block;
             padding: 15px 30px;
             font-size: 16px;
@@ -228,121 +243,9 @@
             transition: all 0.3s ease;
         }
 
-        .program-content .btn:hover {
+        .btn:hover {
             background: #ff8533;
             transform: translateY(-2px);
-        }
-
-        /* Results Section */
-        .results-section {
-            padding: 80px 0;
-        }
-
-        .results-section h2 {
-            font-size: 36px;
-            font-weight: 800;
-            margin-bottom: 20px;
-            color: #1A1A1A;
-        }
-
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 30px;
-        }
-
-        .testimonial-card {
-            background: #fff;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-            border: 1px solid rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-        }
-
-        .testimonial-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .testimonial-content {
-            padding: 30px;
-        }
-
-        .testimonial-content p {
-            font-size: 16px;
-            color: rgba(0,0,0,0.7);
-            margin-bottom: 20px;
-            line-height: 1.6;
-        }
-
-        .testimonial-author {
-            padding: 30px;
-            border-top: 1px solid rgba(0,0,0,0.1);
-            display: flex;
-            align-items: center;
-        }
-
-        .testimonial-author img {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            margin-right: 20px;
-        }
-
-        .testimonial-author h4 {
-            font-size: 18px;
-            font-weight: 700;
-            margin-bottom: 5px;
-            color: #1A1A1A;
-        }
-
-        .testimonial-author p {
-            font-size: 16px;
-            color: rgba(0,0,0,0.7);
-        }
-
-        /* Guarantee Section */
-        .guarantee-section {
-            padding: 80px 0;
-        }
-
-        .guarantee-content {
-            padding: 30px;
-            background: #f7f7f7;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-            border: 1px solid rgba(0,0,0,0.1);
-        }
-
-        .guarantee-content h2 {
-            font-size: 36px;
-            font-weight: 800;
-            margin-bottom: 20px;
-            color: #1A1A1A;
-        }
-
-        .guarantee-content p {
-            font-size: 16px;
-            color: rgba(0,0,0,0.7);
-            margin-bottom: 20px;
-            line-height: 1.6;
-        }
-
-        .guarantee-features {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-
-        .guarantee-features li {
-            margin-bottom: 10px;
-        }
-
-        .guarantee-features li::before {
-            content: "\2022";
-            font-size: 18px;
-            color: #FF6B00;
-            margin-right: 10px;
         }
 
         /* Footer Styles */
@@ -403,7 +306,7 @@
         }
 
         @media (max-width: 1024px) {
-            .programs-grid {
+            .course-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
         }
@@ -417,11 +320,7 @@
                 font-size: 40px;
             }
 
-            .programs-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .testimonials-grid {
+            .course-grid {
                 grid-template-columns: 1fr;
             }
 
@@ -456,119 +355,58 @@
 
     <section class="hero">
         <div class="container">
-            <div class="hero-content">
-                <h1>Business Scaling Programs</h1>
-                <p>Comprehensive training programs designed to help you scale your client business systematically and sustainably.</p>
-            </div>
+            <h1 data-aos="fade-up">Master Course Creation & Scaling</h1>
+            <p data-aos="fade-up" data-aos-delay="100">Learn at your own pace with our comprehensive online courses designed to help you build and scale your course business.</p>
         </div>
     </section>
 
-    <section class="programs">
+    <section class="courses">
         <div class="container">
-            <div class="programs-grid">
-                <div class="program-card" data-aos="fade-up">
-                    <div class="program-header">
-                        <h3>Growth Accelerator</h3>
-                        <span class="price">$2,997</span>
+            <div class="course-grid">
+                <div class="course-card" data-aos="fade-up">
+                    <div class="course-image">
+                        <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Course Creation Fundamentals">
                     </div>
-                    <div class="program-content">
-                        <p class="description">Our flagship 12-week program for service businesses ready to scale systematically.</p>
-                        <ul class="features">
-                            <li>Client Acquisition System Development</li>
-                            <li>Service Delivery Optimization</li>
-                            <li>Team Building & Management</li>
-                            <li>Financial Growth Strategy</li>
-                            <li>Weekly Group Coaching</li>
-                            <li>Private Community Access</li>
-                        </ul>
-                        <a href="#apply" class="btn btn-primary">Apply Now</a>
-                    </div>
-                </div>
-
-                <div class="program-card featured" data-aos="fade-up" data-aos-delay="100">
-                    <div class="program-header">
-                        <h3>Elite Scale Program</h3>
-                        <span class="price">$7,997</span>
-                    </div>
-                    <div class="program-content">
-                        <p class="description">6-month intensive program for established businesses targeting rapid growth.</p>
-                        <ul class="features">
-                            <li>1-on-1 Strategic Planning</li>
-                            <li>Custom Growth Roadmap</li>
-                            <li>Operations Automation Setup</li>
-                            <li>High-Ticket Client Acquisition</li>
-                            <li>Team Scaling Blueprint</li>
-                            <li>Weekly Private Coaching</li>
-                            <li>Priority Support Access</li>
-                        </ul>
-                        <a href="#apply" class="btn btn-primary">Apply Now</a>
-                    </div>
-                </div>
-
-                <div class="program-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="program-header">
-                        <h3>Foundations Workshop</h3>
-                        <span class="price">$997</span>
-                    </div>
-                    <div class="program-content">
-                        <p class="description">4-week program to build the fundamental systems for scaling your service business.</p>
-                        <ul class="features">
-                            <li>Business Assessment</li>
-                            <li>Basic Systems Setup</li>
-                            <li>Growth Strategy Planning</li>
-                            <li>Group Implementation Calls</li>
-                            <li>Resource Library Access</li>
-                        </ul>
-                        <a href="#apply" class="btn btn-primary">Apply Now</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="results-section">
-        <div class="container">
-            <h2>Client Success Stories</h2>
-            <div class="testimonials-grid">
-                <div class="testimonial-card" data-aos="fade-up">
-                    <div class="testimonial-content">
-                        <p>"The Growth Accelerator program helped us systematize our client acquisition. We've grown from 20 to 50 clients in just 3 months while maintaining our service quality."</p>
-                    </div>
-                    <div class="testimonial-author">
-                        <img src="images/client1.jpg" alt="David Park">
-                        <div>
-                            <h4>David Park</h4>
-                            <p>CEO, Digital Agency</p>
+                    <div class="course-content">
+                        <span class="course-tag">Beginner</span>
+                        <h3 class="course-title">Course Creation Fundamentals</h3>
+                        <p class="course-description">Learn the essential elements of creating engaging and profitable online courses.</p>
+                        <div class="course-meta">
+                            <div class="course-price">$997</div>
+                            <a href="#" class="btn">Enroll Now</a>
                         </div>
                     </div>
                 </div>
 
-                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="testimonial-content">
-                        <p>"The systems we implemented through the Elite program helped us scale from $50K to $200K monthly revenue while reducing our working hours."</p>
+                <div class="course-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="course-image">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Advanced Marketing">
                     </div>
-                    <div class="testimonial-author">
-                        <img src="images/client2.jpg" alt="Rachel Chen">
-                        <div>
-                            <h4>Rachel Chen</h4>
-                            <p>Founder, Consulting Firm</p>
+                    <div class="course-content">
+                        <span class="course-tag">Advanced</span>
+                        <h3 class="course-title">Advanced Marketing Strategies</h3>
+                        <p class="course-description">Master the art of marketing your courses through multiple channels.</p>
+                        <div class="course-meta">
+                            <div class="course-price">$1,497</div>
+                            <a href="#" class="btn">Enroll Now</a>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
 
-    <section class="guarantee-section">
-        <div class="container">
-            <div class="guarantee-content">
-                <h2>Our Growth Guarantee</h2>
-                <p>We're so confident in our programs that we offer a 30-day implementation guarantee. If you follow our systems and don't see measurable growth in your business, we'll refund your investment.</p>
-                <ul class="guarantee-features">
-                    <li>30-Day Implementation Period</li>
-                    <li>Clear Growth Metrics</li>
-                    <li>Full Support Throughout</li>
-                </ul>
+                <div class="course-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="course-image">
+                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Business Scaling">
+                    </div>
+                    <div class="course-content">
+                        <span class="course-tag">Expert</span>
+                        <h3 class="course-title">Scaling Your Course Business</h3>
+                        <p class="course-description">Learn how to scale your course business to 7-figures and beyond.</p>
+                        <div class="course-meta">
+                            <div class="course-price">$1,997</div>
+                            <a href="#" class="btn">Enroll Now</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>

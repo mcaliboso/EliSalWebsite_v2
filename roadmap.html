@@ -126,8 +126,8 @@
             }
         }
 
-        /* Hero Section */
-        .hero-section {
+        /* Form Section */
+        .form-section {
             min-height: 100vh;
             padding: 120px 0;
             display: flex;
@@ -138,7 +138,7 @@
             border-bottom: 1px solid rgba(0,0,0,0.1);
         }
 
-        .hero-section::before {
+        .form-section::before {
             content: '';
             position: absolute;
             top: 0;
@@ -149,13 +149,25 @@
             z-index: 0;
         }
 
-        .hero-content {
+        .form-container {
             position: relative;
             z-index: 1;
-            text-align: center;
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 60px;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+            border: 1px solid rgba(0,0,0,0.1);
         }
 
-        .hero-content h1 {
+        .form-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .form-header h1 {
             font-size: 48px;
             font-weight: 800;
             margin-bottom: 20px;
@@ -163,205 +175,149 @@
             color: #1A1A1A;
         }
 
-        .hero-content p {
+        .form-header p {
             font-size: 20px;
             color: rgba(0,0,0,0.7);
             max-width: 600px;
             margin: 0 auto 30px;
         }
 
-        /* Roadmap Section */
-        .roadmap-section {
-            padding: 100px 0;
-        }
-
-        .roadmap-section h2 {
-            font-size: 36px;
-            font-weight: 700;
-            margin-bottom: 40px;
-            color: #1A1A1A;
-        }
-
-        .roadmap-grid {
+        .benefits {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(2, 1fr);
             gap: 30px;
-        }
-
-        .roadmap-card {
-            background: #fff;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
-            border: 1px solid rgba(0,0,0,0.1);
-        }
-
-        .step-number {
-            font-size: 24px;
-            font-weight: 700;
-            margin-bottom: 10px;
-            color: #FF6B00;
-        }
-
-        .roadmap-card h3 {
-            font-size: 20px;
-            font-weight: 600;
-            margin-bottom: 10px;
-            color: #1A1A1A;
-        }
-
-        .roadmap-card p {
-            font-size: 16px;
-            color: rgba(0,0,0,0.7);
-            margin-bottom: 20px;
-        }
-
-        .step-features {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .step-features li {
-            font-size: 16px;
-            color: rgba(0,0,0,0.7);
-            margin-bottom: 10px;
-        }
-
-        /* Benefits Section */
-        .benefits-section {
-            padding: 100px 0;
-        }
-
-        .benefits-section h2 {
-            font-size: 36px;
-            font-weight: 700;
             margin-bottom: 40px;
-            color: #1A1A1A;
         }
 
-        .benefits-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 30px;
+        .benefit-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
         }
 
-        .benefit-card {
-            background: #fff;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
-            border: 1px solid rgba(0,0,0,0.1);
-        }
-
-        .benefit-card i {
-            font-size: 24px;
-            margin-bottom: 10px;
+        .benefit-icon {
+            width: 24px;
+            height: 24px;
             color: #FF6B00;
+            flex-shrink: 0;
         }
 
-        .benefit-card h3 {
-            font-size: 20px;
-            font-weight: 600;
-            margin-bottom: 10px;
-            color: #1A1A1A;
-        }
-
-        .benefit-card p {
+        .benefit-text {
             font-size: 16px;
             color: rgba(0,0,0,0.7);
-            margin-bottom: 20px;
         }
 
-        /* CTA Section */
-        .cta-section {
-            padding: 100px 0;
+        /* Footer */
+        footer {
+            padding: 80px 0 40px;
             background: #f7f7f7;
             border-top: 1px solid rgba(0,0,0,0.1);
+            color: #1A1A1A;
         }
 
-        .cta-content {
-            text-align: center;
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 60px;
+            margin-bottom: 60px;
         }
 
-        .cta-content h2 {
-            font-size: 36px;
+        .footer-col h3 {
+            font-size: 18px;
             font-weight: 700;
             margin-bottom: 20px;
             color: #1A1A1A;
         }
 
-        .cta-content p {
-            font-size: 20px;
+        .footer-col p {
+            font-size: 16px;
             color: rgba(0,0,0,0.7);
-            max-width: 600px;
-            margin: 0 auto 30px;
-        }
-
-        .contact-form {
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .form-group {
             margin-bottom: 20px;
+            max-width: 300px;
         }
 
-        .form-group input, .form-group select, .form-group textarea {
-            width: 100%;
-            padding: 15px;
-            border: 1px solid rgba(0,0,0,0.1);
-            border-radius: 5px;
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: rgba(0,0,0,0.7);
+            text-decoration: none;
             font-size: 16px;
+            transition: color 0.3s ease;
         }
 
-        .form-group select {
-            padding: 10px;
+        .footer-links a:hover {
+            color: #FF6B00;
         }
 
-        .btn {
-            background: #FF6B00;
-            color: #fff;
-            padding: 15px 30px;
-            border: none;
-            border-radius: 5px;
-            font-size: 16px;
-            cursor: pointer;
+        .footer-bottom {
+            padding-top: 40px;
+            border-top: 1px solid rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
-        .btn:hover {
-            background: #FF9900;
+        .footer-bottom p {
+            color: rgba(0,0,0,0.7);
+            font-size: 14px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .social-links a {
+            color: rgba(0,0,0,0.7);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #FF6B00;
         }
 
         @media (max-width: 768px) {
-            .hero-section {
-                padding: 80px 0;
+            .nav {
+                padding: 15px 0;
             }
 
-            .hero-content h1 {
+            .form-section {
+                padding: 100px 0 60px;
+            }
+
+            .form-container {
+                padding: 30px;
+            }
+
+            .form-header h1 {
                 font-size: 32px;
             }
 
-            .hero-content p {
+            .form-header p {
                 font-size: 18px;
             }
 
-            .roadmap-grid {
+            .benefits {
                 grid-template-columns: 1fr;
                 gap: 20px;
             }
 
-            .benefits-grid {
+            .footer-grid {
                 grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
                 gap: 20px;
-            }
-
-            .cta-content h2 {
-                font-size: 28px;
-            }
-
-            .cta-content p {
-                font-size: 16px;
+                text-align: center;
             }
         }
     </style>
@@ -389,127 +345,42 @@
         </div>
     </nav>
 
-    <section class="hero-section">
+    <section class="form-section">
         <div class="container">
-            <div class="hero-content">
-                <h1>Your Business Scaling Roadmap</h1>
-                <p>Get a customized growth strategy tailored to your service business's unique needs and goals.</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="roadmap-section">
-        <div class="container">
-            <h2>Your Path to Sustainable Growth</h2>
-            <div class="roadmap-grid">
-                <div class="roadmap-card" data-aos="fade-up">
-                    <div class="step-number">1</div>
-                    <h3>Business Assessment</h3>
-                    <p>We analyze your current business model, systems, and growth bottlenecks to identify key opportunities.</p>
-                    <ul class="step-features">
-                        <li>Current Systems Analysis</li>
-                        <li>Growth Bottleneck Identification</li>
-                        <li>Market Opportunity Assessment</li>
-                        <li>Resource Allocation Review</li>
-                    </ul>
+            <div class="form-container" data-aos="fade-up">
+                <div class="form-header">
+                    <h1>Get Your Custom Growth Roadmap</h1>
+                    <p>Fill out the form below to receive your personalized strategy for scaling your course business to $5M+ in net profit</p>
                 </div>
 
-                <div class="roadmap-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="step-number">2</div>
-                    <h3>Strategy Development</h3>
-                    <p>Create a customized scaling strategy aligned with your business goals and market position.</p>
-                    <ul class="step-features">
-                        <li>Client Acquisition Strategy</li>
-                        <li>Service Delivery Optimization</li>
-                        <li>Team Structure Planning</li>
-                        <li>Growth Metrics Definition</li>
-                    </ul>
-                </div>
-
-                <div class="roadmap-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="step-number">3</div>
-                    <h3>Systems Implementation</h3>
-                    <p>Deploy proven systems and processes to support sustainable business growth.</p>
-                    <ul class="step-features">
-                        <li>Client Management Systems</li>
-                        <li>Operations Automation</li>
-                        <li>Team Training Programs</li>
-                        <li>Quality Control Processes</li>
-                    </ul>
-                </div>
-
-                <div class="roadmap-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="step-number">4</div>
-                    <h3>Growth Acceleration</h3>
-                    <p>Execute growth initiatives while maintaining service quality and client satisfaction.</p>
-                    <ul class="step-features">
-                        <li>Client Base Expansion</li>
-                        <li>Service Portfolio Optimization</li>
-                        <li>Team Capacity Scaling</li>
-                        <li>Revenue Growth Tracking</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="benefits-section">
-        <div class="container">
-            <h2>Benefits of Our Approach</h2>
-            <div class="benefits-grid">
-                <div class="benefit-card" data-aos="fade-up">
-                    <i class="fas fa-chart-line"></i>
-                    <h3>Sustainable Growth</h3>
-                    <p>Scale your business systematically without compromising service quality or team wellbeing.</p>
-                </div>
-
-                <div class="benefit-card" data-aos="fade-up" data-aos-delay="100">
-                    <i class="fas fa-cogs"></i>
-                    <h3>Efficient Systems</h3>
-                    <p>Implement proven processes that streamline operations and improve service delivery.</p>
-                </div>
-
-                <div class="benefit-card" data-aos="fade-up" data-aos-delay="200">
-                    <i class="fas fa-users"></i>
-                    <h3>Team Development</h3>
-                    <p>Build and train high-performing teams that can support your business growth.</p>
-                </div>
-
-                <div class="benefit-card" data-aos="fade-up" data-aos-delay="300">
-                    <i class="fas fa-dollar-sign"></i>
-                    <h3>Increased Profitability</h3>
-                    <p>Optimize your business model for maximum revenue while controlling costs.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="cta-section">
-        <div class="container">
-            <div class="cta-content">
-                <h2>Ready to Scale Your Business?</h2>
-                <p>Get your personalized roadmap and start your growth journey today.</p>
-                <form id="roadmap-form" class="contact-form">
-                    <div class="form-group">
-                        <input type="text" placeholder="Business Name" required>
+                <div class="benefits">
+                    <div class="benefit-item" data-aos="fade-up" data-aos-delay="100">
+                        <svg class="benefit-icon" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                        </svg>
+                        <div class="benefit-text">Custom-tailored growth strategy based on your unique business</div>
                     </div>
-                    <div class="form-group">
-                        <input type="email" placeholder="Email Address" required>
+                    <div class="benefit-item" data-aos="fade-up" data-aos-delay="200">
+                        <svg class="benefit-icon" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                        </svg>
+                        <div class="benefit-text">Actionable steps you can implement immediately</div>
                     </div>
-                    <div class="form-group">
-                        <select required>
-                            <option value="">Current Monthly Revenue</option>
-                            <option value="10-50k">$10K - $50K</option>
-                            <option value="50-100k">$50K - $100K</option>
-                            <option value="100-500k">$100K - $500K</option>
-                            <option value="500k+">$500K+</option>
-                        </select>
+                    <div class="benefit-item" data-aos="fade-up" data-aos-delay="300">
+                        <svg class="benefit-icon" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                        </svg>
+                        <div class="benefit-text">Revenue optimization strategies proven to work</div>
                     </div>
-                    <div class="form-group">
-                        <textarea placeholder="What's your biggest scaling challenge?" required></textarea>
+                    <div class="benefit-item" data-aos="fade-up" data-aos-delay="400">
+                        <svg class="benefit-icon" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                        </svg>
+                        <div class="benefit-text">Scaling blueprint used by 7-figure course creators</div>
                     </div>
-                    <button type="submit" class="btn btn-primary">Get My Roadmap</button>
-                </form>
+                </div>
+
+                <div id="hubspot-form"></div>
             </div>
         </div>
     </section>

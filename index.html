@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scale Your Client Business | ScalingWorkshops.com</title>
+    <title>Scale Your Course Business | ScalingWorkshops.com</title>
     <!-- HubSpot tracking code -->
     <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/242100136.js"></script>
     <!-- HubSpot Forms -->
@@ -153,28 +153,64 @@
             background: radial-gradient(circle at center, rgba(255,107,0,0.05) 0%, rgba(255,255,255,0) 70%);
         }
 
-        .hero-content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .hero-content h1 {
+        .hero h1 {
             font-size: 72px;
             line-height: 1.1;
             margin-bottom: 30px;
             font-weight: 800;
         }
 
-        .hero-content p {
+        .hero .highlight {
+            color: #FF6B00;
+            position: relative;
+        }
+
+        .hero p {
             font-size: 24px;
             margin-bottom: 40px;
             opacity: 0.9;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            margin: 60px auto 40px;
+            max-width: 900px;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 20px;
+            background: rgba(255, 107, 0, 0.05);
+            border-radius: 12px;
+            border: 1px solid rgba(255, 107, 0, 0.1);
+            min-width: 200px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        .stat-number {
+            font-size: 48px;
+            font-weight: 800;
+            color: #FF6B00;
+            margin-bottom: 10px;
+            line-height: 1;
+        }
+
+        .stat-label {
+            font-size: 16px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: rgba(0, 0, 0, 0.9);
+            line-height: 1.4;
         }
 
         .hero-cta {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
+            margin-top: 60px;
         }
 
         .btn {
@@ -200,34 +236,118 @@
             box-shadow: 0 10px 20px rgba(255, 107, 0, 0.2);
         }
 
-        /* Features Section */
-        .features {
+        /* Results Section */
+        .results {
             padding: 120px 0;
             text-align: center;
             border-top: 1px solid rgba(0,0,0,0.1);
+            background: #f7f7f7;
         }
 
-        .feature-card {
+        .stat-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin: 60px 0;
+        }
+
+        .stat-card {
+            padding: 40px;
             background: rgba(255,255,255,0.03);
             border-radius: 8px;
-            overflow: hidden;
+            transition: transform 0.3s ease;
             background: #fff;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-            padding: 40px;
-            margin: 20px;
         }
 
-        .feature-card i {
+        .stat-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .stat-number {
+            font-size: 64px;
+            font-weight: 800;
+            color: #FF6B00;
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            font-size: 20px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Process Section */
+        .process {
+            padding: 120px 0;
+            background: #fff;
+        }
+
+        .process h2 {
             font-size: 48px;
-            margin-bottom: 20px;
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .process-card {
+            padding: 40px;
+            background: rgba(255,255,255,0.03);
+            border-radius: 20px;
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            background: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        .process-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(255, 107, 0, 0.3);
+            box-shadow: 0 20px 40px rgba(255, 107, 0, 0.1);
+        }
+
+        .process-icon {
+            margin-bottom: 30px;
             color: #FF6B00;
         }
 
-        .feature-card h3 {
+        .process-icon svg {
+            width: 48px;
+            height: 48px;
+        }
+
+        .process-card h3 {
             font-size: 24px;
             font-weight: 700;
             margin-bottom: 20px;
             color: #1A1A1A;
+        }
+
+        .feature-list {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+
+        .feature-list li {
+            margin-bottom: 12px;
+            padding-left: 24px;
+            position: relative;
+            color: rgba(0, 0, 0, 0.9);
+        }
+
+        .feature-list li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #FF6B00;
         }
 
         /* About Section */
@@ -237,10 +357,11 @@
             border-top: 1px solid rgba(0,0,0,0.1);
         }
 
-        .about-content {
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: center;
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
         }
 
         .about-content h2 {
@@ -255,77 +376,16 @@
             opacity: 0.9;
         }
 
-        .stats {
-            display: flex;
-            justify-content: center;
-            gap: 60px;
-            margin: 60px auto 40px;
-            max-width: 900px;
-        }
-
-        .stat-item {
-            text-align: center;
-            padding: 20px;
-            background: rgba(255, 107, 0, 0.05);
+        .about-image {
+            position: relative;
             border-radius: 12px;
-            border: 1px solid rgba(255, 107, 0, 0.1);
-            min-width: 200px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-        }
-
-        .stat-item h3 {
-            font-size: 48px;
-            font-weight: 800;
-            color: #FF6B00;
-            margin-bottom: 10px;
-            line-height: 1;
-        }
-
-        /* Testimonials Section */
-        .testimonials {
-            padding: 120px 0;
-            background: #f7f7f7;
-            border-top: 1px solid rgba(0,0,0,0.1);
-        }
-
-        .testimonial-card {
-            background: rgba(255,255,255,0.03);
-            border-radius: 8px;
             overflow: hidden;
-            background: #fff;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-            padding: 40px;
-            margin: 20px;
         }
 
-        .testimonial-card p {
-            font-size: 18px;
-            margin-bottom: 20px;
-            opacity: 0.9;
-        }
-
-        .testimonial-author {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-        }
-
-        .testimonial-author img {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-        }
-
-        .testimonial-author h4 {
-            font-size: 18px;
-            font-weight: 700;
-            margin-bottom: 5px;
-            color: #1A1A1A;
-        }
-
-        .testimonial-author p {
-            font-size: 16px;
-            opacity: 0.7;
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
         }
 
         /* CTA Section */
@@ -353,6 +413,98 @@
         .form-header h2 {
             font-size: 36px;
             margin-bottom: 20px;
+        }
+
+        /* FAQ Section */
+        .faq {
+            padding: 120px 0;
+            background: #fff;
+            border-top: 1px solid rgba(0,0,0,0.1);
+        }
+
+        .faq h2 {
+            font-size: 48px;
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .faq-grid {
+            display: grid;
+            gap: 30px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: rgba(255,255,255,0.03);
+            border-radius: 8px;
+            overflow: hidden;
+            background: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        .faq-question {
+            padding: 25px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .faq-question h3 {
+            font-size: 18px;
+            font-weight: 600;
+            margin: 0;
+        }
+
+        .faq-question .icon {
+            width: 20px;
+            height: 20px;
+            position: relative;
+        }
+
+        .faq-question .icon::before,
+        .faq-question .icon::after {
+            content: '';
+            position: absolute;
+            background: #FF6B00;
+            transition: all 0.3s ease;
+        }
+
+        .faq-question .icon::before {
+            width: 2px;
+            height: 20px;
+            left: 9px;
+            top: 0;
+        }
+
+        .faq-question .icon::after {
+            width: 20px;
+            height: 2px;
+            left: 0;
+            top: 9px;
+        }
+
+        .faq-answer {
+            padding: 0 30px;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .faq-item.active .faq-question {
+            background: rgba(255,107,0,0.1);
+        }
+
+        .faq-item.active .faq-question .icon::before {
+            transform: rotate(90deg);
+            opacity: 0;
+        }
+
+        .faq-item.active .faq-answer {
+            padding: 0 30px 25px;
+            max-height: 1000px;
         }
 
         /* Footer */
@@ -440,34 +592,38 @@
                 padding: 100px 0 80px;
             }
 
-            .hero-content h1 {
+            .hero h1 {
                 font-size: 56px;
                 padding: 0 20px;
             }
 
-            .hero-content p {
+            .hero p {
                 font-size: 20px;
                 padding: 0 20px;
             }
 
-            .features {
-                padding: 80px 0;
+            .hero-stats {
+                flex-wrap: wrap;
+                gap: 30px;
+                padding: 0 20px;
             }
 
-            .feature-card {
-                margin: 10px;
+            .stat-item {
+                min-width: 180px;
             }
 
-            .about {
-                padding: 80px 0;
+            .process-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 30px;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
             }
 
             .about-content h2 {
                 font-size: 36px;
-            }
-
-            .testimonial-card {
-                margin: 10px;
             }
 
             .footer-grid {
@@ -480,31 +636,50 @@
                 gap: 20px;
                 text-align: center;
             }
+
+            .faq h2 {
+                font-size: 36px;
+                margin-bottom: 40px;
+            }
+
+            .faq-question {
+                padding: 20px;
+            }
+
+            .faq-question h3 {
+                font-size: 16px;
+            }
+
+            .faq-item.active .faq-answer {
+                padding: 0 20px 20px;
+            }
         }
 
         @media (max-width: 768px) {
-            .hero-content h1 {
+            .hero h1 {
                 font-size: 42px;
             }
 
-            .hero-content p {
+            .hero p {
                 font-size: 18px;
             }
 
-            .features {
-                padding: 60px 0;
+            .hero-stats {
+                flex-direction: column;
+                align-items: center;
             }
 
-            .feature-card {
-                padding: 20px;
+            .stat-item {
+                width: 100%;
+                max-width: 300px;
             }
 
-            .about {
-                padding: 60px 0;
+            .process-grid {
+                grid-template-columns: 1fr;
             }
 
-            .testimonial-card {
-                padding: 20px;
+            .process-card {
+                padding: 30px;
             }
 
             .btn {
@@ -525,10 +700,13 @@
                     </svg>
                 </button>
                 <ul class="nav-links">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#features">Features</a></li>
-                    <li><a href="#testimonials">Testimonials</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="workshops.html">Workshops</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="books.html">Books</a></li>
+                    <li><a href="media.html">Media</a></li>
+                    <li><a href="partner.html">Partner With Us</a></li>
+                    <li><a href="about.html">About the Firm</a></li>
+                    <li><a href="careers.html">Careers</a></li>
                 </ul>
             </div>
         </div>
@@ -536,79 +714,161 @@
 
     <section class="hero">
         <div class="container">
-            <div class="hero-content">
-                <h1>Transform Your Business Growth</h1>
-                <p>Expert guidance and proven strategies to scale your client business sustainably. From streamlining operations to maximizing client value, we help you build a thriving enterprise.</p>
-                <div class="hero-cta">
-                    <a href="#contact" class="btn btn-primary">Scale Your Business</a>
-                    <a href="#services" class="btn btn-secondary">Explore Services</a>
+            <h1 data-aos="fade-up">Build Your <span class="highlight">$5M Course Empire</span> With Battle-Tested Systems</h1>
+            <p data-aos="fade-up" data-aos-delay="100">Stop drowning in course creation chaos. Learn the exact frameworks we've used to help 500+ everyday course creators build predictable 7-figure businesses.</p>
+            <div class="hero-stats" data-aos="fade-up" data-aos-delay="200">
+                <div class="stat-item">
+                    <div class="stat-number">500+</div>
+                    <div class="stat-label">Course Creators Scaled</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">$250M+</div>
+                    <div class="stat-label">Student Revenue Generated</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">4.9★</div>
+                    <div class="stat-label">From 2,000+ Reviews</div>
+                </div>
+            </div>
+            <div class="hero-cta" data-aos="fade-up" data-aos-delay="300">
+                <a href="#contact" class="btn btn-primary">Scale Your Course Business</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="results">
+        <div class="container">
+            <h2 data-aos="fade-up">We Don't Teach Theory.<br>We Build Course Empires.</h2>
+            <p data-aos="fade-up" data-aos-delay="100">Our students aren't just creating courses. They're building systematic businesses that generate predictable revenue without the chaos.</p>
+            <div class="stat-grid">
+                <div class="stat-card" data-aos="fade-up">
+                    <div class="stat-number">82%</div>
+                    <div class="stat-label">Hit 6-Figures Within 12 Months</div>
+                    <p>Through systematic implementation of our proven frameworks</p>
+                </div>
+                <div class="stat-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="stat-number">35+</div>
+                    <div class="stat-label">7-Figure Course Creators</div>
+                    <p>Built using our scalable systems and processes</p>
+                </div>
+                <div class="stat-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="stat-number">3X</div>
+                    <div class="stat-label">Average Revenue Growth</div>
+                    <p>Within first 6 months of implementing our systems</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="features">
+    <section class="process">
         <div class="container">
-            <div class="feature-card" data-aos="fade-up">
-                <i class="fas fa-chart-line"></i>
-                <h3>Strategic Growth Planning</h3>
-                <p>Develop a clear roadmap for scaling your client business with actionable milestones and measurable outcomes.</p>
-            </div>
-            <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
-                <i class="fas fa-users"></i>
-                <h3>Client Acquisition Systems</h3>
-                <p>Implement proven systems to consistently attract and convert high-value clients while maintaining service quality.</p>
-            </div>
-            <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
-                <i class="fas fa-cogs"></i>
-                <h3>Operations Optimization</h3>
-                <p>Streamline your business processes to handle growth efficiently while delivering exceptional client experiences.</p>
+            <h2 data-aos="fade-up">The Full-Stack Course Empire System</h2>
+            <p data-aos="fade-up" data-aos-delay="100">Most "gurus" teach tactics. We give you the complete system for building a sustainable course business.</p>
+            <div class="process-grid">
+                <div class="process-card" data-aos="fade-up">
+                    <div class="process-icon">
+                        <svg fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+                        </svg>
+                    </div>
+                    <h3>Foundation System</h3>
+                    <ul class="feature-list">
+                        <li>Scientific niche validation</li>
+                        <li>High-ticket course development</li>
+                        <li>Value-based pricing strategy</li>
+                        <li>Course creation frameworks</li>
+                    </ul>
+                </div>
+                <div class="process-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="process-icon">
+                        <svg fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"/>
+                        </svg>
+                    </div>
+                    <h3>Marketing Machine</h3>
+                    <ul class="feature-list">
+                        <li>Lead generation systems</li>
+                        <li>Automated sales funnels</li>
+                        <li>Conversion optimization</li>
+                        <li>Traffic scaling blueprint</li>
+                    </ul>
+                </div>
+                <div class="process-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="process-icon">
+                        <svg fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z"/>
+                            <path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z"/>
+                        </svg>
+                    </div>
+                    <h3>Scale Framework</h3>
+                    <ul class="feature-list">
+                        <li>Operations automation</li>
+                        <li>Team building systems</li>
+                        <li>Financial optimization</li>
+                        <li>Strategic partnerships</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
 
     <section class="about">
         <div class="container">
-            <div class="about-content">
-                <h2>Scale Your Business With Confidence</h2>
-                <p>We understand the challenges of growing a client-based business. Our proven methodologies and expert guidance help you overcome scaling hurdles and achieve sustainable growth.</p>
-                <div class="stats">
-                    <div class="stat-item">
-                        <h3>500+</h3>
-                        <p>Businesses Scaled</p>
-                    </div>
-                    <div class="stat-item">
-                        <h3>85%</h3>
-                        <p>Revenue Growth</p>
-                    </div>
-                    <div class="stat-item">
-                        <h3>95%</h3>
-                        <p>Client Satisfaction</p>
-                    </div>
+            <div class="about-grid">
+                <div class="about-content" data-aos="fade-right">
+                    <h2>About ScalingWorkshops</h2>
+                    <p>We're a team of course creation experts and business strategists who have helped hundreds of course creators scale their businesses to 7-figures and beyond.</p>
+                    <p>Our proven methodology combines cutting-edge marketing strategies, operational excellence, and deep industry expertise to help you create a thriving course business that generates consistent revenue while maintaining work-life balance.</p>
+                    <p>With over $127M in revenue generated for our clients and a track record of success across various niches, we understand what it takes to build and scale a successful online course business.</p>
+                </div>
+                <div class="about-image" data-aos="fade-left">
+                    <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Team working together">
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="testimonials">
+    <section class="faq">
         <div class="container">
-            <div class="testimonial-card" data-aos="fade-up">
-                <p>"Their strategic guidance helped us triple our client base while maintaining our service quality. A game-changer for our business."</p>
-                <div class="testimonial-author">
-                    <img src="images/testimonial1.jpg" alt="Sarah Johnson">
-                    <div>
-                        <h4>Sarah Johnson</h4>
-                        <p>CEO, Digital Solutions Pro</p>
+            <h2 data-aos="fade-up">Frequently Asked Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item" data-aos="fade-up">
+                    <div class="faq-question">
+                        <h3>How long does it take to see results?</h3>
+                        <div class="icon"></div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Most of our clients start seeing significant improvements within 30-60 days of implementing our strategies. However, the exact timeline depends on your current business stage, niche, and how quickly you can implement our recommendations.</p>
                     </div>
                 </div>
-            </div>
-            <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
-                <p>"The systems they helped us implement transformed our client acquisition process. We're now growing faster than ever."</p>
-                <div class="testimonial-author">
-                    <img src="images/testimonial2.jpg" alt="Michael Chen">
-                    <div>
-                        <h4>Michael Chen</h4>
-                        <p>Founder, Growth Accelerator</p>
+
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="faq-question">
+                        <h3>Do I need to have an existing course?</h3>
+                        <div class="icon"></div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, our strategies work best for course creators who already have a course and some initial traction. If you're just starting out, we recommend first developing and validating your course before scaling.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="faq-question">
+                        <h3>What makes your approach different?</h3>
+                        <div class="icon"></div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Unlike generic business coaching, we specialize exclusively in scaling course businesses. Our methodology combines proven marketing strategies, operational systems, and industry-specific optimizations that we've developed through helping hundreds of course creators reach 7-figures.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="faq-question">
+                        <h3>What's included in the roadmap?</h3>
+                        <div class="icon"></div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Your custom roadmap includes a detailed analysis of your current business, specific growth opportunities, step-by-step implementation plans, and proven strategies tailored to your niche and goals. We also identify potential bottlenecks and provide solutions to overcome them.</p>
                     </div>
                 </div>
             </div>
@@ -619,7 +879,7 @@
         <div class="container">
             <div class="form-wrapper" data-aos="fade-up">
                 <div class="form-header">
-                    <h2>Ready to Scale Your Business?</h2>
+                    <h2>Ready to Scale Your Course Business?</h2>
                     <p>Get your personalized growth roadmap and start scaling today</p>
                     <a href="roadmap.html" class="btn" style="margin-top: 30px;">Create My Roadmap →</a>
                 </div>
@@ -632,7 +892,7 @@
             <div class="footer-grid">
                 <div class="footer-col">
                     <h3>ScalingWorkshops</h3>
-                    <p>Helping businesses scale to $5M+ in net profit through proven strategies and systems.</p>
+                    <p>Helping course creators scale to $5M+ in net profit through proven strategies and systems.</p>
                 </div>
                 <div class="footer-col">
                     <h3>Company</h3>
@@ -679,6 +939,24 @@
         // Mobile Menu Toggle
         document.querySelector('.mobile-menu-btn').addEventListener('click', () => {
             document.querySelector('.nav-links').classList.toggle('active');
+        });
+
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const item = question.parentElement;
+                const isActive = item.classList.contains('active');
+                
+                // Close all FAQ items
+                document.querySelectorAll('.faq-item').forEach(faqItem => {
+                    faqItem.classList.remove('active');
+                });
+
+                // Open clicked item if it wasn't already open
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
         });
     </script>
 </body>
