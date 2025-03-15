@@ -158,123 +158,6 @@
             border-radius: 2px;
         }
 
-        /* Social Media Section */
-        .social-media-section {
-            padding: 80px 0;
-            background: #fff;
-        }
-
-        .social-media-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-
-        .social-card {
-            background: #fff;
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-            border: 1px solid rgba(0,0,0,0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .social-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
-        }
-
-        .social-card-header {
-            padding: 20px;
-            border-bottom: 1px solid rgba(0,0,0,0.1);
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-
-        .social-platform-icon {
-            width: 32px;
-            height: 32px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: #f7f7f7;
-        }
-
-        .social-platform-icon i {
-            font-size: 18px;
-            color: #1A1A1A;
-        }
-
-        .social-platform-info h3 {
-            font-size: 18px;
-            font-weight: 700;
-            color: #1A1A1A;
-            margin: 0;
-        }
-
-        .social-platform-info p {
-            font-size: 14px;
-            color: rgba(0,0,0,0.6);
-            margin: 4px 0 0 0;
-        }
-
-        .social-card-content {
-            padding: 25px;
-        }
-
-        .social-stats {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-            margin-bottom: 20px;
-        }
-
-        .stat-item {
-            text-align: center;
-            padding: 15px;
-            background: #f7f7f7;
-            border-radius: 12px;
-        }
-
-        .stat-number {
-            font-size: 24px;
-            font-weight: 800;
-            color: #1A1A1A;
-            margin-bottom: 5px;
-        }
-
-        .stat-label {
-            font-size: 14px;
-            color: rgba(0,0,0,0.6);
-        }
-
-        .social-description {
-            font-size: 15px;
-            line-height: 1.6;
-            color: rgba(0,0,0,0.7);
-            margin-bottom: 20px;
-        }
-
-        .social-link {
-            display: inline-block;
-            padding: 12px 24px;
-            background: #f7f7f7;
-            color: #1A1A1A;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            border: 1px solid rgba(0,0,0,0.1);
-        }
-
-        .social-link:hover {
-            background: #efefef;
-            transform: translateY(-2px);
-        }
-
         /* Podcast Section */
         .podcast-section {
             padding: 80px 0;
@@ -411,145 +294,197 @@
             font-size: 16px;
         }
 
-        /* Speaking Engagements Section */
-        .speaking {
+        /* Blog Section */
+        .blog-section {
             padding: 80px 0;
             background: #fff;
         }
 
-        .events-grid {
+        .blog-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
             margin-top: 40px;
         }
 
-        .event-card {
+        .blog-card {
             background: #fff;
-            border-radius: 12px;
-            padding: 30px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            border: 1px solid rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+        }
+
+        .blog-image {
+            padding: 20px;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+        }
+
+        .blog-content {
+            padding: 25px;
+        }
+
+        .blog-tag {
+            font-size: 14px;
+            color: rgba(0,0,0,0.6);
+            display: inline-block;
+            padding: 6px 12px;
+            background: #f7f7f7;
+            border-radius: 20px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .blog-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: #1A1A1A;
+            margin-bottom: 12px;
+        }
+
+        .blog-description {
+            font-size: 15px;
+            line-height: 1.6;
+            color: rgba(0,0,0,0.7);
+            margin-bottom: 20px;
+        }
+
+        .read-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            background: #f7f7f7;
+            color: #1A1A1A;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.3s ease;
             border: 1px solid rgba(0,0,0,0.1);
         }
 
-        .event-date {
-            background: #FF6B00;
-            color: #fff;
-            padding: 10px 20px;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-            border-radius: 12px 12px 0 0;
+        .read-button:hover {
+            background: #efefef;
+            transform: translateY(-2px);
         }
 
-        .event-date::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(135deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 100%);
-        }
-
-        .event-date .month {
-            display: block;
-            font-size: 16px;
-            font-weight: 500;
-            text-transform: uppercase;
-        }
-
-        .event-date .day {
-            display: block;
-            font-size: 24px;
-            font-weight: 700;
-            line-height: 1;
-            margin-top: 5px;
-        }
-
-        .event-info {
-            padding: 20px;
-        }
-
-        .event-info h3 {
-            margin-bottom: 15px;
-            color: #1A1A1A;
-            font-size: 20px;
-            font-weight: 600;
-        }
-
-        .event-info .location {
-            color: #FF6B00;
-            margin-bottom: 15px;
-            font-size: 16px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .event-info .location::before {
-            content: '📍';
-            font-size: 18px;
-        }
-
-        .event-info .description {
-            margin-bottom: 30px;
-            color: rgba(0,0,0,0.7);
-            font-size: 16px;
-            line-height: 1.6;
-        }
-
-        /* Contact Section */
-        .contact {
-            padding: 120px 0;
-            text-align: center;
+        /* Resources Section */
+        .resources-section {
+            padding: 80px 0;
             background: #f7f7f7;
             border-top: 1px solid rgba(0,0,0,0.1);
+        }
+
+        .resources-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .resource-card {
+            background: #fff;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            border: 1px solid rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .resource-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+        }
+
+        .resource-icon {
+            font-size: 24px;
             color: #1A1A1A;
+            margin-bottom: 10px;
         }
 
-        .contact-content {
-            position: relative;
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
-        .contact-content h2 {
-            margin-bottom: 25px;
-            font-size: 36px;
-            font-weight: 700;
-        }
-
-        .contact-content p {
-            margin-bottom: 40px;
+        .resource-title {
             font-size: 20px;
+            font-weight: 700;
+            color: #1A1A1A;
+            margin-bottom: 12px;
+        }
+
+        .resource-description {
+            font-size: 15px;
             line-height: 1.6;
             color: rgba(0,0,0,0.7);
+            margin-bottom: 20px;
         }
 
-        .btn {
-            display: inline-block;
-            padding: 15px 40px;
+        .download-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            background: #f7f7f7;
+            color: #1A1A1A;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0,0,0,0.1);
+        }
+
+        .download-button:hover {
+            background: #efefef;
+            transform: translateY(-2px);
+        }
+
+        /* Newsletter Section */
+        .newsletter-section {
+            padding: 80px 0;
+            background: #fff;
+        }
+
+        .newsletter-form {
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .newsletter-input {
+            padding: 15px;
+            border: 1px solid rgba(0,0,0,0.1);
+            border-radius: 8px;
+            font-size: 16px;
+            width: 100%;
+        }
+
+        .subscribe-button {
+            padding: 15px 30px;
             background: #FF6B00;
             color: #fff;
             text-decoration: none;
-            border-radius: 30px;
+            border-radius: 8px;
             font-weight: 600;
             font-size: 16px;
-            transition: all 0.4s ease;
-            border: 2px solid #FF6B00;
+            transition: all 0.3s ease;
+            border: none;
         }
 
-        .btn:hover {
-            background: transparent;
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(255, 107, 0, 0.3);
+        .subscribe-button:hover {
+            background: #FF9900;
+            transform: translateY(-2px);
         }
 
         /* Responsive Design */
         @media (max-width: 992px) {
-            .social-media-grid,
-            .events-grid {
+            .podcast-grid,
+            .blog-grid,
+            .resources-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
 
@@ -559,8 +494,9 @@
         }
 
         @media (max-width: 768px) {
-            .social-media-grid,
-            .events-grid {
+            .podcast-grid,
+            .blog-grid,
+            .resources-grid {
                 grid-template-columns: 1fr;
             }
 
@@ -569,17 +505,9 @@
                 margin-bottom: 40px;
             }
 
-            .contact-content h2 {
-                font-size: 36px;
-            }
-
-            .contact-content p {
-                font-size: 18px;
-            }
-
-            .social-card,
             .podcast-card,
-            .event-card {
+            .blog-card,
+            .resource-card {
                 padding: 20px;
             }
         }
@@ -659,6 +587,7 @@
                     </svg>
                 </button>
                 <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="workshops.html">Workshops</a></li>
                     <li><a href="courses.html">Courses</a></li>
                     <li><a href="books.html">Books</a></li>
@@ -676,92 +605,8 @@
         <section class="hero">
             <div class="container">
                 <div class="hero-content" data-aos="fade-up">
-                    <h1>Media & Engagements</h1>
-                    <p>Connect with us across various platforms and discover our latest speaking engagements.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Social Media Section -->
-        <section class="social-media-section">
-            <div class="container">
-                <h2 class="section-title" data-aos="fade-up">Social Media Presence</h2>
-                <div class="social-media-grid">
-                    <div class="social-card" data-aos="fade-up">
-                        <div class="social-card-header">
-                            <div class="social-platform-icon">
-                                <i class="fab fa-linkedin"></i>
-                            </div>
-                            <div class="social-platform-info">
-                                <h3>LinkedIn</h3>
-                                <p>Follow our professional insights and industry updates</p>
-                            </div>
-                        </div>
-                        <div class="social-card-content">
-                            <div class="social-stats">
-                                <div class="stat-item">
-                                    <p class="stat-number">10k+</p>
-                                    <p class="stat-label">Followers</p>
-                                </div>
-                                <div class="stat-item">
-                                    <p class="stat-number">500+</p>
-                                    <p class="stat-label">Posts</p>
-                                </div>
-                            </div>
-                            <p class="social-description">Stay updated with our latest thoughts and discussions on LinkedIn.</p>
-                            <a href="#" class="social-link">Connect →</a>
-                        </div>
-                    </div>
-                    <div class="social-card" data-aos="fade-up" data-aos-delay="100">
-                        <div class="social-card-header">
-                            <div class="social-platform-icon">
-                                <i class="fab fa-twitter"></i>
-                            </div>
-                            <div class="social-platform-info">
-                                <h3>Twitter</h3>
-                                <p>Stay updated with our latest thoughts and discussions</p>
-                            </div>
-                        </div>
-                        <div class="social-card-content">
-                            <div class="social-stats">
-                                <div class="stat-item">
-                                    <p class="stat-number">5k+</p>
-                                    <p class="stat-label">Followers</p>
-                                </div>
-                                <div class="stat-item">
-                                    <p class="stat-number">200+</p>
-                                    <p class="stat-label">Tweets</p>
-                                </div>
-                            </div>
-                            <p class="social-description">Get behind-the-scenes looks at our events and team on Twitter.</p>
-                            <a href="#" class="social-link">Follow →</a>
-                        </div>
-                    </div>
-                    <div class="social-card" data-aos="fade-up" data-aos-delay="200">
-                        <div class="social-card-header">
-                            <div class="social-platform-icon">
-                                <i class="fab fa-instagram"></i>
-                            </div>
-                            <div class="social-platform-info">
-                                <h3>Instagram</h3>
-                                <p>Get behind-the-scenes looks at our events and team</p>
-                            </div>
-                        </div>
-                        <div class="social-card-content">
-                            <div class="social-stats">
-                                <div class="stat-item">
-                                    <p class="stat-number">2k+</p>
-                                    <p class="stat-label">Followers</p>
-                                </div>
-                                <div class="stat-item">
-                                    <p class="stat-number">100+</p>
-                                    <p class="stat-label">Posts</p>
-                                </div>
-                            </div>
-                            <p class="social-description">Stay updated with our latest thoughts and discussions on Instagram.</p>
-                            <a href="#" class="social-link">Follow →</a>
-                        </div>
-                    </div>
+                    <h1>Growth Insights & Media</h1>
+                    <p>Stay updated with the latest strategies, insights, and success stories in business scaling.</p>
                 </div>
             </div>
         </section>
@@ -769,103 +614,49 @@
         <!-- Podcast Features Section -->
         <section class="podcast-section">
             <div class="container">
-                <h2 class="section-title" data-aos="fade-up">Podcast Appearances</h2>
+                <h2 class="section-title" data-aos="fade-up">Business Growth Podcast</h2>
                 <div class="podcast-grid">
                     <div class="podcast-card" data-aos="fade-up">
-                        <div class="podcast-header">
-                            <div class="podcast-platform-badge">
-                                <i class="fas fa-podcast"></i>
-                                Tech Talks
-                            </div>
-                            <h3 class="podcast-title">The Future of AI Development</h3>
+                        <div class="podcast-image">
+                            <img src="images/podcasts/strategic-growth.jpg" alt="Strategic Growth Podcast">
                         </div>
                         <div class="podcast-content">
+                            <span class="podcast-tag">Latest Episode</span>
+                            <h3>Scaling Through Systems</h3>
+                            <p>Learn how successful businesses implement scalable systems and processes for sustainable growth.</p>
                             <div class="podcast-meta">
-                                <span class="podcast-date">
-                                    <i class="far fa-calendar"></i>
-                                    March 15, 2025
-                                </span>
-                                <span class="podcast-duration">
-                                    <i class="far fa-clock"></i>
-                                    45 min
-                                </span>
-                            </div>
-                            <p class="podcast-description">Join us as we discuss the evolving landscape of AI development and its impact on modern software engineering practices.</p>
-                            <div class="podcast-footer">
-                                <div class="podcast-host">
-                                    <i class="far fa-user"></i>
-                                    Hosted by Sarah Chen
-                                </div>
-                                <a href="#" class="listen-button">
-                                    <i class="fas fa-play"></i>
-                                    Listen Now
-                                </a>
+                                <span class="duration">45 min</span>
+                                <a href="#listen" class="btn btn-primary">Listen Now</a>
                             </div>
                         </div>
                     </div>
 
                     <div class="podcast-card" data-aos="fade-up" data-aos-delay="100">
-                        <div class="podcast-header">
-                            <div class="podcast-platform-badge">
-                                <i class="fas fa-podcast"></i>
-                                Developer Stories
-                            </div>
-                            <h3 class="podcast-title">Building Scalable Solutions</h3>
+                        <div class="podcast-image">
+                            <img src="images/podcasts/leadership-excellence.jpg" alt="Leadership Excellence Podcast">
                         </div>
                         <div class="podcast-content">
+                            <span class="podcast-tag">Featured</span>
+                            <h3>Building High-Performance Teams</h3>
+                            <p>Discover strategies for developing and leading teams that drive business growth.</p>
                             <div class="podcast-meta">
-                                <span class="podcast-date">
-                                    <i class="far fa-calendar"></i>
-                                    March 1, 2025
-                                </span>
-                                <span class="podcast-duration">
-                                    <i class="far fa-clock"></i>
-                                    60 min
-                                </span>
-                            </div>
-                            <p class="podcast-description">Discover the key principles and best practices for creating scalable software solutions in today's dynamic tech landscape.</p>
-                            <div class="podcast-footer">
-                                <div class="podcast-host">
-                                    <i class="far fa-user"></i>
-                                    Hosted by Mike Johnson
-                                </div>
-                                <a href="#" class="listen-button">
-                                    <i class="fas fa-play"></i>
-                                    Listen Now
-                                </a>
+                                <span class="duration">38 min</span>
+                                <a href="#listen" class="btn btn-primary">Listen Now</a>
                             </div>
                         </div>
                     </div>
 
                     <div class="podcast-card" data-aos="fade-up" data-aos-delay="200">
-                        <div class="podcast-header">
-                            <div class="podcast-platform-badge">
-                                <i class="fas fa-podcast"></i>
-                                Code & Coffee
-                            </div>
-                            <h3 class="podcast-title">Modern Development Workflows</h3>
+                        <div class="podcast-image">
+                            <img src="images/podcasts/market-expansion.jpg" alt="Market Expansion Podcast">
                         </div>
                         <div class="podcast-content">
+                            <span class="podcast-tag">Popular</span>
+                            <h3>Market Expansion Strategies</h3>
+                            <p>Expert insights on identifying and capturing new market opportunities for business growth.</p>
                             <div class="podcast-meta">
-                                <span class="podcast-date">
-                                    <i class="far fa-calendar"></i>
-                                    February 15, 2025
-                                </span>
-                                <span class="podcast-duration">
-                                    <i class="far fa-clock"></i>
-                                    30 min
-                                </span>
-                            </div>
-                            <p class="podcast-description">Learn about the latest tools and techniques that are revolutionizing software development workflows.</p>
-                            <div class="podcast-footer">
-                                <div class="podcast-host">
-                                    <i class="far fa-user"></i>
-                                    Hosted by Alex Rivera
-                                </div>
-                                <a href="#" class="listen-button">
-                                    <i class="fas fa-play"></i>
-                                    Listen Now
-                                </a>
+                                <span class="duration">42 min</span>
+                                <a href="#listen" class="btn btn-primary">Listen Now</a>
                             </div>
                         </div>
                     </div>
@@ -873,59 +664,88 @@
             </div>
         </section>
 
-        <!-- Speaking Engagements Section -->
-        <section class="speaking">
+        <!-- Blog Section -->
+        <section class="blog-section">
             <div class="container">
-                <h2 class="section-title" data-aos="fade-up">Speaking Engagements</h2>
-                <div class="events-grid">
-                    <div class="event-card" data-aos="fade-up">
-                        <div class="event-date">
-                            <span class="month">APR</span>
-                            <span class="day">15</span>
+                <h2 class="section-title" data-aos="fade-up">Growth Strategy Blog</h2>
+                <div class="blog-grid">
+                    <div class="blog-card" data-aos="fade-up">
+                        <div class="blog-image">
+                            <img src="images/blog/operational-excellence.jpg" alt="Operational Excellence">
                         </div>
-                        <div class="event-info">
-                            <h3>EdTech Conference 2025</h3>
-                            <p class="location">San Francisco, CA</p>
-                            <p class="description">Keynote: "The Evolution of Online Education"</p>
-                            <a href="#" class="btn">Learn More →</a>
-                        </div>
-                    </div>
-                    <div class="event-card" data-aos="fade-up" data-aos-delay="100">
-                        <div class="event-date">
-                            <span class="month">MAY</span>
-                            <span class="day">22</span>
-                        </div>
-                        <div class="event-info">
-                            <h3>Digital Learning Summit</h3>
-                            <p class="location">New York, NY</p>
-                            <p class="description">Panel: "Scaling Your Course Business"</p>
-                            <a href="#" class="btn">Learn More →</a>
+                        <div class="blog-content">
+                            <span class="blog-tag">Operations</span>
+                            <h3>5 Key Systems for Scaling Your Business</h3>
+                            <p>Learn the essential operational systems that enable sustainable business growth.</p>
+                            <a href="#read" class="btn btn-secondary">Read More</a>
                         </div>
                     </div>
-                    <div class="event-card" data-aos="fade-up" data-aos-delay="200">
-                        <div class="event-date">
-                            <span class="month">JUN</span>
-                            <span class="day">10</span>
+
+                    <div class="blog-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="blog-image">
+                            <img src="images/blog/team-development.jpg" alt="Team Development">
                         </div>
-                        <div class="event-info">
-                            <h3>Course Creator Conference</h3>
-                            <p class="location">Austin, TX</p>
-                            <p class="description">Workshop: "Building a Course Empire"</p>
-                            <a href="#" class="btn">Learn More →</a>
+                        <div class="blog-content">
+                            <span class="blog-tag">Leadership</span>
+                            <h3>Building Teams That Scale</h3>
+                            <p>Strategies for developing and managing high-performing teams in growing businesses.</p>
+                            <a href="#read" class="btn btn-secondary">Read More</a>
+                        </div>
+                    </div>
+
+                    <div class="blog-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="blog-image">
+                            <img src="images/blog/growth-metrics.jpg" alt="Growth Metrics">
+                        </div>
+                        <div class="blog-content">
+                            <span class="blog-tag">Analytics</span>
+                            <h3>Key Metrics for Tracking Business Growth</h3>
+                            <p>Essential KPIs and metrics that indicate healthy business scaling.</p>
+                            <a href="#read" class="btn btn-secondary">Read More</a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Contact Section -->
-        <section class="contact">
+        <!-- Resources Section -->
+        <section class="resources-section">
             <div class="container">
-                <div class="contact-content" data-aos="fade-up">
-                    <h2>Book a Speaking Engagement</h2>
-                    <p>Interested in having us speak at your event? Get in touch with our team.</p>
-                    <a href="partner.html#contact-form" class="btn">Contact Us →</a>
+                <h2 class="section-title" data-aos="fade-up">Free Growth Resources</h2>
+                <div class="resources-grid">
+                    <div class="resource-card" data-aos="fade-up">
+                        <i class="fas fa-file-pdf"></i>
+                        <h3>Growth Strategy Template</h3>
+                        <p>A comprehensive template for planning your business growth strategy.</p>
+                        <a href="#download" class="btn btn-primary">Download Now</a>
+                    </div>
+
+                    <div class="resource-card" data-aos="fade-up" data-aos-delay="100">
+                        <i class="fas fa-video"></i>
+                        <h3>Scaling Masterclass</h3>
+                        <p>Free video training on implementing scalable business systems.</p>
+                        <a href="#watch" class="btn btn-primary">Watch Now</a>
+                    </div>
+
+                    <div class="resource-card" data-aos="fade-up" data-aos-delay="200">
+                        <i class="fas fa-book"></i>
+                        <h3>Growth Playbook</h3>
+                        <p>Step-by-step guide to scaling your business operations.</p>
+                        <a href="#access" class="btn btn-primary">Access Now</a>
+                    </div>
                 </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section class="newsletter-section">
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up">Get Growth Insights</h2>
+                <p>Subscribe to receive weekly strategies and tips for scaling your business.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
             </div>
         </section>
     </main>
@@ -935,7 +755,7 @@
             <div class="footer-grid">
                 <div class="footer-col">
                     <h3>ScalingWorkshops</h3>
-                    <p>Helping course creators scale to $5M+ in net profit through proven strategies and systems.</p>
+                    <p>Helping businesses scale to $5M+ in net profit through proven strategies and systems.</p>
                 </div>
                 <div class="footer-col">
                     <h3>Company</h3>

@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Online Courses | ScalingWorkshops.com</title>
+    <title>ScalingWorkshops.com</title>
     <!-- HubSpot tracking code -->
     <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/242100136.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <style>
         /* Base styles */
         * {
@@ -151,18 +152,14 @@
             margin: 0 auto;
         }
 
-        /* Course Grid */
-        .courses {
-            padding: 80px 0;
-        }
-
-        .course-grid {
+        /* Services Grid */
+        .services-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 30px;
         }
 
-        .course-card {
+        .service-card {
             background: #fff;
             border-radius: 12px;
             overflow: hidden;
@@ -171,29 +168,28 @@
             transition: transform 0.3s ease;
         }
 
-        .course-card:hover {
+        .service-card:hover {
             transform: translateY(-5px);
         }
 
-        .course-image {
+        .service-icon {
             width: 100%;
             height: 200px;
             background: #1a1a1a;
             position: relative;
             overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 48px;
+            color: #fff;
         }
 
-        .course-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .course-content {
+        .service-content {
             padding: 30px;
         }
 
-        .course-tag {
+        .service-tag {
             display: inline-block;
             padding: 5px 12px;
             background: rgba(255,107,0,0.1);
@@ -204,21 +200,21 @@
             margin-bottom: 15px;
         }
 
-        .course-title {
+        .service-title {
             font-size: 24px;
             font-weight: 700;
             margin-bottom: 15px;
             color: #1A1A1A;
         }
 
-        .course-description {
+        .service-description {
             font-size: 16px;
             color: rgba(0,0,0,0.7);
             margin-bottom: 20px;
             line-height: 1.6;
         }
 
-        .course-meta {
+        .service-meta {
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -226,7 +222,7 @@
             border-top: 1px solid rgba(0,0,0,0.1);
         }
 
-        .course-price {
+        .service-price {
             font-weight: 700;
             font-size: 20px;
         }
@@ -246,6 +242,217 @@
         .btn:hover {
             background: #ff8533;
             transform: translateY(-2px);
+        }
+
+        /* Process Section */
+        .process-section {
+            padding: 80px 0;
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+        }
+
+        .process-card {
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            border: 1px solid rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .process-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .process-icon {
+            width: 100%;
+            height: 200px;
+            background: #1a1a1a;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 48px;
+            color: #fff;
+        }
+
+        .process-content {
+            padding: 30px;
+        }
+
+        .process-tag {
+            display: inline-block;
+            padding: 5px 12px;
+            background: rgba(255,107,0,0.1);
+            color: #FF6B00;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+
+        .process-title {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #1A1A1A;
+        }
+
+        .process-description {
+            font-size: 16px;
+            color: rgba(0,0,0,0.7);
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .process-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(0,0,0,0.1);
+        }
+
+        .process-price {
+            font-weight: 700;
+            font-size: 20px;
+        }
+
+        /* Testimonials Section */
+        .testimonials-section {
+            padding: 80px 0;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+
+        .testimonial-card {
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            border: 1px solid rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .testimonial-content {
+            padding: 30px;
+        }
+
+        .testimonial-tag {
+            display: inline-block;
+            padding: 5px 12px;
+            background: rgba(255,107,0,0.1);
+            color: #FF6B00;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+
+        .testimonial-title {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #1A1A1A;
+        }
+
+        .testimonial-description {
+            font-size: 16px;
+            color: rgba(0,0,0,0.7);
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .testimonial-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(0,0,0,0.1);
+        }
+
+        .testimonial-price {
+            font-weight: 700;
+            font-size: 20px;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 80px 0;
+        }
+
+        .cta-grid {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 30px;
+        }
+
+        .cta-card {
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            border: 1px solid rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .cta-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .cta-content {
+            padding: 30px;
+        }
+
+        .cta-tag {
+            display: inline-block;
+            padding: 5px 12px;
+            background: rgba(255,107,0,0.1);
+            color: #FF6B00;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+
+        .cta-title {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #1A1A1A;
+        }
+
+        .cta-description {
+            font-size: 16px;
+            color: rgba(0,0,0,0.7);
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .cta-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(0,0,0,0.1);
+        }
+
+        .cta-price {
+            font-weight: 700;
+            font-size: 20px;
         }
 
         /* Footer Styles */
@@ -306,7 +513,7 @@
         }
 
         @media (max-width: 1024px) {
-            .course-grid {
+            .services-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
         }
@@ -320,7 +527,7 @@
                 font-size: 40px;
             }
 
-            .course-grid {
+            .services-grid {
                 grid-template-columns: 1fr;
             }
 
@@ -341,13 +548,10 @@
                     </svg>
                 </button>
                 <ul class="nav-links">
-                    <li><a href="workshops.html">Workshops</a></li>
-                    <li><a href="courses.html">Courses</a></li>
-                    <li><a href="books.html">Books</a></li>
-                    <li><a href="media.html">Media</a></li>
-                    <li><a href="partner.html">Partner With Us</a></li>
-                    <li><a href="about.html">About the Firm</a></li>
-                    <li><a href="careers.html">Careers</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
         </div>
@@ -355,59 +559,128 @@
 
     <section class="hero">
         <div class="container">
-            <h1 data-aos="fade-up">Master Course Creation & Scaling</h1>
-            <p data-aos="fade-up" data-aos-delay="100">Learn at your own pace with our comprehensive online courses designed to help you build and scale your course business.</p>
+            <h1>Strategic Growth Services</h1>
+            <p>Comprehensive solutions to scale your business through proven methodologies and expert guidance.</p>
         </div>
     </section>
 
-    <section class="courses">
+    <section class="services">
         <div class="container">
-            <div class="course-grid">
-                <div class="course-card" data-aos="fade-up">
-                    <div class="course-image">
-                        <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Course Creation Fundamentals">
+            <div class="services-grid">
+                <div class="service-card" data-aos="fade-up">
+                    <div class="service-icon">
+                        <i class="fas fa-chart-line"></i>
                     </div>
-                    <div class="course-content">
-                        <span class="course-tag">Beginner</span>
-                        <h3 class="course-title">Course Creation Fundamentals</h3>
-                        <p class="course-description">Learn the essential elements of creating engaging and profitable online courses.</p>
-                        <div class="course-meta">
-                            <div class="course-price">$997</div>
-                            <a href="#" class="btn">Enroll Now</a>
-                        </div>
-                    </div>
+                    <h3>Growth Strategy Development</h3>
+                    <p class="price">Starting at $5,000</p>
+                    <ul class="feature-list">
+                        <li>Market Opportunity Analysis</li>
+                        <li>Competitive Positioning Strategy</li>
+                        <li>Revenue Model Optimization</li>
+                        <li>Growth Roadmap Creation</li>
+                        <li>KPI Framework Development</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary">Schedule Consultation</a>
                 </div>
 
-                <div class="course-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="course-image">
-                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Advanced Marketing">
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-icon">
+                        <i class="fas fa-cogs"></i>
                     </div>
-                    <div class="course-content">
-                        <span class="course-tag">Advanced</span>
-                        <h3 class="course-title">Advanced Marketing Strategies</h3>
-                        <p class="course-description">Master the art of marketing your courses through multiple channels.</p>
-                        <div class="course-meta">
-                            <div class="course-price">$1,497</div>
-                            <a href="#" class="btn">Enroll Now</a>
-                        </div>
-                    </div>
+                    <h3>Operations Excellence</h3>
+                    <p class="price">Starting at $7,500</p>
+                    <ul class="feature-list">
+                        <li>Process Automation Implementation</li>
+                        <li>Scalable Systems Design</li>
+                        <li>Quality Management Framework</li>
+                        <li>Operational Efficiency Audit</li>
+                        <li>Technology Stack Optimization</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary">Schedule Consultation</a>
                 </div>
 
-                <div class="course-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="course-image">
-                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Business Scaling">
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-icon">
+                        <i class="fas fa-users"></i>
                     </div>
-                    <div class="course-content">
-                        <span class="course-tag">Expert</span>
-                        <h3 class="course-title">Scaling Your Course Business</h3>
-                        <p class="course-description">Learn how to scale your course business to 7-figures and beyond.</p>
-                        <div class="course-meta">
-                            <div class="course-price">$1,997</div>
-                            <a href="#" class="btn">Enroll Now</a>
-                        </div>
+                    <h3>Team Development</h3>
+                    <p class="price">Starting at $6,500</p>
+                    <ul class="feature-list">
+                        <li>Leadership Training Programs</li>
+                        <li>Talent Acquisition Strategy</li>
+                        <li>Performance Management Systems</li>
+                        <li>Team Structure Optimization</li>
+                        <li>Culture Development Framework</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary">Schedule Consultation</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="process-section">
+        <div class="container">
+            <h2>Our Engagement Process</h2>
+            <div class="process-grid">
+                <div class="process-card">
+                    <div class="process-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>1. Discovery</h3>
+                    <p>In-depth analysis of your business, goals, and current challenges to create a tailored growth strategy.</p>
+                </div>
+                <div class="process-card">
+                    <div class="process-icon">
+                        <i class="fas fa-map"></i>
+                    </div>
+                    <h3>2. Strategy Development</h3>
+                    <p>Creating a comprehensive roadmap with clear milestones and actionable implementation plans.</p>
+                </div>
+                <div class="process-card">
+                    <div class="process-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>3. Implementation</h3>
+                    <p>Hands-on guidance and support throughout the execution phase to ensure successful outcomes.</p>
+                </div>
+                <div class="process-card">
+                    <div class="process-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h3>4. Optimization</h3>
+                    <p>Continuous monitoring and refinement of strategies based on performance metrics and market changes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials-section">
+        <div class="container">
+            <h2>Client Success Stories</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p>"Their strategic guidance helped us triple our revenue in just 18 months while building a sustainable operational foundation."</p>
+                    <div class="testimonial-author">
+                        <h4>Sarah Chen</h4>
+                        <p>CEO, TechGrowth Solutions</p>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p>"The team's expertise in scaling operations and developing our leadership has been instrumental in our company's expansion to new markets."</p>
+                    <div class="testimonial-author">
+                        <h4>Michael Rodriguez</h4>
+                        <p>Founder, InnovateScale</p>
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Scale Your Business?</h2>
+            <p>Schedule a free consultation to discuss how we can help you achieve your growth goals.</p>
+            <a href="#contact" class="btn btn-primary">Book Your Strategy Call</a>
         </div>
     </section>
 
@@ -416,24 +689,23 @@
             <div class="footer-grid">
                 <div class="footer-col">
                     <h3>ScalingWorkshops</h3>
-                    <p>Helping course creators scale to $5M+ in net profit through proven strategies and systems.</p>
+                    <p>Helping businesses scale to $5M+ in net profit through proven strategies and systems.</p>
                 </div>
                 <div class="footer-col">
                     <h3>Company</h3>
                     <ul class="footer-links">
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="workshops.html">Workshops</a></li>
-                        <li><a href="courses.html">Courses</a></li>
-                        <li><a href="books.html">Books</a></li>
-                        <li><a href="media.html">Media</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
                     <h3>Resources</h3>
                     <ul class="footer-links">
-                        <li><a href="partner.html">Partner With Us</a></li>
-                        <li><a href="about.html">About the Firm</a></li>
-                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="podcast.html">Podcast</a></li>
+                        <li><a href="webinars.html">Webinars</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
