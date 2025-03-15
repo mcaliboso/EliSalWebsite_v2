@@ -259,82 +259,137 @@
         }
 
         .success-stories {
-            margin: 4rem 0;
+            padding: 4rem 0;
+            background: var(--color-light);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-header h2 {
+            color: var(--color-primary);
+            margin-bottom: 1rem;
         }
 
         .stories-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 2rem;
-            margin-top: 2rem;
+            margin: 0 auto;
+            max-width: 1400px;
+            padding: 0 2rem;
         }
 
         .story-card {
             background: var(--color-white);
-            padding: 2rem;
             border-radius: 10px;
+            padding: 2rem;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
         }
 
-        .story-card p {
-            font-style: italic;
-            margin-bottom: 1.5rem;
-            color: var(--color-text);
-            line-height: 1.6;
+        .story-card:hover {
+            transform: translateY(-5px);
         }
 
-        .client-info {
+        .story-header {
             display: flex;
             align-items: center;
-            gap: 1rem;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
         }
 
-        .client-info img {
-            width: 60px;
-            height: 60px;
+        .story-image {
+            width: 80px;
+            height: 80px;
             border-radius: 50%;
             object-fit: cover;
         }
 
-        .client-details h4 {
+        .story-meta h4 {
             color: var(--color-primary);
             margin-bottom: 0.2rem;
         }
 
-        .client-details p {
+        .story-meta p {
             color: var(--color-gray);
             font-size: 0.9rem;
-            margin: 0;
+            margin-bottom: 0.5rem;
         }
 
-        .results {
+        .program-badge {
             display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--color-light);
+            padding: 0.5rem;
+            border-radius: 5px;
+            margin-top: 0.5rem;
+        }
+
+        .program-thumbnail {
+            width: 30px;
+            height: 30px;
+            object-fit: cover;
+            border-radius: 3px;
+        }
+
+        .program-badge span {
+            font-size: 0.8rem;
+            color: var(--color-text);
+        }
+
+        .story-quote {
+            font-style: italic;
+            color: var(--color-text);
+            line-height: 1.6;
+            margin: 1.5rem 0;
+            padding-left: 1rem;
+            border-left: 3px solid var(--color-primary);
+        }
+
+        .story-results {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
             gap: 1rem;
-            margin-top: 1rem;
-            padding-top: 1rem;
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
             border-top: 1px solid var(--color-light);
         }
 
         .result-item {
-            flex: 1;
             text-align: center;
         }
 
         .result-item .number {
-            font-size: 1.5rem;
+            display: block;
+            font-size: 1.8rem;
             font-weight: bold;
             color: var(--color-primary);
             margin-bottom: 0.2rem;
         }
 
         .result-item .label {
-            font-size: 0.9rem;
+            font-size: 0.8rem;
             color: var(--color-gray);
         }
 
         @media (max-width: 768px) {
-            .programs-grid {
+            .stories-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .story-results {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .result-item {
+                padding: 1rem;
+                background: var(--color-light);
+                border-radius: 5px;
             }
         }
 
@@ -583,44 +638,102 @@
         </div>
     </section>
 
-    <section class="results-section">
-        <div class="container">
+    <section class="success-stories">
+        <div class="section-header" data-aos="fade-up">
             <h2>Client Success Stories</h2>
-            <div class="results-grid">
-                <div class="result-card" data-aos="fade-up">
-                    <div class="result-header">
-                        <img src="images/client1.jpg" alt="Sarah's Business">
-                        <div class="result-meta">
-                            <h3>Sarah's Consulting Firm</h3>
-                            <p>Business Services</p>
+            <p>Real transformations from business owners who completed our programs</p>
+        </div>
+        <div class="stories-grid">
+            <div class="story-card" data-aos="fade-up">
+                <div class="story-header">
+                    <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Sarah L." class="story-image">
+                    <div class="story-meta">
+                        <h4>Sarah L.</h4>
+                        <p>Digital Agency Owner</p>
+                        <div class="program-badge">
+                            <img src="https://images.unsplash.com/photo-1434626881859-194d67b2b86f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Scale Your Agency" class="program-thumbnail">
+                            <span>Scale Your Agency</span>
                         </div>
                     </div>
-                    <p class="result-stats">Revenue Growth: 312% in 8 months</p>
-                    <p class="result-description">"The systems we implemented transformed our business. We went from struggling with client management to running a streamlined operation that practically runs itself."</p>
                 </div>
-
-                <div class="result-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="result-header">
-                        <img src="images/client2.jpg" alt="Mark's Agency">
-                        <div class="result-meta">
-                            <h3>Mark's Digital Agency</h3>
-                            <p>Marketing Services</p>
-                        </div>
+                <blockquote class="story-quote">
+                    "The systems and frameworks from the Scale Your Agency program helped us transform from a struggling freelance operation into a thriving agency with predictable revenue."
+                </blockquote>
+                <div class="story-results">
+                    <div class="result-item">
+                        <span class="number">4X</span>
+                        <span class="label">Revenue Growth</span>
                     </div>
-                    <p class="result-stats">Monthly Revenue: $0 to $83K in 6 months</p>
-                    <p class="result-description">"The strategies we learned helped us position our agency as a premium service provider. Our client acquisition is now systematic and predictable."</p>
+                    <div class="result-item">
+                        <span class="number">12</span>
+                        <span class="label">Team Members</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="number">95%</span>
+                        <span class="label">Client Retention</span>
+                    </div>
                 </div>
+            </div>
 
-                <div class="result-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="result-header">
-                        <img src="images/client3.jpg" alt="Lisa's SaaS">
-                        <div class="result-meta">
-                            <h3>Lisa's Tech Company</h3>
-                            <p>SaaS Platform</p>
+            <div class="story-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="story-header">
+                    <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Marcus R." class="story-image">
+                    <div class="story-meta">
+                        <h4>Marcus R.</h4>
+                        <p>SaaS Founder</p>
+                        <div class="program-badge">
+                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Tech Scale-Up Accelerator" class="program-thumbnail">
+                            <span>Tech Scale-Up Accelerator</span>
                         </div>
                     </div>
-                    <p class="result-stats">User Growth: 5X increase in 12 months</p>
-                    <p class="result-description">"The scaling framework helped us optimize our operations and marketing. We're now growing faster than ever while maintaining profitability."</p>
+                </div>
+                <blockquote class="story-quote">
+                    "The Tech Scale-Up Accelerator program gave us the exact playbook we needed to optimize our operations, improve our product-market fit, and scale our customer acquisition."
+                </blockquote>
+                <div class="story-results">
+                    <div class="result-item">
+                        <span class="number">$2M</span>
+                        <span class="label">ARR Achieved</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="number">300%</span>
+                        <span class="label">User Growth</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="number">60%</span>
+                        <span class="label">CAC Reduction</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="story-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="story-header">
+                    <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Jennifer P." class="story-image">
+                    <div class="story-meta">
+                        <h4>Jennifer P.</h4>
+                        <p>E-commerce Brand CEO</p>
+                        <div class="program-badge">
+                            <img src="https://images.unsplash.com/photo-1472851294608-062f824d29cc?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="E-commerce Empire" class="program-thumbnail">
+                            <span>E-commerce Empire</span>
+                        </div>
+                    </div>
+                </div>
+                <blockquote class="story-quote">
+                    "The E-commerce Empire program helped us build automated systems for inventory, marketing, and customer service. Now we can scale without the constant overwhelm."
+                </blockquote>
+                <div class="story-results">
+                    <div class="result-item">
+                        <span class="number">5X</span>
+                        <span class="label">Monthly Sales</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="number">75%</span>
+                        <span class="label">Process Automation</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="number">45%</span>
+                        <span class="label">Profit Margin</span>
+                    </div>
                 </div>
             </div>
         </div>
