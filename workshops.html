@@ -151,7 +151,7 @@
             margin: 0 auto;
         }
 
-        /* Workshops Section */
+        /* Workshop Grid */
         .workshops {
             padding: 80px 0;
         }
@@ -175,16 +175,10 @@
             transform: translateY(-5px);
         }
 
-        .workshop-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-
         .workshop-date {
             color: #FF6B00;
             font-weight: 600;
+            margin-bottom: 20px;
         }
 
         .workshop-title {
@@ -194,30 +188,11 @@
             color: #1A1A1A;
         }
 
-        .workshop-location {
-            font-size: 16px;
-            color: rgba(0,0,0,0.7);
-        }
-
-        .workshop-content {
-            margin-bottom: 25px;
-        }
-
         .workshop-description {
             font-size: 16px;
             color: rgba(0,0,0,0.7);
-            margin-bottom: 15px;
+            margin-bottom: 25px;
             line-height: 1.6;
-        }
-
-        .workshop-topics {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-
-        .workshop-topics li {
-            margin-bottom: 10px;
         }
 
         .workshop-meta {
@@ -246,98 +221,6 @@
         }
 
         .btn:hover {
-            background: #ff8533;
-            transform: translateY(-2px);
-        }
-
-        /* Format Section */
-        .format {
-            padding: 80px 0;
-        }
-
-        .format-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 40px;
-        }
-
-        .format-card {
-            background: #fff;
-            border-radius: 12px;
-            padding: 40px;
-            transition: transform 0.3s ease;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-            border: 1px solid rgba(0,0,0,0.1);
-        }
-
-        .format-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .format-icon {
-            font-size: 24px;
-            margin-bottom: 20px;
-        }
-
-        .format-title {
-            font-size: 18px;
-            font-weight: 700;
-            margin-bottom: 15px;
-        }
-
-        .format-description {
-            font-size: 16px;
-            color: rgba(0,0,0,0.7);
-            margin-bottom: 25px;
-            line-height: 1.6;
-        }
-
-        /* Registration Section */
-        .registration {
-            padding: 80px 0;
-        }
-
-        .registration-form {
-            background: #fff;
-            border-radius: 12px;
-            padding: 40px;
-            transition: transform 0.3s ease;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-            border: 1px solid rgba(0,0,0,0.1);
-        }
-
-        .registration-form:hover {
-            transform: translateY(-5px);
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        .form-group input, .form-group select, .form-group textarea {
-            width: 100%;
-            padding: 15px;
-            font-size: 16px;
-            border: 1px solid rgba(0,0,0,0.1);
-            border-radius: 4px;
-        }
-
-        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
-            border-color: #FF6B00;
-        }
-
-        .btn-primary {
-            background: #FF6B00;
-            color: #fff;
-            padding: 15px 30px;
-            font-size: 16px;
-            font-weight: 600;
-            text-decoration: none;
-            border-radius: 4px;
-            transition: all 0.3s ease;
-        }
-
-        .btn-primary:hover {
             background: #ff8533;
             transform: translateY(-2px);
         }
@@ -416,14 +299,6 @@
                 padding: 30px;
             }
 
-            .format-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .format-card {
-                padding: 30px;
-            }
-
             .footer-grid {
                 grid-template-columns: 1fr;
             }
@@ -459,8 +334,8 @@
 
     <section class="hero">
         <div class="container">
-            <h1 data-aos="fade-up">Intensive Business Scaling Workshops</h1>
-            <p data-aos="fade-up" data-aos-delay="100">Join our hands-on workshops designed to help you implement proven scaling strategies in your business.</p>
+            <h1 data-aos="fade-up">Transform Your Course Business Through Live Workshops</h1>
+            <p data-aos="fade-up" data-aos-delay="100">Join our intensive, results-driven workshops designed to help course creators scale their businesses to new heights.</p>
         </div>
     </section>
 
@@ -468,140 +343,44 @@
         <div class="container">
             <div class="workshop-grid">
                 <div class="workshop-card" data-aos="fade-up">
-                    <div class="workshop-header">
-                        <span class="workshop-date">March 25-26, 2025</span>
-                        <h3>Strategic Growth Planning</h3>
-                        <p class="workshop-location">San Francisco, CA</p>
-                    </div>
-                    <div class="workshop-content">
-                        <p>Two-day intensive workshop focused on developing and implementing strategic growth plans.</p>
-                        <ul class="workshop-topics">
-                            <li>Market Analysis & Opportunity Assessment</li>
-                            <li>Growth Strategy Development</li>
-                            <li>Resource Allocation & Planning</li>
-                            <li>Risk Management & Mitigation</li>
-                            <li>Implementation Roadmap Creation</li>
-                        </ul>
-                        <div class="workshop-meta">
-                            <div class="workshop-price">$2,500</div>
-                            <a href="#register" class="btn btn-primary">Register Now</a>
-                        </div>
+                    <div class="workshop-date">March 25-26, 2025</div>
+                    <h3 class="workshop-title">Course Creation Mastery</h3>
+                    <p class="workshop-description">A two-day intensive workshop covering everything from course design to pricing strategy. Learn how to create high-value courses that sell.</p>
+                    <div class="workshop-meta">
+                        <div class="workshop-price">$2,997</div>
+                        <a href="#" class="btn">Register Now</a>
                     </div>
                 </div>
 
                 <div class="workshop-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="workshop-header">
-                        <span class="workshop-date">April 15-16, 2025</span>
-                        <h3>Operational Excellence</h3>
-                        <p class="workshop-location">New York, NY</p>
-                    </div>
-                    <div class="workshop-content">
-                        <p>Master the art of building and optimizing scalable business operations.</p>
-                        <ul class="workshop-topics">
-                            <li>Process Optimization & Automation</li>
-                            <li>Team Structure & Management</li>
-                            <li>Quality Control Systems</li>
-                            <li>Performance Metrics & KPIs</li>
-                            <li>Continuous Improvement Methods</li>
-                        </ul>
-                        <div class="workshop-meta">
-                            <div class="workshop-price">$2,500</div>
-                            <a href="#register" class="btn btn-primary">Register Now</a>
-                        </div>
+                    <div class="workshop-date">April 15-16, 2025</div>
+                    <h3 class="workshop-title">Sales Automation Summit</h3>
+                    <p class="workshop-description">Master the art of automated sales systems. Build funnels that convert and scale your course business without hiring a sales team.</p>
+                    <div class="workshop-meta">
+                        <div class="workshop-price">$3,497</div>
+                        <a href="#" class="btn">Register Now</a>
                     </div>
                 </div>
 
-                <div class="workshop-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="workshop-header">
-                        <span class="workshop-date">May 8-9, 2025</span>
-                        <h3>Financial Scaling Mastery</h3>
-                        <p class="workshop-location">Chicago, IL</p>
-                    </div>
-                    <div class="workshop-content">
-                        <p>Learn advanced financial strategies for sustainable business scaling.</p>
-                        <ul class="workshop-topics">
-                            <li>Financial Planning & Forecasting</li>
-                            <li>Cash Flow Optimization</li>
-                            <li>Investment Strategy</li>
-                            <li>Risk Management</li>
-                            <li>Funding & Capital Allocation</li>
-                        </ul>
-                        <div class="workshop-meta">
-                            <div class="workshop-price">$2,500</div>
-                            <a href="#register" class="btn btn-primary">Register Now</a>
-                        </div>
+                <div class="workshop-card" data-aos="fade-up">
+                    <div class="workshop-date">May 10-11, 2025</div>
+                    <h3 class="workshop-title">Marketing Optimization</h3>
+                    <p class="workshop-description">Learn advanced marketing strategies specifically for course creators. Optimize your campaigns and reduce acquisition costs.</p>
+                    <div class="workshop-meta">
+                        <div class="workshop-price">$2,997</div>
+                        <a href="#" class="btn">Register Now</a>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
 
-    <section class="format">
-        <div class="container">
-            <h2 class="section-title" data-aos="fade-up">Workshop Format</h2>
-            <div class="format-grid">
-                <div class="format-card" data-aos="fade-up">
-                    <i class="fas fa-users"></i>
-                    <h3>Small Groups</h3>
-                    <p>Limited to 20 participants to ensure personalized attention and meaningful interactions.</p>
+                <div class="workshop-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="workshop-date">June 5-6, 2025</div>
+                    <h3 class="workshop-title">Scaling to 8-Figures</h3>
+                    <p class="workshop-description">Advanced strategies for established course creators. Learn how to scale your business while maintaining profitability and quality.</p>
+                    <div class="workshop-meta">
+                        <div class="workshop-price">$4,997</div>
+                        <a href="#" class="btn">Register Now</a>
+                    </div>
                 </div>
-                <div class="format-card" data-aos="fade-up" data-aos-delay="100">
-                    <i class="fas fa-laptop"></i>
-                    <h3>Hands-on Practice</h3>
-                    <p>Work on real business challenges with expert guidance and immediate feedback.</p>
-                </div>
-                <div class="format-card" data-aos="fade-up" data-aos-delay="200">
-                    <i class="fas fa-comments"></i>
-                    <h3>Interactive Sessions</h3>
-                    <p>Engage in discussions, case studies, and collaborative problem-solving.</p>
-                </div>
-                <div class="format-card" data-aos="fade-up" data-aos-delay="300">
-                    <i class="fas fa-chart-line"></i>
-                    <h3>Action Planning</h3>
-                    <p>Leave with a concrete action plan tailored to your business goals.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="register" class="registration">
-        <div class="container">
-            <h2 class="section-title" data-aos="fade-up">Register for a Workshop</h2>
-            <p class="section-subtitle" data-aos="fade-up">Secure your spot in our upcoming workshops</p>
-            <div class="registration-form" data-aos="fade-up">
-                <form>
-                    <div class="form-group">
-                        <input type="text" placeholder="Your Name" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" placeholder="Your Email" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" placeholder="Company Name" required>
-                    </div>
-                    <div class="form-group">
-                        <select required>
-                            <option value="">Select Workshop</option>
-                            <option value="growth">Strategic Growth Planning - March 25-26</option>
-                            <option value="operations">Operational Excellence - April 15-16</option>
-                            <option value="finance">Financial Scaling Mastery - May 8-9</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <select required>
-                            <option value="">Number of Attendees</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5+</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <textarea placeholder="What specific challenges would you like to address in the workshop?" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Complete Registration</button>
-                </form>
             </div>
         </div>
     </section>
@@ -611,7 +390,7 @@
             <div class="footer-grid">
                 <div class="footer-col">
                     <h3>ScalingWorkshops</h3>
-                    <p>Helping businesses scale to new heights through proven strategies and systems.</p>
+                    <p>Helping course creators scale to $5M+ in net profit through proven strategies and systems.</p>
                 </div>
                 <div class="footer-col">
                     <h3>Company</h3>

@@ -126,8 +126,8 @@
             }
         }
 
-        /* Hero Section */
-        .hero {
+        /* Form Section */
+        .form-section {
             min-height: 100vh;
             padding: 120px 0;
             display: flex;
@@ -138,7 +138,36 @@
             border-bottom: 1px solid rgba(0,0,0,0.1);
         }
 
-        .hero h1 {
+        .form-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at center, rgba(255,107,0,0.15) 0%, rgba(255,255,255,0) 70%);
+            z-index: 0;
+        }
+
+        .form-container {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 60px;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+            border: 1px solid rgba(0,0,0,0.1);
+        }
+
+        .form-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .form-header h1 {
             font-size: 48px;
             font-weight: 800;
             margin-bottom: 20px;
@@ -146,145 +175,36 @@
             color: #1A1A1A;
         }
 
-        .hero p {
+        .form-header p {
             font-size: 20px;
             color: rgba(0,0,0,0.7);
             max-width: 600px;
             margin: 0 auto 30px;
         }
 
-        /* Roadmap Section */
-        .roadmap {
-            padding: 100px 0;
+        .benefits {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-bottom: 40px;
         }
 
-        .roadmap-timeline {
+        .benefit-item {
             display: flex;
-            flex-direction: column;
-            gap: 40px;
+            align-items: flex-start;
+            gap: 15px;
         }
 
-        .timeline-item {
-            background: #fff;
-            padding: 20px;
-            border: 1px solid rgba(0,0,0,0.1);
-            border-radius: 12px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+        .benefit-icon {
+            width: 24px;
+            height: 24px;
+            color: #FF6B00;
+            flex-shrink: 0;
         }
 
-        .timeline-content {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-
-        .timeline-phase {
-            font-size: 18px;
-            font-weight: 700;
-            color: #1A1A1A;
-        }
-
-        .timeline-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .timeline-list li {
-            margin-bottom: 10px;
-        }
-
-        .timeline-duration {
+        .benefit-text {
             font-size: 16px;
             color: rgba(0,0,0,0.7);
-        }
-
-        /* Milestones Section */
-        .milestones {
-            padding: 100px 0;
-        }
-
-        .milestones-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-        }
-
-        .milestone-card {
-            background: #fff;
-            padding: 20px;
-            border: 1px solid rgba(0,0,0,0.1);
-            border-radius: 12px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
-        }
-
-        .milestone-number {
-            font-size: 24px;
-            font-weight: 800;
-            color: #1A1A1A;
-        }
-
-        .milestone-card h3 {
-            font-size: 18px;
-            font-weight: 700;
-            margin-bottom: 10px;
-            color: #1A1A1A;
-        }
-
-        .milestone-card ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .milestone-card li {
-            margin-bottom: 10px;
-        }
-
-        /* Start Section */
-        .start {
-            padding: 100px 0;
-        }
-
-        .start h2 {
-            font-size: 36px;
-            font-weight: 800;
-            margin-bottom: 20px;
-            line-height: 1.2;
-            color: #1A1A1A;
-        }
-
-        .start p {
-            font-size: 18px;
-            color: rgba(0,0,0,0.7);
-            max-width: 600px;
-            margin: 0 auto 30px;
-        }
-
-        .start-form {
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .start-form form {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-
-        .start-form input, .start-form select, .start-form textarea {
-            padding: 10px;
-            border: 1px solid rgba(0,0,0,0.1);
-            border-radius: 6px;
-        }
-
-        .start-form button[type="submit"] {
-            background: #FF6B00;
-            color: #fff;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 6px;
-            cursor: pointer;
         }
 
         /* Footer */
@@ -368,29 +288,25 @@
                 padding: 15px 0;
             }
 
-            .hero {
+            .form-section {
                 padding: 100px 0 60px;
             }
 
-            .hero h1 {
+            .form-container {
+                padding: 30px;
+            }
+
+            .form-header h1 {
                 font-size: 32px;
             }
 
-            .hero p {
+            .form-header p {
                 font-size: 18px;
             }
 
-            .roadmap-timeline {
-                gap: 20px;
-            }
-
-            .milestones-grid {
+            .benefits {
                 grid-template-columns: 1fr;
                 gap: 20px;
-            }
-
-            .start-form {
-                max-width: 100%;
             }
 
             .footer-grid {
@@ -429,146 +345,42 @@
         </div>
     </nav>
 
-    <section class="hero">
+    <section class="form-section">
         <div class="container">
-            <h1 data-aos="fade-up">Your Business Scaling Roadmap</h1>
-            <p data-aos="fade-up" data-aos-delay="100">A customized growth plan to take your business to the next level</p>
-        </div>
-    </section>
-
-    <section class="roadmap">
-        <div class="container">
-            <div class="roadmap-timeline">
-                <div class="timeline-item" data-aos="fade-up">
-                    <div class="timeline-content">
-                        <span class="timeline-phase">Phase 1</span>
-                        <h3>Assessment & Strategy</h3>
-                        <p>Comprehensive analysis of your current business state and growth potential.</p>
-                        <ul class="timeline-list">
-                            <li>Business Model Analysis</li>
-                            <li>Market Opportunity Assessment</li>
-                            <li>Competitive Positioning</li>
-                            <li>Growth Strategy Development</li>
-                            <li>Resource Planning</li>
-                        </ul>
-                        <div class="timeline-duration">Duration: 2-3 Weeks</div>
-                    </div>
+            <div class="form-container" data-aos="fade-up">
+                <div class="form-header">
+                    <h1>Get Your Custom Growth Roadmap</h1>
+                    <p>Fill out the form below to receive your personalized strategy for scaling your course business to $5M+ in net profit</p>
                 </div>
 
-                <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
-                    <div class="timeline-content">
-                        <span class="timeline-phase">Phase 2</span>
-                        <h3>Operations Optimization</h3>
-                        <p>Streamline and scale your operations for maximum efficiency.</p>
-                        <ul class="timeline-list">
-                            <li>Process Mapping & Optimization</li>
-                            <li>Technology Stack Assessment</li>
-                            <li>Team Structure Design</li>
-                            <li>Quality Control Systems</li>
-                            <li>Performance Metrics Setup</li>
-                        </ul>
-                        <div class="timeline-duration">Duration: 4-6 Weeks</div>
+                <div class="benefits">
+                    <div class="benefit-item" data-aos="fade-up" data-aos-delay="100">
+                        <svg class="benefit-icon" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                        </svg>
+                        <div class="benefit-text">Custom-tailored growth strategy based on your unique business</div>
+                    </div>
+                    <div class="benefit-item" data-aos="fade-up" data-aos-delay="200">
+                        <svg class="benefit-icon" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                        </svg>
+                        <div class="benefit-text">Actionable steps you can implement immediately</div>
+                    </div>
+                    <div class="benefit-item" data-aos="fade-up" data-aos-delay="300">
+                        <svg class="benefit-icon" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                        </svg>
+                        <div class="benefit-text">Revenue optimization strategies proven to work</div>
+                    </div>
+                    <div class="benefit-item" data-aos="fade-up" data-aos-delay="400">
+                        <svg class="benefit-icon" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                        </svg>
+                        <div class="benefit-text">Scaling blueprint used by 7-figure course creators</div>
                     </div>
                 </div>
 
-                <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
-                    <div class="timeline-content">
-                        <span class="timeline-phase">Phase 3</span>
-                        <h3>Market Expansion</h3>
-                        <p>Execute strategic growth initiatives to capture new markets.</p>
-                        <ul class="timeline-list">
-                            <li>Market Entry Strategy</li>
-                            <li>Sales Channel Development</li>
-                            <li>Marketing Campaign Launch</li>
-                            <li>Partnership Development</li>
-                            <li>Customer Acquisition Strategy</li>
-                        </ul>
-                        <div class="timeline-duration">Duration: 8-12 Weeks</div>
-                    </div>
-                </div>
-
-                <div class="timeline-item" data-aos="fade-up" data-aos-delay="300">
-                    <div class="timeline-content">
-                        <span class="timeline-phase">Phase 4</span>
-                        <h3>Scale & Optimize</h3>
-                        <p>Fine-tune operations and accelerate growth.</p>
-                        <ul class="timeline-list">
-                            <li>Performance Analysis</li>
-                            <li>Process Automation</li>
-                            <li>Team Expansion</li>
-                            <li>Systems Integration</li>
-                            <li>Growth Optimization</li>
-                        </ul>
-                        <div class="timeline-duration">Duration: Ongoing</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="milestones">
-        <div class="container">
-            <h2 class="section-title" data-aos="fade-up">Key Milestones</h2>
-            <div class="milestones-grid">
-                <div class="milestone-card" data-aos="fade-up">
-                    <div class="milestone-number">1</div>
-                    <h3>Foundation</h3>
-                    <ul>
-                        <li>Complete Business Assessment</li>
-                        <li>Define Growth Strategy</li>
-                        <li>Set Performance Metrics</li>
-                    </ul>
-                </div>
-                <div class="milestone-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="milestone-number">2</div>
-                    <h3>Systems</h3>
-                    <ul>
-                        <li>Optimize Core Processes</li>
-                        <li>Implement Tech Stack</li>
-                        <li>Establish Quality Controls</li>
-                    </ul>
-                </div>
-                <div class="milestone-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="milestone-number">3</div>
-                    <h3>Growth</h3>
-                    <ul>
-                        <li>Launch Market Expansion</li>
-                        <li>Scale Operations</li>
-                        <li>Optimize Performance</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="start">
-        <div class="container">
-            <h2 class="section-title" data-aos="fade-up">Start Your Scaling Journey</h2>
-            <p class="section-subtitle" data-aos="fade-up">Schedule a consultation to create your custom roadmap</p>
-            <div class="start-form" data-aos="fade-up">
-                <form>
-                    <div class="form-group">
-                        <input type="text" placeholder="Your Name" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" placeholder="Your Email" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" placeholder="Company Name" required>
-                    </div>
-                    <div class="form-group">
-                        <select required>
-                            <option value="">Current Annual Revenue</option>
-                            <option value="1m">$1M - $5M</option>
-                            <option value="5m">$5M - $10M</option>
-                            <option value="10m">$10M+</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <textarea placeholder="What are your main scaling challenges?" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Schedule Consultation</button>
-                </form>
+                <div id="hubspot-form"></div>
             </div>
         </div>
     </section>
