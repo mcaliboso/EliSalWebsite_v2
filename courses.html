@@ -154,16 +154,16 @@
         /* Programs Grid */
         .programs-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
         }
 
         .program-card {
-            background: #fff;
-            border-radius: 12px;
+            background: var(--color-white);
+            border-radius: 10px;
             overflow: hidden;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-            border: 1px solid rgba(0,0,0,0.1);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease;
         }
 
@@ -171,59 +171,171 @@
             transform: translateY(-5px);
         }
 
+        .program-card.featured {
+            border: 2px solid var(--color-primary);
+        }
+
         .program-header {
-            padding: 30px;
-            border-bottom: 1px solid rgba(0,0,0,0.1);
+            background: var(--color-primary);
+            color: var(--color-white);
+            padding: 2rem;
+            text-align: center;
         }
 
         .program-header h3 {
-            font-size: 24px;
-            font-weight: 700;
-            margin-bottom: 15px;
-            color: #1A1A1A;
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .program-header .subtitle {
+            opacity: 0.9;
+            font-size: 1.1rem;
         }
 
         .program-content {
-            padding: 30px;
+            padding: 2rem;
         }
 
-        .program-content .description {
-            font-size: 16px;
-            color: rgba(0,0,0,0.7);
-            margin-bottom: 20px;
+        .program-description {
+            color: var(--color-text);
+            margin-bottom: 1.5rem;
             line-height: 1.6;
         }
 
-        .program-content .features {
+        .program-features {
             list-style: none;
-            margin: 0;
             padding: 0;
+            margin: 1.5rem 0;
         }
 
-        .program-content .features li {
-            margin-bottom: 10px;
+        .program-features li {
+            margin-bottom: 0.8rem;
+            padding-left: 1.8rem;
+            position: relative;
+            color: var(--color-text);
         }
 
-        .program-content .features li::before {
-            content: "•";
-            margin-right: 10px;
+        .program-features li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--color-primary);
+            font-weight: bold;
+        }
+
+        .program-footer {
+            padding: 2rem;
+            background: var(--color-light);
+            text-align: center;
+        }
+
+        .program-price {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--color-primary);
+            margin-bottom: 1rem;
+        }
+
+        .program-price .period {
+            font-size: 1rem;
+            color: var(--color-gray);
         }
 
         .cta-button {
             display: inline-block;
-            padding: 15px 30px;
-            font-size: 16px;
-            font-weight: 600;
+            width: 100%;
+            padding: 1rem 2rem;
+            background: var(--color-primary);
+            color: var(--color-white);
+            border-radius: 5px;
             text-decoration: none;
-            color: #000;
-            background: #FF6B00;
-            border-radius: 4px;
-            transition: all 0.3s ease;
+            transition: background 0.3s ease;
+            text-align: center;
+            font-weight: bold;
         }
 
         .cta-button:hover {
-            background: #ff8533;
-            transform: translateY(-2px);
+            background: var(--color-primary-dark);
+        }
+
+        .success-stories {
+            margin: 4rem 0;
+        }
+
+        .stories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .story-card {
+            background: var(--color-white);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .story-card p {
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            color: var(--color-text);
+            line-height: 1.6;
+        }
+
+        .client-info {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .client-info img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .client-details h4 {
+            color: var(--color-primary);
+            margin-bottom: 0.2rem;
+        }
+
+        .client-details p {
+            color: var(--color-gray);
+            font-size: 0.9rem;
+            margin: 0;
+        }
+
+        .results {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--color-light);
+        }
+
+        .result-item {
+            flex: 1;
+            text-align: center;
+        }
+
+        .result-item .number {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--color-primary);
+            margin-bottom: 0.2rem;
+        }
+
+        .result-item .label {
+            font-size: 0.9rem;
+            color: var(--color-gray);
+        }
+
+        @media (max-width: 768px) {
+            .programs-grid {
+                grid-template-columns: 1fr;
+            }
         }
 
         /* Results Section */
@@ -412,8 +524,8 @@
                         <span class="price">$997</span>
                     </div>
                     <div class="program-content">
-                        <p class="description">Master the core principles of building a scalable business infrastructure</p>
-                        <ul class="features">
+                        <p class="program-description">Master the core principles of building a scalable business infrastructure</p>
+                        <ul class="program-features">
                             <li>Business Model Optimization</li>
                             <li>Systems & Process Development</li>
                             <li>Client Acquisition Framework</li>
@@ -421,7 +533,9 @@
                             <li>Growth Strategy Blueprint</li>
                         </ul>
                     </div>
-                    <a href="#contact" class="cta-button">Start Scaling →</a>
+                    <div class="program-footer">
+                        <a href="#contact" class="cta-button">Start Scaling →</a>
+                    </div>
                 </div>
 
                 <div class="program-card featured" data-aos="fade-up" data-aos-delay="100">
@@ -430,8 +544,8 @@
                         <span class="price">$4,997</span>
                     </div>
                     <div class="program-content">
-                        <p class="description">Comprehensive program for businesses ready to scale to 7-figures and beyond</p>
-                        <ul class="features">
+                        <p class="program-description">Comprehensive program for businesses ready to scale to 7-figures and beyond</p>
+                        <ul class="program-features">
                             <li>Advanced Growth Strategies</li>
                             <li>Team Building & Management</li>
                             <li>Marketing Systems Implementation</li>
@@ -441,7 +555,9 @@
                             <li>Weekly Group Coaching</li>
                         </ul>
                     </div>
-                    <a href="#contact" class="cta-button">Apply Now →</a>
+                    <div class="program-footer">
+                        <a href="#contact" class="cta-button">Apply Now →</a>
+                    </div>
                 </div>
 
                 <div class="program-card" data-aos="fade-up" data-aos-delay="200">
@@ -450,8 +566,8 @@
                         <span class="price">Custom</span>
                     </div>
                     <div class="program-content">
-                        <p class="description">Exclusive mastermind for 7-figure business owners seeking exponential growth</p>
-                        <ul class="features">
+                        <p class="program-description">Exclusive mastermind for 7-figure business owners seeking exponential growth</p>
+                        <ul class="program-features">
                             <li>Quarterly Strategy Intensives</li>
                             <li>Monthly 1-on-1 Consulting</li>
                             <li>Advanced Systems Implementation</li>
@@ -459,7 +575,9 @@
                             <li>Priority Support & Resources</li>
                         </ul>
                     </div>
-                    <a href="#contact" class="cta-button">Schedule Call →</a>
+                    <div class="program-footer">
+                        <a href="#contact" class="cta-button">Schedule Call →</a>
+                    </div>
                 </div>
             </div>
         </div>

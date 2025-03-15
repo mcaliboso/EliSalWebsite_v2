@@ -234,128 +234,163 @@
             color: rgba(0,0,0,0.7);
         }
 
-        .book-grid {
+        .books-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
-            padding: 80px 0;
-            background: #fff;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
         }
 
         .book-card {
-            background: #fff;
-            border-radius: 12px;
+            background: var(--color-white);
+            border-radius: 10px;
             overflow: hidden;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease;
-            border: 1px solid rgba(0,0,0,0.1);
         }
 
         .book-card:hover {
             transform: translateY(-5px);
-            border-color: rgba(255,107,0,0.3);
-            box-shadow: 0 20px 40px rgba(255,107,0,0.1);
+        }
+
+        .book-card.featured {
+            grid-column: 1 / -1;
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 2rem;
         }
 
         .book-image {
-            flex: 0 0 200px;
-            position: relative;
+            height: 250px;
+            overflow: hidden;
+        }
+
+        .book-card.featured .book-image {
+            height: 100%;
         }
 
         .book-image img {
             width: 100%;
-            height: auto;
-            border-radius: 12px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
-            transition: transform 0.3s ease;
-        }
-
-        .book-card:hover .book-image img {
-            transform: scale(1.05);
+            height: 100%;
+            object-fit: cover;
         }
 
         .book-content {
-            padding: 30px;
-            background: #fff;
+            padding: 2rem;
         }
 
-        .book-tag {
-            display: inline-block;
-            padding: 8px 16px;
-            background: rgba(255,107,0,0.1);
-            color: #FF6B00;
-            border-radius: 20px;
-            font-size: 14px;
-            font-weight: 600;
-            margin-bottom: 20px;
-            border: 1px solid rgba(255,107,0,0.2);
+        .book-card h3 {
+            color: var(--color-primary);
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
         }
 
-        .book-title {
-            font-size: 24px;
-            font-weight: 700;
-            margin-bottom: 15px;
-            color: #1A1A1A;
+        .book-card .subtitle {
+            color: var(--color-gray);
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
         }
 
-        .book-description {
-            font-size: 16px;
+        .book-card .description {
+            color: var(--color-text);
+            margin-bottom: 1.5rem;
             line-height: 1.6;
-            margin-bottom: 20px;
-            color: rgba(0,0,0,0.7);
         }
 
-        .feature-list {
+        .book-features {
             list-style: none;
-            margin: 20px 0 30px;
             padding: 0;
+            margin: 1.5rem 0;
         }
 
-        .feature-list li {
-            font-size: 16px;
-            color: rgba(0,0,0,0.7);
-            margin-bottom: 12px;
-            padding-left: 24px;
+        .book-features li {
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
             position: relative;
+            color: var(--color-text);
         }
 
-        .feature-list li:before {
-            content: "→";
+        .book-features li::before {
+            content: "✓";
             position: absolute;
             left: 0;
-            color: #FF6B00;
+            color: var(--color-primary);
         }
 
-        .book-meta {
+        .book-footer {
             display: flex;
-            justify-content: space-between;
             align-items: center;
-            margin-top: auto;
+            justify-content: space-between;
+            margin-top: 2rem;
         }
 
-        .book-price {
-            font-size: 24px;
-            font-weight: 700;
-            color: #1A1A1A;
+        .price {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--color-primary);
         }
 
-        .btn {
+        .cta-button {
             display: inline-block;
-            background: #FF6B00;
-            color: #fff;
-            padding: 12px 30px;
-            border-radius: 30px;
+            padding: 0.8rem 1.5rem;
+            background: var(--color-primary);
+            color: var(--color-white);
+            border-radius: 5px;
             text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            border: 2px solid #FF6B00;
+            transition: background 0.3s ease;
         }
 
-        .btn:hover {
-            background: transparent;
-            color: #FF6B00;
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(255, 107, 0, 0.2);
+        .cta-button:hover {
+            background: var(--color-primary-dark);
+        }
+
+        .testimonials {
+            margin: 4rem 0;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .testimonial-card {
+            background: var(--color-white);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .testimonial-card p {
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            color: var(--color-text);
+            line-height: 1.6;
+        }
+
+        .author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .author img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .author-info h4 {
+            color: var(--color-primary);
+            margin-bottom: 0.2rem;
+        }
+
+        .author-info p {
+            color: var(--color-gray);
+            font-size: 0.9rem;
+            margin: 0;
         }
 
         @media (max-width: 1024px) {
@@ -437,6 +472,16 @@
 
             .section-header p {
                 font-size: 16px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .book-card.featured {
+                grid-template-columns: 1fr;
+            }
+
+            .book-card.featured .book-image {
+                height: 250px;
             }
         }
 
@@ -548,7 +593,7 @@
                 <h2>Master The Full Stack</h2>
                 <p>Most businesses focus on just one aspect of growth. But to build a real empire, you need to master the entire stack.</p>
             </div>
-            <div class="book-grid">
+            <div class="books-grid">
                 <div class="book-card featured" data-aos="fade-up">
                     <div class="book-image">
                         <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="The Scale-Up Blueprint">
@@ -557,16 +602,16 @@
                         <span class="book-tag">Foundation System</span>
                         <h3 class="book-title">The Scale-Up Blueprint</h3>
                         <p class="book-description">Transform your business from 6 to 7-figures. Learn the exact systems, strategies, and processes we've used to help hundreds of businesses achieve exponential growth.</p>
-                        <ul class="feature-list">
+                        <ul class="book-features">
                             <li>Business Model Optimization</li>
                             <li>Scalable Systems Implementation</li>
                             <li>Client Acquisition Framework</li>
                             <li>Team Building Strategies</li>
                             <li>Growth Analytics Guide</li>
                         </ul>
-                        <div class="book-meta">
-                            <div class="book-price">$29.99</div>
-                            <a href="#" class="btn">Get The System</a>
+                        <div class="book-footer">
+                            <div class="price">$29.99</div>
+                            <a href="#" class="cta-button">Get The System</a>
                         </div>
                     </div>
                 </div>
@@ -579,16 +624,16 @@
                         <span class="book-tag">Scale Framework</span>
                         <h3 class="book-title">Systems That Scale</h3>
                         <p class="book-description">A comprehensive guide to creating and implementing scalable business systems. Learn how to automate and optimize every aspect of your business operations.</p>
-                        <ul class="feature-list">
+                        <ul class="book-features">
                             <li>Operations Automation</li>
                             <li>Process Documentation</li>
                             <li>Team Management Systems</li>
                             <li>Quality Control Frameworks</li>
                             <li>Scaling Checklists</li>
                         </ul>
-                        <div class="book-meta">
-                            <div class="book-price">$24.99</div>
-                            <a href="#" class="btn">Master Scaling</a>
+                        <div class="book-footer">
+                            <div class="price">$24.99</div>
+                            <a href="#" class="cta-button">Master Scaling</a>
                         </div>
                     </div>
                 </div>
@@ -601,16 +646,16 @@
                         <span class="book-tag">Marketing Blueprint</span>
                         <h3 class="book-title">The Client Acquisition Code</h3>
                         <p class="book-description">Master the art of attracting and converting high-value clients consistently. A data-driven approach to marketing and sales for scaling businesses.</p>
-                        <ul class="feature-list">
+                        <ul class="book-features">
                             <li>Marketing Systems Design</li>
                             <li>Sales Process Optimization</li>
                             <li>Lead Generation Framework</li>
                             <li>Client Journey Mapping</li>
                             <li>Conversion Optimization</li>
                         </ul>
-                        <div class="book-meta">
-                            <div class="book-price">$24.99</div>
-                            <a href="#" class="btn">Master Marketing</a>
+                        <div class="book-footer">
+                            <div class="price">$24.99</div>
+                            <a href="#" class="cta-button">Master Marketing</a>
                         </div>
                     </div>
                 </div>
@@ -623,15 +668,15 @@
                         <span class="book-tag">Mental Framework</span>
                         <h3 class="book-title">The Business Owner's Mindset</h3>
                         <p class="book-description">Your business can only grow as fast as your psychology allows. Master the proven mental frameworks used by top business owners to maintain peak performance.</p>
-                        <ul class="feature-list">
+                        <ul class="book-features">
                             <li>Decision-making clarity</li>
                             <li>Peak performance habits</li>
                             <li>Strategic thinking</li>
                             <li>Execution discipline</li>
                         </ul>
-                        <div class="book-meta">
-                            <div class="book-price">$21.99</div>
-                            <a href="#" class="btn">Upgrade Your Mind</a>
+                        <div class="book-footer">
+                            <div class="price">$21.99</div>
+                            <a href="#" class="cta-button">Upgrade Your Mind</a>
                         </div>
                     </div>
                 </div>
