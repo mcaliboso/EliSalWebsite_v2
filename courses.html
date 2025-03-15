@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Online Courses | ScalingWorkshops.com</title>
+    <title>Scaling Client Businesses | ScalingWorkshops.com</title>
     <!-- HubSpot tracking code -->
     <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/242100136.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -151,18 +151,14 @@
             margin: 0 auto;
         }
 
-        /* Course Grid */
-        .courses {
-            padding: 80px 0;
-        }
-
-        .course-grid {
+        /* Programs Grid */
+        .programs-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 30px;
         }
 
-        .course-card {
+        .program-card {
             background: #fff;
             border-radius: 12px;
             overflow: hidden;
@@ -171,67 +167,49 @@
             transition: transform 0.3s ease;
         }
 
-        .course-card:hover {
+        .program-card:hover {
             transform: translateY(-5px);
         }
 
-        .course-image {
-            width: 100%;
-            height: 200px;
-            background: #1a1a1a;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .course-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .course-content {
+        .program-header {
             padding: 30px;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
         }
 
-        .course-tag {
-            display: inline-block;
-            padding: 5px 12px;
-            background: rgba(255,107,0,0.1);
-            color: #FF6B00;
-            border-radius: 20px;
-            font-size: 14px;
-            font-weight: 500;
-            margin-bottom: 15px;
-        }
-
-        .course-title {
+        .program-header h3 {
             font-size: 24px;
             font-weight: 700;
             margin-bottom: 15px;
             color: #1A1A1A;
         }
 
-        .course-description {
+        .program-content {
+            padding: 30px;
+        }
+
+        .program-content .description {
             font-size: 16px;
             color: rgba(0,0,0,0.7);
             margin-bottom: 20px;
             line-height: 1.6;
         }
 
-        .course-meta {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding-top: 20px;
-            border-top: 1px solid rgba(0,0,0,0.1);
+        .program-content .features {
+            list-style: none;
+            margin: 0;
+            padding: 0;
         }
 
-        .course-price {
-            font-weight: 700;
-            font-size: 20px;
+        .program-content .features li {
+            margin-bottom: 10px;
         }
 
-        .btn {
+        .program-content .features li::before {
+            content: "•";
+            margin-right: 10px;
+        }
+
+        .cta-button {
             display: inline-block;
             padding: 15px 30px;
             font-size: 16px;
@@ -243,9 +221,70 @@
             transition: all 0.3s ease;
         }
 
-        .btn:hover {
+        .cta-button:hover {
             background: #ff8533;
             transform: translateY(-2px);
+        }
+
+        /* Results Section */
+        .results-section {
+            padding: 80px 0;
+        }
+
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .result-card {
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            border: 1px solid rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .result-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .result-header {
+            padding: 30px;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+        }
+
+        .result-header img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 12px 12px 0 0;
+        }
+
+        .result-meta {
+            padding: 20px;
+        }
+
+        .result-meta h3 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #1A1A1A;
+        }
+
+        .result-stats {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #1A1A1A;
+        }
+
+        .result-description {
+            font-size: 16px;
+            color: rgba(0,0,0,0.7);
+            margin-bottom: 20px;
+            line-height: 1.6;
         }
 
         /* Footer Styles */
@@ -306,7 +345,7 @@
         }
 
         @media (max-width: 1024px) {
-            .course-grid {
+            .programs-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
         }
@@ -320,7 +359,11 @@
                 font-size: 40px;
             }
 
-            .course-grid {
+            .programs-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .results-grid {
                 grid-template-columns: 1fr;
             }
 
@@ -355,57 +398,111 @@
 
     <section class="hero">
         <div class="container">
-            <h1 data-aos="fade-up">Master Course Creation & Scaling</h1>
-            <p data-aos="fade-up" data-aos-delay="100">Learn at your own pace with our comprehensive online courses designed to help you build and scale your course business.</p>
+            <h1 data-aos="fade-up">Growth Programs for Ambitious Entrepreneurs</h1>
+            <p data-aos="fade-up" data-aos-delay="100">Strategic training and implementation programs designed to help you scale your business systematically.</p>
         </div>
     </section>
 
-    <section class="courses">
+    <section class="programs">
         <div class="container">
-            <div class="course-grid">
-                <div class="course-card" data-aos="fade-up">
-                    <div class="course-image">
-                        <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Course Creation Fundamentals">
+            <div class="programs-grid">
+                <div class="program-card" data-aos="fade-up">
+                    <div class="program-header">
+                        <h3>Foundations of Scale</h3>
+                        <span class="price">$997</span>
                     </div>
-                    <div class="course-content">
-                        <span class="course-tag">Beginner</span>
-                        <h3 class="course-title">Course Creation Fundamentals</h3>
-                        <p class="course-description">Learn the essential elements of creating engaging and profitable online courses.</p>
-                        <div class="course-meta">
-                            <div class="course-price">$997</div>
-                            <a href="#" class="btn">Enroll Now</a>
-                        </div>
+                    <div class="program-content">
+                        <p class="description">Master the core principles of building a scalable business infrastructure</p>
+                        <ul class="features">
+                            <li>Business Model Optimization</li>
+                            <li>Systems & Process Development</li>
+                            <li>Client Acquisition Framework</li>
+                            <li>Operational Excellence Training</li>
+                            <li>Growth Strategy Blueprint</li>
+                        </ul>
                     </div>
+                    <a href="#contact" class="cta-button">Start Scaling →</a>
                 </div>
 
-                <div class="course-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="course-image">
-                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Advanced Marketing">
+                <div class="program-card featured" data-aos="fade-up" data-aos-delay="100">
+                    <div class="program-header">
+                        <h3>Scale Accelerator</h3>
+                        <span class="price">$4,997</span>
                     </div>
-                    <div class="course-content">
-                        <span class="course-tag">Advanced</span>
-                        <h3 class="course-title">Advanced Marketing Strategies</h3>
-                        <p class="course-description">Master the art of marketing your courses through multiple channels.</p>
-                        <div class="course-meta">
-                            <div class="course-price">$1,497</div>
-                            <a href="#" class="btn">Enroll Now</a>
-                        </div>
+                    <div class="program-content">
+                        <p class="description">Comprehensive program for businesses ready to scale to 7-figures and beyond</p>
+                        <ul class="features">
+                            <li>Advanced Growth Strategies</li>
+                            <li>Team Building & Management</li>
+                            <li>Marketing Systems Implementation</li>
+                            <li>Sales Process Optimization</li>
+                            <li>Business Automation Suite</li>
+                            <li>1-on-1 Strategy Sessions</li>
+                            <li>Weekly Group Coaching</li>
+                        </ul>
                     </div>
+                    <a href="#contact" class="cta-button">Apply Now →</a>
                 </div>
 
-                <div class="course-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="course-image">
-                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Business Scaling">
+                <div class="program-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="program-header">
+                        <h3>Elite Growth Mastermind</h3>
+                        <span class="price">Custom</span>
                     </div>
-                    <div class="course-content">
-                        <span class="course-tag">Expert</span>
-                        <h3 class="course-title">Scaling Your Course Business</h3>
-                        <p class="course-description">Learn how to scale your course business to 7-figures and beyond.</p>
-                        <div class="course-meta">
-                            <div class="course-price">$1,997</div>
-                            <a href="#" class="btn">Enroll Now</a>
+                    <div class="program-content">
+                        <p class="description">Exclusive mastermind for 7-figure business owners seeking exponential growth</p>
+                        <ul class="features">
+                            <li>Quarterly Strategy Intensives</li>
+                            <li>Monthly 1-on-1 Consulting</li>
+                            <li>Advanced Systems Implementation</li>
+                            <li>Network of Elite Entrepreneurs</li>
+                            <li>Priority Support & Resources</li>
+                        </ul>
+                    </div>
+                    <a href="#contact" class="cta-button">Schedule Call →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="results-section">
+        <div class="container">
+            <h2>Client Success Stories</h2>
+            <div class="results-grid">
+                <div class="result-card" data-aos="fade-up">
+                    <div class="result-header">
+                        <img src="images/client1.jpg" alt="Sarah's Business">
+                        <div class="result-meta">
+                            <h3>Sarah's Consulting Firm</h3>
+                            <p>Business Services</p>
                         </div>
                     </div>
+                    <p class="result-stats">Revenue Growth: 312% in 8 months</p>
+                    <p class="result-description">"The systems we implemented transformed our business. We went from struggling with client management to running a streamlined operation that practically runs itself."</p>
+                </div>
+
+                <div class="result-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="result-header">
+                        <img src="images/client2.jpg" alt="Mark's Agency">
+                        <div class="result-meta">
+                            <h3>Mark's Digital Agency</h3>
+                            <p>Marketing Services</p>
+                        </div>
+                    </div>
+                    <p class="result-stats">Monthly Revenue: $0 to $83K in 6 months</p>
+                    <p class="result-description">"The strategies we learned helped us position our agency as a premium service provider. Our client acquisition is now systematic and predictable."</p>
+                </div>
+
+                <div class="result-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="result-header">
+                        <img src="images/client3.jpg" alt="Lisa's SaaS">
+                        <div class="result-meta">
+                            <h3>Lisa's Tech Company</h3>
+                            <p>SaaS Platform</p>
+                        </div>
+                    </div>
+                    <p class="result-stats">User Growth: 5X increase in 12 months</p>
+                    <p class="result-description">"The scaling framework helped us optimize our operations and marketing. We're now growing faster than ever while maintaining profitability."</p>
                 </div>
             </div>
         </div>
@@ -416,7 +513,7 @@
             <div class="footer-grid">
                 <div class="footer-col">
                     <h3>ScalingWorkshops</h3>
-                    <p>Helping course creators scale to $5M+ in net profit through proven strategies and systems.</p>
+                    <p>Helping entrepreneurs scale their businesses to 7-figures and beyond through proven strategies and systems.</p>
                 </div>
                 <div class="footer-col">
                     <h3>Company</h3>

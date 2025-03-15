@@ -162,12 +162,12 @@
             border: 1px solid rgba(0,0,0,0.1);
         }
 
-        .form-header {
+        .hero-content {
             text-align: center;
             margin-bottom: 40px;
         }
 
-        .form-header h1 {
+        .hero-content h1 {
             font-size: 48px;
             font-weight: 800;
             margin-bottom: 20px;
@@ -175,8 +175,28 @@
             color: #1A1A1A;
         }
 
-        .form-header p {
+        .hero-content p {
             font-size: 20px;
+            color: rgba(0,0,0,0.7);
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+
+        .form-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .form-header h2 {
+            font-size: 32px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.2;
+            color: #1A1A1A;
+        }
+
+        .form-header p {
+            font-size: 18px;
             color: rgba(0,0,0,0.7);
             max-width: 600px;
             margin: 0 auto 30px;
@@ -205,6 +225,43 @@
         .benefit-text {
             font-size: 16px;
             color: rgba(0,0,0,0.7);
+        }
+
+        .roadmap-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .form-group label {
+            font-size: 16px;
+            font-weight: 500;
+            color: #1A1A1A;
+        }
+
+        .form-group select {
+            padding: 10px;
+            border: 1px solid rgba(0,0,0,0.1);
+            border-radius: 5px;
+            font-size: 16px;
+            color: #1A1A1A;
+        }
+
+        .submit-button {
+            padding: 15px 30px;
+            background: #FF6B00;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
         }
 
         /* Footer */
@@ -296,11 +353,11 @@
                 padding: 30px;
             }
 
-            .form-header h1 {
+            .hero-content h1 {
                 font-size: 32px;
             }
 
-            .form-header p {
+            .hero-content p {
                 font-size: 18px;
             }
 
@@ -348,9 +405,14 @@
     <section class="form-section">
         <div class="container">
             <div class="form-container" data-aos="fade-up">
+                <div class="hero-content">
+                    <h1>Your Personalized Business Growth Roadmap</h1>
+                    <p>Get a customized strategy to scale your business to 7-figures and beyond. Our data-driven approach has helped hundreds of businesses achieve predictable, sustainable growth.</p>
+                </div>
+
                 <div class="form-header">
-                    <h1>Get Your Custom Growth Roadmap</h1>
-                    <p>Fill out the form below to receive your personalized strategy for scaling your course business to $5M+ in net profit</p>
+                    <h2>Start Your Growth Journey</h2>
+                    <p>Answer a few questions about your business to receive your personalized scaling roadmap</p>
                 </div>
 
                 <div class="benefits">
@@ -358,29 +420,73 @@
                         <svg class="benefit-icon" fill="currentColor" viewBox="0 0 20 20">
                             <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                         </svg>
-                        <div class="benefit-text">Custom-tailored growth strategy based on your unique business</div>
+                        <div class="benefit-text">Growth Strategy</div>
+                        <p>Get a detailed analysis of your current business model and specific strategies to scale your revenue</p>
                     </div>
                     <div class="benefit-item" data-aos="fade-up" data-aos-delay="200">
                         <svg class="benefit-icon" fill="currentColor" viewBox="0 0 20 20">
                             <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                         </svg>
-                        <div class="benefit-text">Actionable steps you can implement immediately</div>
+                        <div class="benefit-text">Systems Optimization</div>
+                        <p>Discover operational improvements and automation opportunities to increase efficiency and profitability</p>
                     </div>
                     <div class="benefit-item" data-aos="fade-up" data-aos-delay="300">
                         <svg class="benefit-icon" fill="currentColor" viewBox="0 0 20 20">
                             <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                         </svg>
-                        <div class="benefit-text">Revenue optimization strategies proven to work</div>
-                    </div>
-                    <div class="benefit-item" data-aos="fade-up" data-aos-delay="400">
-                        <svg class="benefit-icon" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                        </svg>
-                        <div class="benefit-text">Scaling blueprint used by 7-figure course creators</div>
+                        <div class="benefit-text">Market Positioning</div>
+                        <p>Learn how to position your business for maximum market impact and client acquisition</p>
                     </div>
                 </div>
 
-                <div id="hubspot-form"></div>
+                <form id="roadmap-form" class="roadmap-form">
+                    <div class="form-group">
+                        <label for="business-type">What type of business do you run?</label>
+                        <select id="business-type" name="business-type" required>
+                            <option value="">Select your business type</option>
+                            <option value="service">Service-based Business</option>
+                            <option value="product">Product-based Business</option>
+                            <option value="saas">SaaS/Technology</option>
+                            <option value="consulting">Consulting/Agency</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="revenue">What is your current monthly revenue?</label>
+                        <select id="revenue" name="revenue" required>
+                            <option value="">Select revenue range</option>
+                            <option value="0-10k">$0 - $10,000</option>
+                            <option value="10k-50k">$10,000 - $50,000</option>
+                            <option value="50k-100k">$50,000 - $100,000</option>
+                            <option value="100k+">$100,000+</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="goal">What's your primary growth goal?</label>
+                        <select id="goal" name="goal" required>
+                            <option value="">Select your goal</option>
+                            <option value="scale">Scale Revenue</option>
+                            <option value="automate">Automate Operations</option>
+                            <option value="team">Build Team</option>
+                            <option value="market">Expand Market Reach</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="challenges">What's your biggest scaling challenge?</label>
+                        <select id="challenges" name="challenges" required>
+                            <option value="">Select your main challenge</option>
+                            <option value="leads">Client Acquisition</option>
+                            <option value="systems">Business Systems</option>
+                            <option value="team">Team Management</option>
+                            <option value="time">Time Management</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="submit-button">Get My Growth Roadmap →</button>
+                </form>
             </div>
         </div>
     </section>
