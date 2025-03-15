@@ -177,7 +177,7 @@
 
         .roadmap-section h2 {
             font-size: 36px;
-            font-weight: 800;
+            font-weight: 700;
             margin-bottom: 40px;
             color: #1A1A1A;
         }
@@ -188,120 +188,89 @@
             gap: 30px;
         }
 
-        .roadmap-phase {
+        .roadmap-card {
             background: #fff;
             padding: 30px;
-            border: 1px solid rgba(0,0,0,0.1);
             border-radius: 12px;
             box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+            border: 1px solid rgba(0,0,0,0.1);
         }
 
-        .phase-number {
+        .step-number {
             font-size: 24px;
-            font-weight: 800;
+            font-weight: 700;
             margin-bottom: 10px;
             color: #FF6B00;
         }
 
-        .roadmap-phase h3 {
-            font-size: 24px;
-            font-weight: 700;
-            margin-bottom: 20px;
+        .roadmap-card h3 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 10px;
             color: #1A1A1A;
         }
 
-        .phase-items {
+        .roadmap-card p {
+            font-size: 16px;
+            color: rgba(0,0,0,0.7);
+            margin-bottom: 20px;
+        }
+
+        .step-features {
             list-style: none;
-            margin: 0;
             padding: 0;
+            margin: 0;
         }
 
-        .phase-items li {
+        .step-features li {
             font-size: 16px;
             color: rgba(0,0,0,0.7);
             margin-bottom: 10px;
         }
 
-        /* Methodology Section */
-        .methodology-section {
+        /* Benefits Section */
+        .benefits-section {
             padding: 100px 0;
         }
 
-        .methodology-section h2 {
+        .benefits-section h2 {
             font-size: 36px;
-            font-weight: 800;
-            margin-bottom: 40px;
-            color: #1A1A1A;
-        }
-
-        .methodology-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-        }
-
-        .methodology-card {
-            background: #fff;
-            padding: 30px;
-            border: 1px solid rgba(0,0,0,0.1);
-            border-radius: 12px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
-        }
-
-        .methodology-card i {
-            font-size: 24px;
-            margin-bottom: 10px;
-            color: #FF6B00;
-        }
-
-        .methodology-card h3 {
-            font-size: 24px;
             font-weight: 700;
-            margin-bottom: 20px;
-            color: #1A1A1A;
-        }
-
-        .methodology-card p {
-            font-size: 16px;
-            color: rgba(0,0,0,0.7);
-        }
-
-        /* Results Section */
-        .results-section {
-            padding: 100px 0;
-        }
-
-        .results-section h2 {
-            font-size: 36px;
-            font-weight: 800;
             margin-bottom: 40px;
             color: #1A1A1A;
         }
 
-        .results-grid {
+        .benefits-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(4, 1fr);
             gap: 30px;
         }
 
-        .result-card {
+        .benefit-card {
             background: #fff;
             padding: 30px;
-            border: 1px solid rgba(0,0,0,0.1);
             border-radius: 12px;
             box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+            border: 1px solid rgba(0,0,0,0.1);
         }
 
-        .result-number {
-            font-size: 48px;
-            font-weight: 800;
+        .benefit-card i {
+            font-size: 24px;
             margin-bottom: 10px;
             color: #FF6B00;
         }
 
-        .result-card p {
+        .benefit-card h3 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #1A1A1A;
+        }
+
+        .benefit-card p {
             font-size: 16px;
             color: rgba(0,0,0,0.7);
+            margin-bottom: 20px;
         }
 
         /* CTA Section */
@@ -311,119 +280,62 @@
             border-top: 1px solid rgba(0,0,0,0.1);
         }
 
-        .cta-section h2 {
+        .cta-content {
+            text-align: center;
+        }
+
+        .cta-content h2 {
             font-size: 36px;
-            font-weight: 800;
+            font-weight: 700;
             margin-bottom: 20px;
             color: #1A1A1A;
         }
 
-        .cta-section p {
+        .cta-content p {
             font-size: 20px;
             color: rgba(0,0,0,0.7);
             max-width: 600px;
             margin: 0 auto 30px;
         }
 
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid rgba(0,0,0,0.1);
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .form-group select {
+            padding: 10px;
+        }
+
         .btn {
             background: #FF6B00;
             color: #fff;
-            border: none;
             padding: 15px 30px;
-            font-size: 18px;
-            font-weight: 700;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
             cursor: pointer;
-            border-radius: 12px;
-            transition: background 0.3s ease;
         }
 
         .btn:hover {
             background: #FF9900;
         }
 
-        /* Footer */
-        footer {
-            padding: 80px 0 40px;
-            background: #f7f7f7;
-            border-top: 1px solid rgba(0,0,0,0.1);
-            color: #1A1A1A;
-        }
-
-        .footer-grid {
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr 1fr;
-            gap: 60px;
-            margin-bottom: 60px;
-        }
-
-        .footer-col h3 {
-            font-size: 18px;
-            font-weight: 700;
-            margin-bottom: 20px;
-            color: #1A1A1A;
-        }
-
-        .footer-col p {
-            font-size: 16px;
-            color: rgba(0,0,0,0.7);
-            margin-bottom: 20px;
-            max-width: 300px;
-        }
-
-        .footer-links {
-            list-style: none;
-        }
-
-        .footer-links li {
-            margin-bottom: 12px;
-        }
-
-        .footer-links a {
-            color: rgba(0,0,0,0.7);
-            text-decoration: none;
-            font-size: 16px;
-            transition: color 0.3s ease;
-        }
-
-        .footer-links a:hover {
-            color: #FF6B00;
-        }
-
-        .footer-bottom {
-            padding-top: 40px;
-            border-top: 1px solid rgba(0,0,0,0.1);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .footer-bottom p {
-            color: rgba(0,0,0,0.7);
-            font-size: 14px;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 20px;
-        }
-
-        .social-links a {
-            color: rgba(0,0,0,0.7);
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .social-links a:hover {
-            color: #FF6B00;
-        }
-
         @media (max-width: 768px) {
-            .nav {
-                padding: 15px 0;
-            }
-
             .hero-section {
-                padding: 100px 0 60px;
+                padding: 80px 0;
             }
 
             .hero-content h1 {
@@ -439,25 +351,17 @@
                 gap: 20px;
             }
 
-            .methodology-grid {
+            .benefits-grid {
                 grid-template-columns: 1fr;
                 gap: 20px;
             }
 
-            .results-grid {
-                grid-template-columns: 1fr;
-                gap: 20px;
+            .cta-content h2 {
+                font-size: 28px;
             }
 
-            .footer-grid {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
-
-            .footer-bottom {
-                flex-direction: column;
-                gap: 20px;
-                text-align: center;
+            .cta-content p {
+                font-size: 16px;
             }
         }
     </style>
@@ -488,101 +392,93 @@
     <section class="hero-section">
         <div class="container">
             <div class="hero-content">
-                <h1>Your Growth Roadmap</h1>
-                <p>Get a customized strategy to scale your business based on proven methodologies and data-driven insights.</p>
+                <h1>Your Business Scaling Roadmap</h1>
+                <p>Get a customized growth strategy tailored to your service business's unique needs and goals.</p>
             </div>
         </div>
     </section>
 
     <section class="roadmap-section">
         <div class="container">
-            <h2>Strategic Growth Framework</h2>
+            <h2>Your Path to Sustainable Growth</h2>
             <div class="roadmap-grid">
-                <div class="roadmap-phase" data-aos="fade-up">
-                    <div class="phase-number">01</div>
-                    <h3>Assessment & Strategy</h3>
-                    <ul class="phase-items">
-                        <li>Business Model Analysis</li>
-                        <li>Market Opportunity Mapping</li>
-                        <li>Competitive Positioning</li>
+                <div class="roadmap-card" data-aos="fade-up">
+                    <div class="step-number">1</div>
+                    <h3>Business Assessment</h3>
+                    <p>We analyze your current business model, systems, and growth bottlenecks to identify key opportunities.</p>
+                    <ul class="step-features">
+                        <li>Current Systems Analysis</li>
                         <li>Growth Bottleneck Identification</li>
+                        <li>Market Opportunity Assessment</li>
+                        <li>Resource Allocation Review</li>
                     </ul>
                 </div>
 
-                <div class="roadmap-phase" data-aos="fade-up" data-aos-delay="100">
-                    <div class="phase-number">02</div>
-                    <h3>Systems & Operations</h3>
-                    <ul class="phase-items">
-                        <li>Process Optimization</li>
-                        <li>Technology Stack Review</li>
-                        <li>Automation Implementation</li>
-                        <li>Quality Management Framework</li>
+                <div class="roadmap-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="step-number">2</div>
+                    <h3>Strategy Development</h3>
+                    <p>Create a customized scaling strategy aligned with your business goals and market position.</p>
+                    <ul class="step-features">
+                        <li>Client Acquisition Strategy</li>
+                        <li>Service Delivery Optimization</li>
+                        <li>Team Structure Planning</li>
+                        <li>Growth Metrics Definition</li>
                     </ul>
                 </div>
 
-                <div class="roadmap-phase" data-aos="fade-up" data-aos-delay="200">
-                    <div class="phase-number">03</div>
-                    <h3>Team & Leadership</h3>
-                    <ul class="phase-items">
-                        <li>Organizational Structure Design</li>
-                        <li>Talent Acquisition Strategy</li>
-                        <li>Leadership Development</li>
-                        <li>Performance Management</li>
+                <div class="roadmap-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="step-number">3</div>
+                    <h3>Systems Implementation</h3>
+                    <p>Deploy proven systems and processes to support sustainable business growth.</p>
+                    <ul class="step-features">
+                        <li>Client Management Systems</li>
+                        <li>Operations Automation</li>
+                        <li>Team Training Programs</li>
+                        <li>Quality Control Processes</li>
                     </ul>
                 </div>
 
-                <div class="roadmap-phase" data-aos="fade-up" data-aos-delay="300">
-                    <div class="phase-number">04</div>
-                    <h3>Growth Execution</h3>
-                    <ul class="phase-items">
-                        <li>Market Expansion Strategy</li>
-                        <li>Revenue Stream Optimization</li>
-                        <li>Strategic Partnerships</li>
-                        <li>Scalable Growth Tactics</li>
+                <div class="roadmap-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="step-number">4</div>
+                    <h3>Growth Acceleration</h3>
+                    <p>Execute growth initiatives while maintaining service quality and client satisfaction.</p>
+                    <ul class="step-features">
+                        <li>Client Base Expansion</li>
+                        <li>Service Portfolio Optimization</li>
+                        <li>Team Capacity Scaling</li>
+                        <li>Revenue Growth Tracking</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="methodology-section">
+    <section class="benefits-section">
         <div class="container">
-            <h2>Our Methodology</h2>
-            <div class="methodology-grid">
-                <div class="methodology-card" data-aos="fade-up">
+            <h2>Benefits of Our Approach</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card" data-aos="fade-up">
                     <i class="fas fa-chart-line"></i>
-                    <h3>Data-Driven Approach</h3>
-                    <p>We analyze key metrics and market data to identify the most impactful growth opportunities.</p>
+                    <h3>Sustainable Growth</h3>
+                    <p>Scale your business systematically without compromising service quality or team wellbeing.</p>
                 </div>
-                <div class="methodology-card" data-aos="fade-up" data-aos-delay="100">
-                    <i class="fas fa-cogs"></i>
-                    <h3>Systematic Implementation</h3>
-                    <p>Clear, step-by-step execution plans ensure successful implementation of growth strategies.</p>
-                </div>
-                <div class="methodology-card" data-aos="fade-up" data-aos-delay="200">
-                    <i class="fas fa-users"></i>
-                    <h3>Collaborative Process</h3>
-                    <p>We work closely with your team to ensure strategies align with your vision and capabilities.</p>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <section class="results-section">
-        <div class="container">
-            <h2>Client Results</h2>
-            <div class="results-grid">
-                <div class="result-card" data-aos="fade-up">
-                    <div class="result-number">3x</div>
-                    <p>Average Revenue Growth in First Year</p>
+                <div class="benefit-card" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fas fa-cogs"></i>
+                    <h3>Efficient Systems</h3>
+                    <p>Implement proven processes that streamline operations and improve service delivery.</p>
                 </div>
-                <div class="result-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="result-number">40%</div>
-                    <p>Operational Efficiency Improvement</p>
+
+                <div class="benefit-card" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fas fa-users"></i>
+                    <h3>Team Development</h3>
+                    <p>Build and train high-performing teams that can support your business growth.</p>
                 </div>
-                <div class="result-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="result-number">95%</div>
-                    <p>Client Success Rate</p>
+
+                <div class="benefit-card" data-aos="fade-up" data-aos-delay="300">
+                    <i class="fas fa-dollar-sign"></i>
+                    <h3>Increased Profitability</h3>
+                    <p>Optimize your business model for maximum revenue while controlling costs.</p>
                 </div>
             </div>
         </div>
@@ -590,9 +486,31 @@
 
     <section class="cta-section">
         <div class="container">
-            <h2>Get Your Custom Growth Roadmap</h2>
-            <p>Schedule a strategy session to discuss your business goals and receive a tailored growth plan.</p>
-            <a href="#contact" class="btn btn-primary">Book Your Strategy Call</a>
+            <div class="cta-content">
+                <h2>Ready to Scale Your Business?</h2>
+                <p>Get your personalized roadmap and start your growth journey today.</p>
+                <form id="roadmap-form" class="contact-form">
+                    <div class="form-group">
+                        <input type="text" placeholder="Business Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Email Address" required>
+                    </div>
+                    <div class="form-group">
+                        <select required>
+                            <option value="">Current Monthly Revenue</option>
+                            <option value="10-50k">$10K - $50K</option>
+                            <option value="50-100k">$50K - $100K</option>
+                            <option value="100-500k">$100K - $500K</option>
+                            <option value="500k+">$500K+</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="What's your biggest scaling challenge?" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Get My Roadmap</button>
+                </form>
+            </div>
         </div>
     </section>
 
@@ -601,7 +519,7 @@
             <div class="footer-grid">
                 <div class="footer-col">
                     <h3>ScalingWorkshops</h3>
-                    <p>Helping businesses scale to $5M+ in net profit through proven strategies and systems.</p>
+                    <p>Helping course creators scale to $5M+ in net profit through proven strategies and systems.</p>
                 </div>
                 <div class="footer-col">
                     <h3>Company</h3>
@@ -649,6 +567,17 @@
         document.querySelector('.mobile-menu-btn').addEventListener('click', () => {
             document.querySelector('.nav-links').classList.toggle('active');
         });
+
+        // HubSpot Form Embed
+        window.onload = function() {
+            hbspt.forms.create({
+                region: "na1",
+                portalId: "242100136",
+                formId: "de2b86e7-830a-40a2-8125-0b803aa849ac",
+                target: "#hubspot-form",
+                css: ""
+            });
+        }
     </script>
 </body>
 </html>

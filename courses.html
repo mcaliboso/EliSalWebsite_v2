@@ -3,12 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ScalingWorkshops.com</title>
+    <title>Business Scaling Programs | ScalingWorkshops.com</title>
     <!-- HubSpot tracking code -->
     <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/242100136.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <style>
         /* Base styles */
         * {
@@ -152,14 +151,14 @@
             margin: 0 auto;
         }
 
-        /* Services Grid */
-        .services-grid {
+        /* Programs Grid */
+        .programs-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 30px;
         }
 
-        .service-card {
+        .program-card {
             background: #fff;
             border-radius: 12px;
             overflow: hidden;
@@ -168,66 +167,56 @@
             transition: transform 0.3s ease;
         }
 
-        .service-card:hover {
+        .program-card:hover {
             transform: translateY(-5px);
         }
 
-        .service-icon {
-            width: 100%;
-            height: 200px;
-            background: #1a1a1a;
-            position: relative;
-            overflow: hidden;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 48px;
-            color: #fff;
-        }
-
-        .service-content {
+        .program-header {
             padding: 30px;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
         }
 
-        .service-tag {
-            display: inline-block;
-            padding: 5px 12px;
-            background: rgba(255,107,0,0.1);
-            color: #FF6B00;
-            border-radius: 20px;
-            font-size: 14px;
-            font-weight: 500;
-            margin-bottom: 15px;
-        }
-
-        .service-title {
+        .program-header h3 {
             font-size: 24px;
             font-weight: 700;
             margin-bottom: 15px;
             color: #1A1A1A;
         }
 
-        .service-description {
+        .program-header .price {
+            font-weight: 700;
+            font-size: 20px;
+        }
+
+        .program-content {
+            padding: 30px;
+        }
+
+        .program-content .description {
             font-size: 16px;
             color: rgba(0,0,0,0.7);
             margin-bottom: 20px;
             line-height: 1.6;
         }
 
-        .service-meta {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding-top: 20px;
-            border-top: 1px solid rgba(0,0,0,0.1);
+        .program-content .features {
+            list-style: none;
+            margin: 0;
+            padding: 0;
         }
 
-        .service-price {
-            font-weight: 700;
-            font-size: 20px;
+        .program-content .features li {
+            margin-bottom: 10px;
         }
 
-        .btn {
+        .program-content .features li::before {
+            content: "\2022";
+            font-size: 18px;
+            color: #FF6B00;
+            margin-right: 10px;
+        }
+
+        .program-content .btn {
             display: inline-block;
             padding: 15px 30px;
             font-size: 16px;
@@ -239,93 +228,21 @@
             transition: all 0.3s ease;
         }
 
-        .btn:hover {
+        .program-content .btn:hover {
             background: #ff8533;
             transform: translateY(-2px);
         }
 
-        /* Process Section */
-        .process-section {
+        /* Results Section */
+        .results-section {
             padding: 80px 0;
         }
 
-        .process-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 30px;
-        }
-
-        .process-card {
-            background: #fff;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-            border: 1px solid rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-        }
-
-        .process-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .process-icon {
-            width: 100%;
-            height: 200px;
-            background: #1a1a1a;
-            position: relative;
-            overflow: hidden;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 48px;
-            color: #fff;
-        }
-
-        .process-content {
-            padding: 30px;
-        }
-
-        .process-tag {
-            display: inline-block;
-            padding: 5px 12px;
-            background: rgba(255,107,0,0.1);
-            color: #FF6B00;
-            border-radius: 20px;
-            font-size: 14px;
-            font-weight: 500;
-            margin-bottom: 15px;
-        }
-
-        .process-title {
-            font-size: 24px;
-            font-weight: 700;
-            margin-bottom: 15px;
-            color: #1A1A1A;
-        }
-
-        .process-description {
-            font-size: 16px;
-            color: rgba(0,0,0,0.7);
+        .results-section h2 {
+            font-size: 36px;
+            font-weight: 800;
             margin-bottom: 20px;
-            line-height: 1.6;
-        }
-
-        .process-meta {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding-top: 20px;
-            border-top: 1px solid rgba(0,0,0,0.1);
-        }
-
-        .process-price {
-            font-weight: 700;
-            font-size: 20px;
-        }
-
-        /* Testimonials Section */
-        .testimonials-section {
-            padding: 80px 0;
+            color: #1A1A1A;
         }
 
         .testimonials-grid {
@@ -351,108 +268,81 @@
             padding: 30px;
         }
 
-        .testimonial-tag {
-            display: inline-block;
-            padding: 5px 12px;
-            background: rgba(255,107,0,0.1);
-            color: #FF6B00;
-            border-radius: 20px;
-            font-size: 14px;
-            font-weight: 500;
-            margin-bottom: 15px;
-        }
-
-        .testimonial-title {
-            font-size: 24px;
-            font-weight: 700;
-            margin-bottom: 15px;
-            color: #1A1A1A;
-        }
-
-        .testimonial-description {
+        .testimonial-content p {
             font-size: 16px;
             color: rgba(0,0,0,0.7);
             margin-bottom: 20px;
             line-height: 1.6;
         }
 
-        .testimonial-meta {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding-top: 20px;
+        .testimonial-author {
+            padding: 30px;
             border-top: 1px solid rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
         }
 
-        .testimonial-price {
+        .testimonial-author img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+
+        .testimonial-author h4 {
+            font-size: 18px;
             font-weight: 700;
-            font-size: 20px;
+            margin-bottom: 5px;
+            color: #1A1A1A;
         }
 
-        /* CTA Section */
-        .cta-section {
+        .testimonial-author p {
+            font-size: 16px;
+            color: rgba(0,0,0,0.7);
+        }
+
+        /* Guarantee Section */
+        .guarantee-section {
             padding: 80px 0;
         }
 
-        .cta-grid {
-            display: grid;
-            grid-template-columns: repeat(1, 1fr);
-            gap: 30px;
-        }
-
-        .cta-card {
-            background: #fff;
+        .guarantee-content {
+            padding: 30px;
+            background: #f7f7f7;
             border-radius: 12px;
-            overflow: hidden;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
             border: 1px solid rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
         }
 
-        .cta-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .cta-content {
-            padding: 30px;
-        }
-
-        .cta-tag {
-            display: inline-block;
-            padding: 5px 12px;
-            background: rgba(255,107,0,0.1);
-            color: #FF6B00;
-            border-radius: 20px;
-            font-size: 14px;
-            font-weight: 500;
-            margin-bottom: 15px;
-        }
-
-        .cta-title {
-            font-size: 24px;
-            font-weight: 700;
-            margin-bottom: 15px;
+        .guarantee-content h2 {
+            font-size: 36px;
+            font-weight: 800;
+            margin-bottom: 20px;
             color: #1A1A1A;
         }
 
-        .cta-description {
+        .guarantee-content p {
             font-size: 16px;
             color: rgba(0,0,0,0.7);
             margin-bottom: 20px;
             line-height: 1.6;
         }
 
-        .cta-meta {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding-top: 20px;
-            border-top: 1px solid rgba(0,0,0,0.1);
+        .guarantee-features {
+            list-style: none;
+            margin: 0;
+            padding: 0;
         }
 
-        .cta-price {
-            font-weight: 700;
-            font-size: 20px;
+        .guarantee-features li {
+            margin-bottom: 10px;
+        }
+
+        .guarantee-features li::before {
+            content: "\2022";
+            font-size: 18px;
+            color: #FF6B00;
+            margin-right: 10px;
         }
 
         /* Footer Styles */
@@ -513,7 +403,7 @@
         }
 
         @media (max-width: 1024px) {
-            .services-grid {
+            .programs-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
         }
@@ -527,7 +417,11 @@
                 font-size: 40px;
             }
 
-            .services-grid {
+            .programs-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .testimonials-grid {
                 grid-template-columns: 1fr;
             }
 
@@ -548,10 +442,13 @@
                     </svg>
                 </button>
                 <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="workshops.html">Workshops</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="books.html">Books</a></li>
+                    <li><a href="media.html">Media</a></li>
+                    <li><a href="partner.html">Partner With Us</a></li>
+                    <li><a href="about.html">About the Firm</a></li>
+                    <li><a href="careers.html">Careers</a></li>
                 </ul>
             </div>
         </div>
@@ -559,128 +456,120 @@
 
     <section class="hero">
         <div class="container">
-            <h1>Strategic Growth Services</h1>
-            <p>Comprehensive solutions to scale your business through proven methodologies and expert guidance.</p>
+            <div class="hero-content">
+                <h1>Business Scaling Programs</h1>
+                <p>Comprehensive training programs designed to help you scale your client business systematically and sustainably.</p>
+            </div>
         </div>
     </section>
 
-    <section class="services">
+    <section class="programs">
         <div class="container">
-            <div class="services-grid">
-                <div class="service-card" data-aos="fade-up">
-                    <div class="service-icon">
-                        <i class="fas fa-chart-line"></i>
+            <div class="programs-grid">
+                <div class="program-card" data-aos="fade-up">
+                    <div class="program-header">
+                        <h3>Growth Accelerator</h3>
+                        <span class="price">$2,997</span>
                     </div>
-                    <h3>Growth Strategy Development</h3>
-                    <p class="price">Starting at $5,000</p>
-                    <ul class="feature-list">
-                        <li>Market Opportunity Analysis</li>
-                        <li>Competitive Positioning Strategy</li>
-                        <li>Revenue Model Optimization</li>
-                        <li>Growth Roadmap Creation</li>
-                        <li>KPI Framework Development</li>
-                    </ul>
-                    <a href="#contact" class="btn btn-primary">Schedule Consultation</a>
+                    <div class="program-content">
+                        <p class="description">Our flagship 12-week program for service businesses ready to scale systematically.</p>
+                        <ul class="features">
+                            <li>Client Acquisition System Development</li>
+                            <li>Service Delivery Optimization</li>
+                            <li>Team Building & Management</li>
+                            <li>Financial Growth Strategy</li>
+                            <li>Weekly Group Coaching</li>
+                            <li>Private Community Access</li>
+                        </ul>
+                        <a href="#apply" class="btn btn-primary">Apply Now</a>
+                    </div>
                 </div>
 
-                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="service-icon">
-                        <i class="fas fa-cogs"></i>
+                <div class="program-card featured" data-aos="fade-up" data-aos-delay="100">
+                    <div class="program-header">
+                        <h3>Elite Scale Program</h3>
+                        <span class="price">$7,997</span>
                     </div>
-                    <h3>Operations Excellence</h3>
-                    <p class="price">Starting at $7,500</p>
-                    <ul class="feature-list">
-                        <li>Process Automation Implementation</li>
-                        <li>Scalable Systems Design</li>
-                        <li>Quality Management Framework</li>
-                        <li>Operational Efficiency Audit</li>
-                        <li>Technology Stack Optimization</li>
-                    </ul>
-                    <a href="#contact" class="btn btn-primary">Schedule Consultation</a>
+                    <div class="program-content">
+                        <p class="description">6-month intensive program for established businesses targeting rapid growth.</p>
+                        <ul class="features">
+                            <li>1-on-1 Strategic Planning</li>
+                            <li>Custom Growth Roadmap</li>
+                            <li>Operations Automation Setup</li>
+                            <li>High-Ticket Client Acquisition</li>
+                            <li>Team Scaling Blueprint</li>
+                            <li>Weekly Private Coaching</li>
+                            <li>Priority Support Access</li>
+                        </ul>
+                        <a href="#apply" class="btn btn-primary">Apply Now</a>
+                    </div>
                 </div>
 
-                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="service-icon">
-                        <i class="fas fa-users"></i>
+                <div class="program-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="program-header">
+                        <h3>Foundations Workshop</h3>
+                        <span class="price">$997</span>
                     </div>
-                    <h3>Team Development</h3>
-                    <p class="price">Starting at $6,500</p>
-                    <ul class="feature-list">
-                        <li>Leadership Training Programs</li>
-                        <li>Talent Acquisition Strategy</li>
-                        <li>Performance Management Systems</li>
-                        <li>Team Structure Optimization</li>
-                        <li>Culture Development Framework</li>
-                    </ul>
-                    <a href="#contact" class="btn btn-primary">Schedule Consultation</a>
+                    <div class="program-content">
+                        <p class="description">4-week program to build the fundamental systems for scaling your service business.</p>
+                        <ul class="features">
+                            <li>Business Assessment</li>
+                            <li>Basic Systems Setup</li>
+                            <li>Growth Strategy Planning</li>
+                            <li>Group Implementation Calls</li>
+                            <li>Resource Library Access</li>
+                        </ul>
+                        <a href="#apply" class="btn btn-primary">Apply Now</a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="process-section">
-        <div class="container">
-            <h2>Our Engagement Process</h2>
-            <div class="process-grid">
-                <div class="process-card">
-                    <div class="process-icon">
-                        <i class="fas fa-search"></i>
-                    </div>
-                    <h3>1. Discovery</h3>
-                    <p>In-depth analysis of your business, goals, and current challenges to create a tailored growth strategy.</p>
-                </div>
-                <div class="process-card">
-                    <div class="process-icon">
-                        <i class="fas fa-map"></i>
-                    </div>
-                    <h3>2. Strategy Development</h3>
-                    <p>Creating a comprehensive roadmap with clear milestones and actionable implementation plans.</p>
-                </div>
-                <div class="process-card">
-                    <div class="process-icon">
-                        <i class="fas fa-rocket"></i>
-                    </div>
-                    <h3>3. Implementation</h3>
-                    <p>Hands-on guidance and support throughout the execution phase to ensure successful outcomes.</p>
-                </div>
-                <div class="process-card">
-                    <div class="process-icon">
-                        <i class="fas fa-chart-bar"></i>
-                    </div>
-                    <h3>4. Optimization</h3>
-                    <p>Continuous monitoring and refinement of strategies based on performance metrics and market changes.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="testimonials-section">
+    <section class="results-section">
         <div class="container">
             <h2>Client Success Stories</h2>
             <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <p>"Their strategic guidance helped us triple our revenue in just 18 months while building a sustainable operational foundation."</p>
+                <div class="testimonial-card" data-aos="fade-up">
+                    <div class="testimonial-content">
+                        <p>"The Growth Accelerator program helped us systematize our client acquisition. We've grown from 20 to 50 clients in just 3 months while maintaining our service quality."</p>
+                    </div>
                     <div class="testimonial-author">
-                        <h4>Sarah Chen</h4>
-                        <p>CEO, TechGrowth Solutions</p>
+                        <img src="images/client1.jpg" alt="David Park">
+                        <div>
+                            <h4>David Park</h4>
+                            <p>CEO, Digital Agency</p>
+                        </div>
                     </div>
                 </div>
-                <div class="testimonial-card">
-                    <p>"The team's expertise in scaling operations and developing our leadership has been instrumental in our company's expansion to new markets."</p>
+
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="testimonial-content">
+                        <p>"The systems we implemented through the Elite program helped us scale from $50K to $200K monthly revenue while reducing our working hours."</p>
+                    </div>
                     <div class="testimonial-author">
-                        <h4>Michael Rodriguez</h4>
-                        <p>Founder, InnovateScale</p>
+                        <img src="images/client2.jpg" alt="Rachel Chen">
+                        <div>
+                            <h4>Rachel Chen</h4>
+                            <p>Founder, Consulting Firm</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="cta-section">
+    <section class="guarantee-section">
         <div class="container">
-            <h2>Ready to Scale Your Business?</h2>
-            <p>Schedule a free consultation to discuss how we can help you achieve your growth goals.</p>
-            <a href="#contact" class="btn btn-primary">Book Your Strategy Call</a>
+            <div class="guarantee-content">
+                <h2>Our Growth Guarantee</h2>
+                <p>We're so confident in our programs that we offer a 30-day implementation guarantee. If you follow our systems and don't see measurable growth in your business, we'll refund your investment.</p>
+                <ul class="guarantee-features">
+                    <li>30-Day Implementation Period</li>
+                    <li>Clear Growth Metrics</li>
+                    <li>Full Support Throughout</li>
+                </ul>
+            </div>
         </div>
     </section>
 
@@ -689,23 +578,24 @@
             <div class="footer-grid">
                 <div class="footer-col">
                     <h3>ScalingWorkshops</h3>
-                    <p>Helping businesses scale to $5M+ in net profit through proven strategies and systems.</p>
+                    <p>Helping course creators scale to $5M+ in net profit through proven strategies and systems.</p>
                 </div>
                 <div class="footer-col">
                     <h3>Company</h3>
                     <ul class="footer-links">
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="workshops.html">Workshops</a></li>
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="books.html">Books</a></li>
+                        <li><a href="media.html">Media</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
                     <h3>Resources</h3>
                     <ul class="footer-links">
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="podcast.html">Podcast</a></li>
-                        <li><a href="webinars.html">Webinars</a></li>
+                        <li><a href="partner.html">Partner With Us</a></li>
+                        <li><a href="about.html">About the Firm</a></li>
+                        <li><a href="careers.html">Careers</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">

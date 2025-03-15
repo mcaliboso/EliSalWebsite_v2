@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scale Your Business | ScalingWorkshops.com</title>
+    <title>Scale Your Client Business | ScalingWorkshops.com</title>
     <!-- HubSpot tracking code -->
     <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/242100136.js"></script>
     <!-- HubSpot Forms -->
@@ -172,7 +172,9 @@
         }
 
         .hero-cta {
-            margin-top: 60px;
+            display: flex;
+            gap: 20px;
+            justify-content: center;
         }
 
         .btn {
@@ -205,34 +207,20 @@
             border-top: 1px solid rgba(0,0,0,0.1);
         }
 
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 40px;
-            margin: 60px 0;
-        }
-
         .feature-card {
-            padding: 40px;
             background: rgba(255,255,255,0.03);
             border-radius: 8px;
-            transition: transform 0.3s ease;
+            overflow: hidden;
             background: #fff;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            padding: 40px;
+            margin: 20px;
         }
 
-        .feature-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .feature-icon {
-            margin-bottom: 30px;
+        .feature-card i {
+            font-size: 48px;
+            margin-bottom: 20px;
             color: #FF6B00;
-        }
-
-        .feature-icon svg {
-            width: 48px;
-            height: 48px;
         }
 
         .feature-card h3 {
@@ -267,11 +255,12 @@
             opacity: 0.9;
         }
 
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 40px;
-            margin: 60px 0;
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            margin: 60px auto 40px;
+            max-width: 900px;
         }
 
         .stat-item {
@@ -284,21 +273,12 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
         }
 
-        .stat-number {
+        .stat-item h3 {
             font-size: 48px;
             font-weight: 800;
             color: #FF6B00;
             margin-bottom: 10px;
             line-height: 1;
-        }
-
-        .stat-label {
-            font-size: 16px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: rgba(0, 0, 0, 0.9);
-            line-height: 1.4;
         }
 
         /* Testimonials Section */
@@ -308,43 +288,44 @@
             border-top: 1px solid rgba(0,0,0,0.1);
         }
 
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 40px;
-            margin: 60px 0;
-        }
-
         .testimonial-card {
-            padding: 40px;
             background: rgba(255,255,255,0.03);
             border-radius: 8px;
-            transition: transform 0.3s ease;
+            overflow: hidden;
             background: #fff;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            padding: 40px;
+            margin: 20px;
         }
 
-        .testimonial-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .testimonial-content {
-            margin-bottom: 30px;
-        }
-
-        .testimonial-content p {
+        .testimonial-card p {
             font-size: 18px;
             margin-bottom: 20px;
             opacity: 0.9;
         }
 
         .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .testimonial-author img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+        }
+
+        .testimonial-author h4 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 5px;
+            color: #1A1A1A;
+        }
+
+        .testimonial-author p {
             font-size: 16px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: rgba(0, 0, 0, 0.9);
-            line-height: 1.4;
+            opacity: 0.7;
         }
 
         /* CTA Section */
@@ -354,22 +335,24 @@
             border-top: 1px solid rgba(0,0,0,0.1);
         }
 
-        .cta-content {
-            max-width: 800px;
+        .form-wrapper {
+            max-width: 600px;
             margin: 0 auto;
+            padding: 60px;
+            background: rgba(255,255,255,0.03);
+            border-radius: 12px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+            background: #fff;
+        }
+
+        .form-header {
             text-align: center;
+            margin-bottom: 40px;
         }
 
-        .cta-content h2 {
-            font-size: 48px;
-            margin-bottom: 30px;
-            line-height: 1.2;
-        }
-
-        .cta-content p {
-            font-size: 18px;
+        .form-header h2 {
+            font-size: 36px;
             margin-bottom: 20px;
-            opacity: 0.9;
         }
 
         /* Footer */
@@ -467,13 +450,24 @@
                 padding: 0 20px;
             }
 
-            .features-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 30px;
+            .features {
+                padding: 80px 0;
+            }
+
+            .feature-card {
+                margin: 10px;
+            }
+
+            .about {
+                padding: 80px 0;
             }
 
             .about-content h2 {
                 font-size: 36px;
+            }
+
+            .testimonial-card {
+                margin: 10px;
             }
 
             .footer-grid {
@@ -497,12 +491,20 @@
                 font-size: 18px;
             }
 
-            .features-grid {
-                grid-template-columns: 1fr;
+            .features {
+                padding: 60px 0;
             }
 
-            .testimonial-grid {
-                grid-template-columns: 1fr;
+            .feature-card {
+                padding: 20px;
+            }
+
+            .about {
+                padding: 60px 0;
+            }
+
+            .testimonial-card {
+                padding: 20px;
             }
 
             .btn {
@@ -523,8 +525,8 @@
                     </svg>
                 </button>
                 <ul class="nav-links">
-                    <li><a href="#services">Services</a></li>
                     <li><a href="#about">About</a></li>
+                    <li><a href="#features">Features</a></li>
                     <li><a href="#testimonials">Testimonials</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
@@ -535,11 +537,11 @@
     <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <h1>Transform Your Business Through Strategic Growth</h1>
-                <p>Partner with us to scale your business, optimize operations, and achieve sustainable growth through proven strategies and personalized consulting.</p>
+                <h1>Transform Your Business Growth</h1>
+                <p>Expert guidance and proven strategies to scale your client business sustainably. From streamlining operations to maximizing client value, we help you build a thriving enterprise.</p>
                 <div class="hero-cta">
-                    <a href="#contact" class="btn btn-primary">Schedule a Strategy Call</a>
-                    <a href="#services" class="btn btn-secondary">Explore Our Services</a>
+                    <a href="#contact" class="btn btn-primary">Scale Your Business</a>
+                    <a href="#services" class="btn btn-secondary">Explore Services</a>
                 </div>
             </div>
         </div>
@@ -547,24 +549,20 @@
 
     <section class="features">
         <div class="container">
-            <h2 data-aos="fade-up">Our Expertise</h2>
-            <p data-aos="fade-up" data-aos-delay="100">We specialize in helping businesses break through growth plateaus and achieve their full potential.</p>
-            <div class="features-grid">
-                <div class="feature-card" data-aos="fade-up">
-                    <i class="fas fa-chart-line"></i>
-                    <h3>Strategic Growth Planning</h3>
-                    <p>Develop a customized roadmap for scaling your business with actionable milestones and measurable outcomes.</p>
-                </div>
-                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
-                    <i class="fas fa-cogs"></i>
-                    <h3>Operations Optimization</h3>
-                    <p>Streamline your business processes and systems to increase efficiency and prepare for sustainable growth.</p>
-                </div>
-                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
-                    <i class="fas fa-users"></i>
-                    <h3>Team Development</h3>
-                    <p>Build and scale high-performing teams that drive business success through strategic hiring and management.</p>
-                </div>
+            <div class="feature-card" data-aos="fade-up">
+                <i class="fas fa-chart-line"></i>
+                <h3>Strategic Growth Planning</h3>
+                <p>Develop a clear roadmap for scaling your client business with actionable milestones and measurable outcomes.</p>
+            </div>
+            <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                <i class="fas fa-users"></i>
+                <h3>Client Acquisition Systems</h3>
+                <p>Implement proven systems to consistently attract and convert high-value clients while maintaining service quality.</p>
+            </div>
+            <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                <i class="fas fa-cogs"></i>
+                <h3>Operations Optimization</h3>
+                <p>Streamline your business processes to handle growth efficiently while delivering exceptional client experiences.</p>
             </div>
         </div>
     </section>
@@ -572,20 +570,20 @@
     <section class="about">
         <div class="container">
             <div class="about-content">
-                <h2>Scale Your Business with Confidence</h2>
-                <p>We specialize in helping businesses break through growth plateaus and achieve their full potential. Our proven methodology combines strategic planning, operational excellence, and market insights to drive sustainable growth.</p>
-                <div class="stats-grid">
+                <h2>Scale Your Business With Confidence</h2>
+                <p>We understand the challenges of growing a client-based business. Our proven methodologies and expert guidance help you overcome scaling hurdles and achieve sustainable growth.</p>
+                <div class="stats">
                     <div class="stat-item">
-                        <h3>200+</h3>
+                        <h3>500+</h3>
                         <p>Businesses Scaled</p>
                     </div>
                     <div class="stat-item">
-                        <h3>$500M+</h3>
-                        <p>Revenue Generated</p>
+                        <h3>85%</h3>
+                        <p>Revenue Growth</p>
                     </div>
                     <div class="stat-item">
                         <h3>95%</h3>
-                        <p>Client Success Rate</p>
+                        <p>Client Satisfaction</p>
                     </div>
                 </div>
             </div>
@@ -594,25 +592,23 @@
 
     <section class="testimonials">
         <div class="container">
-            <h2 data-aos="fade-up">What Our Clients Say</h2>
-            <p data-aos="fade-up" data-aos-delay="100">Don't just take our word for it. Hear from our clients who have achieved remarkable growth and success through our services.</p>
-            <div class="testimonials-grid">
-                <div class="testimonial-card" data-aos="fade-up">
-                    <div class="testimonial-content">
-                        <p>"Their strategic guidance helped us triple our revenue in just 18 months while building a sustainable operational foundation."</p>
-                        <div class="testimonial-author">
-                            <h4>Sarah Chen</h4>
-                            <p>CEO, TechGrowth Solutions</p>
-                        </div>
+            <div class="testimonial-card" data-aos="fade-up">
+                <p>"Their strategic guidance helped us triple our client base while maintaining our service quality. A game-changer for our business."</p>
+                <div class="testimonial-author">
+                    <img src="images/testimonial1.jpg" alt="Sarah Johnson">
+                    <div>
+                        <h4>Sarah Johnson</h4>
+                        <p>CEO, Digital Solutions Pro</p>
                     </div>
                 </div>
-                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="testimonial-content">
-                        <p>"The team's expertise in scaling operations and developing our leadership has been instrumental in our company's expansion to new markets."</p>
-                        <div class="testimonial-author">
-                            <h4>Michael Rodriguez</h4>
-                            <p>Founder, InnovateScale</p>
-                        </div>
+            </div>
+            <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+                <p>"The systems they helped us implement transformed our client acquisition process. We're now growing faster than ever."</p>
+                <div class="testimonial-author">
+                    <img src="images/testimonial2.jpg" alt="Michael Chen">
+                    <div>
+                        <h4>Michael Chen</h4>
+                        <p>Founder, Growth Accelerator</p>
                     </div>
                 </div>
             </div>
@@ -621,10 +617,12 @@
 
     <section class="cta" id="contact">
         <div class="container">
-            <div class="cta-content">
-                <h2>Ready to Scale Your Business?</h2>
-                <p>Book a free strategy session to discover how we can help you achieve your growth goals.</p>
-                <a href="#contact" class="btn btn-primary">Schedule Your Call</a>
+            <div class="form-wrapper" data-aos="fade-up">
+                <div class="form-header">
+                    <h2>Ready to Scale Your Business?</h2>
+                    <p>Get your personalized growth roadmap and start scaling today</p>
+                    <a href="roadmap.html" class="btn" style="margin-top: 30px;">Create My Roadmap →</a>
+                </div>
             </div>
         </div>
     </section>
@@ -634,14 +632,14 @@
             <div class="footer-grid">
                 <div class="footer-col">
                     <h3>ScalingWorkshops</h3>
-                    <p>Helping businesses scale to new heights through strategic growth planning, operations optimization, and team development.</p>
+                    <p>Helping businesses scale to $5M+ in net profit through proven strategies and systems.</p>
                 </div>
                 <div class="footer-col">
                     <h3>Company</h3>
                     <ul class="footer-links">
                         <li><a href="#about">About Us</a></li>
-                        <li><a href="#services">Our Services</a></li>
-                        <li><a href="#contact">Get in Touch</a></li>
+                        <li><a href="#process">Our Process</a></li>
+                        <li><a href="roadmap.html">Get Your Roadmap</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">

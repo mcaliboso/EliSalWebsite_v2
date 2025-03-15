@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Our Firm | ScalingWorkshops.com</title>
+    <title>About the Firm | ScalingWorkshops.com</title>
     <!-- HubSpot tracking code -->
     <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/242100136.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -137,97 +137,68 @@
         }
 
         /* About Section */
-        .about-content {
+        .about-section {
             padding: 80px 0;
             background: #fff;
         }
 
-        .about-content h1 {
+        .about-section h2 {
             font-size: 36px;
             font-weight: 700;
             margin-bottom: 30px;
             color: #1A1A1A;
         }
 
-        .about-content p {
+        .about-section p {
             font-size: 20px;
             color: rgba(0,0,0,0.7);
             margin-bottom: 20px;
         }
 
-        .mission-section {
-            margin-bottom: 60px;
-        }
-
-        .mission-section h2 {
-            font-size: 24px;
-            font-weight: 700;
-            margin-bottom: 15px;
-            color: #1A1A1A;
-        }
-
-        .values-section {
-            margin-bottom: 60px;
-        }
-
-        .values-section h2 {
-            font-size: 24px;
-            font-weight: 700;
-            margin-bottom: 15px;
-            color: #1A1A1A;
-        }
-
-        .values-grid {
+        .expertise-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 40px;
         }
 
-        .value-card {
+        .expertise-card {
             background: #fff;
             border-radius: 12px;
-            padding: 40px;
+            padding: 30px;
+            text-align: center;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
             border: 1px solid rgba(0,0,0,0.1);
         }
 
-        .value-icon {
-            width: 60px;
-            height: 60px;
-            background: rgba(255,107,0,0.1);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        .expertise-card i {
+            font-size: 48px;
             margin-bottom: 20px;
-        }
-
-        .value-icon svg {
-            width: 30px;
-            height: 30px;
             color: #FF6B00;
         }
 
-        .value-title {
-            font-size: 18px;
+        .expertise-card h3 {
+            font-size: 24px;
             font-weight: 700;
             margin-bottom: 15px;
             color: #1A1A1A;
         }
 
-        .value-description {
+        .expertise-card p {
+            font-size: 18px;
             color: rgba(0,0,0,0.7);
-            font-size: 16px;
         }
 
+        /* Team Section */
         .team-section {
-            margin-bottom: 60px;
+            padding: 80px 0;
+            background: #f7f7f7;
+            border-top: 1px solid rgba(0,0,0,0.1);
         }
 
         .team-section h2 {
-            font-size: 24px;
+            font-size: 36px;
             font-weight: 700;
-            margin-bottom: 15px;
+            margin-bottom: 30px;
             color: #1A1A1A;
         }
 
@@ -246,7 +217,7 @@
             border: 1px solid rgba(0,0,0,0.1);
         }
 
-        .member-image {
+        .team-member img {
             width: 200px;
             height: 200px;
             border-radius: 50%;
@@ -254,70 +225,56 @@
             overflow: hidden;
         }
 
-        .member-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .member-name {
-            font-size: 18px;
-            font-weight: 700;
-            margin-bottom: 10px;
-            color: #1A1A1A;
-        }
-
-        .member-role {
-            color: #FF6B00;
-            font-weight: 500;
-            margin-bottom: 15px;
-        }
-
-        .member-bio {
-            color: rgba(0,0,0,0.7);
-            margin-bottom: 20px;
-        }
-
-        .expertise-section {
-            margin-bottom: 60px;
-        }
-
-        .expertise-section h2 {
+        .team-member h3 {
             font-size: 24px;
             font-weight: 700;
             margin-bottom: 15px;
             color: #1A1A1A;
         }
 
-        .expertise-grid {
+        .team-member p {
+            font-size: 18px;
+            color: rgba(0,0,0,0.7);
+        }
+
+        /* Results Section */
+        .results-section {
+            padding: 80px 0;
+            background: #fff;
+        }
+
+        .results-section h2 {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 30px;
+            color: #1A1A1A;
+        }
+
+        .stats-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 40px;
         }
 
-        .expertise-card {
+        .stat-card {
             background: #fff;
             border-radius: 12px;
-            padding: 40px;
+            padding: 30px;
+            text-align: center;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
             border: 1px solid rgba(0,0,0,0.1);
         }
 
-        .expertise-card h3 {
-            font-size: 18px;
-            font-weight: 700;
+        .stat-card h3 {
+            font-size: 48px;
+            font-weight: 800;
             margin-bottom: 15px;
-            color: #1A1A1A;
+            color: #FF6B00;
         }
 
-        .expertise-card ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-
-        .expertise-card li {
-            margin-bottom: 10px;
+        .stat-card p {
+            font-size: 18px;
+            color: rgba(0,0,0,0.7);
         }
 
         /* Footer Styles */
@@ -388,9 +345,7 @@
                 gap: 40px;
             }
 
-            .team-grid,
-            .values-grid,
-            .expertise-grid {
+            .team-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
         }
@@ -404,10 +359,12 @@
                 font-size: 40px;
             }
 
-            .stats-grid,
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
             .team-grid,
-            .values-grid,
-            .expertise-grid {
+            .values-grid {
                 grid-template-columns: 1fr;
             }
 
@@ -433,7 +390,6 @@
                     </svg>
                 </button>
                 <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
                     <li><a href="workshops.html">Workshops</a></li>
                     <li><a href="courses.html">Courses</a></li>
                     <li><a href="books.html">Books</a></li>
@@ -448,114 +404,79 @@
 
     <section class="hero">
         <div class="container">
-            <h1 data-aos="fade-up">About Our Firm</h1>
-            <p data-aos="fade-up" data-aos-delay="100">We are a strategic growth consultancy that helps businesses scale sustainably through proven methodologies and data-driven strategies.</p>
+            <div class="hero-content">
+                <h1>About Our Business Scaling Expertise</h1>
+                <p>We're a team of business growth strategists dedicated to helping service-based businesses scale sustainably and profitably.</p>
+            </div>
         </div>
     </section>
 
-    <section class="about-content">
+    <section class="about-section">
         <div class="container">
-            <div class="mission-section">
-                <h2 data-aos="fade-up">Our Mission</h2>
-                <p data-aos="fade-up" data-aos-delay="100">To empower businesses with the strategies, systems, and support they need to achieve exponential growth while maintaining operational excellence.</p>
-            </div>
-
-            <div class="values-section">
-                <h2 data-aos="fade-up">Our Values</h2>
-                <div class="values-grid">
-                    <div class="value-card" data-aos="fade-up">
-                        <div class="value-icon">
-                            <svg fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"/>
-                            </svg>
-                        </div>
-                        <h3 class="value-title">Data-Driven Growth</h3>
-                        <p class="value-description">We base our strategies on concrete data and measurable outcomes, not hunches.</p>
-                    </div>
-
-                    <div class="value-card" data-aos="fade-up" data-aos-delay="100">
-                        <div class="value-icon">
-                            <svg fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M6.672 1.911a1 1 0 10-1.932.518l.259.966a1 1 0 001.932-.518l-.26-.966zM2.429 4.74a1 1 0 10-.517 1.932l.966.259a1 1 0 00.517-1.932l-.966-.26zm8.814-.569a1 1 0 00-1.415-1.414l-.707.707a1 1 0 101.415 1.415l.707-.708zm-7.071 7.072l.707-.707A1 1 0 003.465 9.12l-.708.707a1 1 0 001.415 1.415zm3.2-5.171a1 1 0 00-1.3 1.3l4 10a1 1 0 001.823.075l1.38-2.759 3.018 3.02a1 1 0 001.414-1.415l-3.019-3.02 2.76-1.379a1 1 0 00-.076-1.822l-10-4z" clip-rule="evenodd"/>
-                            </svg>
-                        </div>
-                        <h3 class="value-title">Partnership Mindset</h3>
-                        <p class="value-description">We succeed when our clients succeed, making their goals our goals.</p>
-                    </div>
-
-                    <div class="value-card" data-aos="fade-up">
-                        <div class="value-icon">
-                            <svg fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"/>
-                            </svg>
-                        </div>
-                        <h3 class="value-title">Innovation Focus</h3>
-                        <p class="value-description">We continuously evolve our methods to stay ahead of market trends.</p>
-                    </div>
+            <h2>Our Mission</h2>
+            <p>At ScalingWorkshops, we transform service-based businesses into scalable enterprises. Our proven methodologies and systems have helped over 500 businesses achieve sustainable growth while maintaining service excellence.</p>
+            
+            <div class="expertise-grid">
+                <div class="expertise-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Growth Strategy</h3>
+                    <p>We develop customized scaling strategies that align with your business goals and market opportunities.</p>
+                </div>
+                <div class="expertise-card">
+                    <i class="fas fa-users"></i>
+                    <h3>Client Success</h3>
+                    <p>Our systems help you attract and retain high-value clients while delivering exceptional service at scale.</p>
+                </div>
+                <div class="expertise-card">
+                    <i class="fas fa-cogs"></i>
+                    <h3>Operations Excellence</h3>
+                    <p>We optimize your business processes and systems to handle growth efficiently and profitably.</p>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <div class="team-section">
-                <h2 data-aos="fade-up">Our Leadership Team</h2>
-                <div class="team-grid">
-                    <div class="team-member" data-aos="fade-up">
-                        <div class="member-image">
-                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="John Smith">
-                        </div>
-                        <h3 class="member-name">John Smith</h3>
-                        <p class="title">CEO & Founder</p>
-                        <p class="bio">Former VP of Operations at TechGrowth, scaled 3 companies to $100M+ revenue.</p>
-                    </div>
-
-                    <div class="team-member" data-aos="fade-up" data-aos-delay="100">
-                        <div class="member-image">
-                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Sarah Johnson">
-                        </div>
-                        <h3 class="member-name">Sarah Johnson</h3>
-                        <p class="title">Chief Strategy Officer</p>
-                        <p class="bio">15+ years experience in business transformation and operational scaling.</p>
-                    </div>
-
-                    <div class="team-member" data-aos="fade-up" data-aos-delay="200">
-                        <div class="member-image">
-                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Michael Chen">
-                        </div>
-                        <h3 class="member-name">Michael Chen</h3>
-                        <p class="title">Head of Operations</p>
-                        <p class="bio">Expert in implementing scalable systems and processes across industries.</p>
-                    </div>
+    <section class="team-section">
+        <div class="container">
+            <h2>Our Leadership Team</h2>
+            <div class="team-grid">
+                <div class="team-member">
+                    <img src="images/team1.jpg" alt="Sarah Chen">
+                    <h3>Sarah Chen</h3>
+                    <p>CEO & Growth Strategist</p>
+                    <p>15+ years scaling service businesses</p>
+                </div>
+                <div class="team-member">
+                    <img src="images/team2.jpg" alt="Michael Rodriguez">
+                    <h3>Michael Rodriguez</h3>
+                    <p>Head of Client Success</p>
+                    <p>Expert in client acquisition systems</p>
+                </div>
+                <div class="team-member">
+                    <img src="images/team3.jpg" alt="Lisa Thompson">
+                    <h3>Lisa Thompson</h3>
+                    <p>Operations Director</p>
+                    <p>Specialist in scaling operations</p>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <div class="expertise-section">
-                <h2 data-aos="fade-up">Our Expertise</h2>
-                <div class="expertise-grid">
-                    <div class="expertise-card" data-aos="fade-up">
-                        <h3>Strategic Planning</h3>
-                        <ul>
-                            <li>Market Analysis & Positioning</li>
-                            <li>Growth Strategy Development</li>
-                            <li>Revenue Model Optimization</li>
-                        </ul>
-                    </div>
-
-                    <div class="expertise-card" data-aos="fade-up" data-aos-delay="100">
-                        <h3>Operations Excellence</h3>
-                        <ul>
-                            <li>Process Automation</li>
-                            <li>Scalable Systems Design</li>
-                            <li>Quality Management</li>
-                        </ul>
-                    </div>
-
-                    <div class="expertise-card" data-aos="fade-up">
-                        <h3>Team Development</h3>
-                        <ul>
-                            <li>Leadership Training</li>
-                            <li>Talent Acquisition Strategy</li>
-                            <li>Performance Management</li>
-                        </ul>
-                    </div>
+    <section class="results-section">
+        <div class="container">
+            <h2>Our Impact</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>500+</h3>
+                    <p>Businesses Scaled</p>
+                </div>
+                <div class="stat-card">
+                    <h3>85%</h3>
+                    <p>Average Revenue Growth</p>
+                </div>
+                <div class="stat-card">
+                    <h3>$2.5B+</h3>
+                    <p>Client Revenue Generated</p>
                 </div>
             </div>
         </div>
@@ -566,7 +487,7 @@
             <div class="footer-grid">
                 <div class="footer-col">
                     <h3>ScalingWorkshops</h3>
-                    <p>Helping businesses scale sustainably through proven methodologies and data-driven strategies.</p>
+                    <p>Helping service-based businesses scale sustainably and profitably.</p>
                 </div>
                 <div class="footer-col">
                     <h3>Company</h3>
