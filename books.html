@@ -344,144 +344,132 @@
             background: var(--color-primary-dark);
         }
 
-        .testimonials {
-            margin: 4rem 0;
+        .success-stories {
+            padding: 4rem 0;
+            background: var(--color-light);
         }
 
-        .testimonial-grid {
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-header h2 {
+            color: var(--color-primary);
+            margin-bottom: 1rem;
+        }
+
+        .stories-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 2rem;
-            margin-top: 2rem;
+            margin: 0 auto;
+            max-width: 1400px;
         }
 
-        .testimonial-card {
+        .story-card {
             background: var(--color-white);
-            padding: 2rem;
             border-radius: 10px;
+            padding: 2rem;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
-        .testimonial-card p {
-            font-style: italic;
-            margin-bottom: 1.5rem;
-            color: var(--color-text);
-            line-height: 1.6;
-        }
-
-        .author {
+        .story-header {
             display: flex;
             align-items: center;
-            gap: 1rem;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
         }
 
-        .author img {
-            width: 50px;
-            height: 50px;
+        .story-image {
+            width: 80px;
+            height: 80px;
             border-radius: 50%;
             object-fit: cover;
         }
 
-        .author-info h4 {
+        .story-meta h4 {
             color: var(--color-primary);
             margin-bottom: 0.2rem;
         }
 
-        .author-info p {
+        .story-meta p {
             color: var(--color-gray);
             font-size: 0.9rem;
-            margin: 0;
+            margin-bottom: 0.5rem;
         }
 
-        @media (max-width: 1024px) {
-            .book-grid {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
-
-            .hero h1 {
-                font-size: 48px;
-            }
-
-            .hero-stats {
-                padding: 0 20px;
-            }
-
-            .stat-number {
-                font-size: 32px;
-            }
-
-            .stat-label {
-                font-size: 14px;
-            }
+        .book-badge {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--color-light);
+            padding: 0.5rem;
+            border-radius: 5px;
+            margin-top: 0.5rem;
         }
 
-        @media (max-width: 768px) {
-            .book-card {
-                flex-direction: column;
-                gap: 30px;
-                padding: 30px;
-            }
+        .book-thumbnail {
+            width: 30px;
+            height: 30px;
+            object-fit: cover;
+            border-radius: 3px;
+        }
 
-            .book-image {
-                flex: 0 0 auto;
-                max-width: 250px;
-                margin: 0 auto;
-            }
+        .book-badge span {
+            font-size: 0.8rem;
+            color: var(--color-text);
+        }
 
-            .hero h1 {
-                font-size: 36px;
-                padding: 0 20px;
-            }
+        .story-quote {
+            font-style: italic;
+            color: var(--color-text);
+            line-height: 1.6;
+            margin: 1.5rem 0;
+            padding-left: 1rem;
+            border-left: 3px solid var(--color-primary);
+        }
 
-            .hero p {
-                font-size: 18px;
-                padding: 0 20px;
-            }
+        .story-results {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--color-light);
+        }
 
-            .hero-stats {
-                flex-direction: column;
-                gap: 30px;
-            }
+        .result-item {
+            text-align: center;
+        }
 
-            .stat-number {
-                font-size: 36px;
-            }
+        .result-item .number {
+            display: block;
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--color-primary);
+            margin-bottom: 0.2rem;
+        }
 
-            .stat-label {
-                font-size: 16px;
-            }
-
-            .book-title {
-                font-size: 28px;
-            }
-
-            .book-meta {
-                flex-direction: column;
-                gap: 20px;
-                align-items: flex-start;
-            }
-
-            .section-header {
-                padding: 0 20px;
-            }
-
-            .section-header h2 {
-                font-size: 32px;
-            }
-
-            .section-header p {
-                font-size: 16px;
-            }
+        .result-item .label {
+            font-size: 0.8rem;
+            color: var(--color-gray);
         }
 
         @media (max-width: 768px) {
-            .book-card.featured {
+            .stories-grid {
                 grid-template-columns: 1fr;
             }
 
-            .book-card.featured .book-image {
-                height: 250px;
+            .story-results {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .result-item {
+                padding: 1rem;
+                background: var(--color-light);
+                border-radius: 5px;
             }
         }
 
@@ -684,26 +672,101 @@
         </div>
     </section>
 
-    <div class="testimonials">
-        <h2>Reader Success Stories</h2>
-        <div class="testimonial-grid">
-            <div class="testimonial-card">
-                <p>"The systems from 'The Scale-Up Blueprint' helped us streamline our operations and double our monthly revenue in just 4 months."</p>
-                <div class="author">
-                    <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="David K.">
-                    <div class="author-info">
+    <div class="success-stories">
+        <div class="section-header" data-aos="fade-up">
+            <h2>Reader Success Stories</h2>
+            <p>Real results from business owners who implemented our frameworks</p>
+        </div>
+        <div class="stories-grid">
+            <div class="story-card" data-aos="fade-up">
+                <div class="story-header">
+                    <img src="images/reader1.jpg" alt="David K." class="story-image">
+                    <div class="story-meta">
                         <h4>David K.</h4>
                         <p>Professional Services Firm</p>
+                        <div class="book-badge">
+                            <img src="images/book1.jpg" alt="The Scale-Up Blueprint" class="book-thumbnail">
+                            <span>The Scale-Up Blueprint</span>
+                        </div>
+                    </div>
+                </div>
+                <blockquote class="story-quote">
+                    "The systems from 'The Scale-Up Blueprint' transformed our operations. The step-by-step implementation guide helped us create scalable processes that reduced our operational overhead by 40%."
+                </blockquote>
+                <div class="story-results">
+                    <div class="result-item">
+                        <span class="number">2X</span>
+                        <span class="label">Revenue Growth</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="number">40%</span>
+                        <span class="label">Cost Reduction</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="number">15+</span>
+                        <span class="label">New Clients</span>
                     </div>
                 </div>
             </div>
-            <div class="testimonial-card">
-                <p>"'Systems That Scale' gave us the framework we needed to build a business that runs without constant oversight. Our efficiency improved by 200%."</p>
-                <div class="author">
-                    <img src="https://images.unsplash.com/photo-1589998059171-988d887df646?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Rachel M.">
-                    <div class="author-info">
+
+            <div class="story-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="story-header">
+                    <img src="images/reader2.jpg" alt="Rachel M." class="story-image">
+                    <div class="story-meta">
                         <h4>Rachel M.</h4>
                         <p>E-commerce Business Owner</p>
+                        <div class="book-badge">
+                            <img src="images/book2.jpg" alt="Systems That Scale" class="book-thumbnail">
+                            <span>Systems That Scale</span>
+                        </div>
+                    </div>
+                </div>
+                <blockquote class="story-quote">
+                    "'Systems That Scale' gave us the framework to build a business that runs without constant oversight. The automation strategies alone saved us 30 hours per week in manual work."
+                </blockquote>
+                <div class="story-results">
+                    <div class="result-item">
+                        <span class="number">3X</span>
+                        <span class="label">Order Volume</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="number">30h</span>
+                        <span class="label">Weekly Time Saved</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="number">90%</span>
+                        <span class="label">Task Automation</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="story-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="story-header">
+                    <img src="images/reader3.jpg" alt="Michael P." class="story-image">
+                    <div class="story-meta">
+                        <h4>Michael P.</h4>
+                        <p>Marketing Agency Founder</p>
+                        <div class="book-badge">
+                            <img src="images/book3.jpg" alt="The Client Acquisition Code" class="book-thumbnail">
+                            <span>The Client Acquisition Code</span>
+                        </div>
+                    </div>
+                </div>
+                <blockquote class="story-quote">
+                    "The strategies in 'The Client Acquisition Code' helped us develop a predictable lead generation system. We now have a waiting list of qualified clients eager to work with us."
+                </blockquote>
+                <div class="story-results">
+                    <div class="result-item">
+                        <span class="number">5X</span>
+                        <span class="label">Lead Quality</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="number">85%</span>
+                        <span class="label">Close Rate</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="number">$2M</span>
+                        <span class="label">Revenue Growth</span>
                     </div>
                 </div>
             </div>
