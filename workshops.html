@@ -546,6 +546,141 @@
                 text-align: center;
             }
         }
+
+        .success-stories {
+            padding: 4rem 0;
+            background: var(--color-light);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-header h2 {
+            color: var(--color-primary);
+            margin-bottom: 1rem;
+        }
+
+        .stories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin: 0 auto;
+            max-width: 1400px;
+            padding: 0 2rem;
+        }
+
+        .story-card {
+            background: var(--color-white);
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .story-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .story-header {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .story-image {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .story-meta h4 {
+            color: var(--color-primary);
+            margin-bottom: 0.2rem;
+        }
+
+        .story-meta p {
+            color: var(--color-gray);
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .program-badge {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--color-light);
+            padding: 0.5rem;
+            border-radius: 5px;
+            margin-top: 0.5rem;
+        }
+
+        .program-thumbnail {
+            width: 30px;
+            height: 30px;
+            object-fit: cover;
+            border-radius: 3px;
+        }
+
+        .program-badge span {
+            font-size: 0.8rem;
+            color: var(--color-text);
+        }
+
+        .story-quote {
+            font-style: italic;
+            color: var(--color-text);
+            line-height: 1.6;
+            margin: 1.5rem 0;
+            padding-left: 1rem;
+            border-left: 3px solid var(--color-primary);
+        }
+
+        .story-results {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--color-light);
+        }
+
+        .result-item {
+            text-align: center;
+        }
+
+        .result-item .number {
+            display: block;
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--color-primary);
+            margin-bottom: 0.2rem;
+        }
+
+        .result-item .label {
+            font-size: 0.8rem;
+            color: var(--color-gray);
+        }
+
+        @media (max-width: 768px) {
+            .stories-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .story-results {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .result-item {
+                padding: 1rem;
+                background: var(--color-light);
+                border-radius: 5px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -658,28 +793,70 @@
         </div>
     </section>
 
-    <section class="testimonials">
-        <div class="container">
+    <section class="success-stories">
+        <div class="section-header" data-aos="fade-up">
             <h2>Event Success Stories</h2>
-            <div class="testimonial-grid">
-                <div class="testimonial-card">
-                    <p>"The strategies we learned during the 5-Day Intensive helped us scale from $20K to $100K monthly revenue in just 90 days."</p>
-                    <div class="author">
-                        <img src="images/testimonial1.jpg" alt="John D.">
-                        <div class="author-info">
-                            <h4>John D.</h4>
-                            <p>Digital Marketing Agency</p>
+            <p>Real transformations from business owners who attended our events</p>
+        </div>
+        <div class="stories-grid">
+            <div class="story-card" data-aos="fade-up">
+                <div class="story-header">
+                    <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="John D." class="story-image">
+                    <div class="story-meta">
+                        <h4>John D.</h4>
+                        <p>Digital Marketing Agency</p>
+                        <div class="program-badge">
+                            <img src="https://images.unsplash.com/photo-1434626881859-194d67b2b86f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Business Growth Accelerator" class="program-thumbnail">
+                            <span>Business Growth Accelerator</span>
                         </div>
                     </div>
                 </div>
-                <div class="testimonial-card">
-                    <p>"The Virtual Growth Lab provided exactly what we needed to systematize our operations. Our team efficiency improved by 300%."</p>
-                    <div class="author">
-                        <img src="images/testimonial2.jpg" alt="Maria S.">
-                        <div class="author-info">
-                            <h4>Maria S.</h4>
-                            <p>Tech Startup Founder</p>
+                <blockquote class="story-quote">
+                    "The strategies we learned during the Business Growth Accelerator helped us scale from $20K to $100K monthly revenue in just 90 days."
+                </blockquote>
+                <div class="story-results">
+                    <div class="result-item">
+                        <span class="number">5X</span>
+                        <span class="label">Revenue Growth</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="number">12</span>
+                        <span class="label">Team Members</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="number">95%</span>
+                        <span class="label">Client Retention</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="story-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="story-header">
+                    <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Maria S." class="story-image">
+                    <div class="story-meta">
+                        <h4>Maria S.</h4>
+                        <p>Tech Startup Founder</p>
+                        <div class="program-badge">
+                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Leadership Excellence Program" class="program-thumbnail">
+                            <span>Leadership Excellence Program</span>
                         </div>
+                    </div>
+                </div>
+                <blockquote class="story-quote">
+                    "The Leadership Excellence Program provided exactly what we needed to systematize our operations. Our team efficiency improved by 300%."
+                </blockquote>
+                <div class="story-results">
+                    <div class="result-item">
+                        <span class="number">300%</span>
+                        <span class="label">Team Efficiency</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="number">8</span>
+                        <span class="label">Team Members</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="number">85%</span>
+                        <span class="label">Process Automation</span>
                     </div>
                 </div>
             </div>
@@ -748,3 +925,4 @@
     </script>
 </body>
 </html>
+
